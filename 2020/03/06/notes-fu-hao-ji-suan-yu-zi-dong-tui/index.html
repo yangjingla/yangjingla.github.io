@@ -1,0 +1,641 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content=" 这是一个似乎不善于自我介绍的人">
+  <meta name="author" content="yangjing">
+  <meta name="keywords" content="">
+  <title>Notes-符号计算与自动推理 - The Sound Of Silence</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>YangJing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/index_bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-03-06 10:21" pubdate>
+        March 6, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      30
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Notes-符号计算与自动推理</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>关于 <strong>$\lambda$ 演算</strong>  和 <strong>自动推理与符号计算</strong>笔记以及资源</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>  本篇文章主要介绍了 <strong>$\lambda$ 演算</strong>  和 <strong>自动推理与符号计算</strong> 两个内容。</p>
+<ul>
+<li>学习动机：</li>
+<li>学习内容：<ul>
+<li>$\lambda$演算其实可以看作是自动推理的基础，计算机真的什么都可以计算吗？（其实好像$\lambda$演算和<strong>函数式编程</strong>有很大的关系）</li>
+<li>自动推理主要是在看《人工智能，一种现代方法》的几章内容 + Mooc上面《人工智能:模型与算法》的课件</li>
+</ul>
+</li>
+<li>学习意义：<ul>
+<li>整理一下学习笔记和自己的思绪（建议还是最好，看看后面给的reference(emmm））</li>
+</ul>
+</li>
+</ul>
+<h1 id="PARTI-Lambda-Calculus"><a href="#PARTI-Lambda-Calculus" class="headerlink" title="PARTI : Lambda_Calculus"></a>PARTI : Lambda_Calculus</h1><p>在计算机科学尤其是是编程语言领域，我们常用一种算子：Lambda Calculus。逻辑学家也常用Lambda Calculus 来研究计算和离散数学结构的本质。<strong>λ演算其实就是将一行字母进行查找替换。你会看到它凭借简单的剪切和粘贴，几乎可以计算所有东西</strong>。</p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>讨论怎么使用lambda前，我们还要解决一个细微但重要的语法问题：<a href="[https://zh.wikipedia.org/wiki/%E9%97%AD%E5%8C%85_%28%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%29](https://zh.wikipedia.org/wiki/闭包_(计算机科学))">封闭(closure)</a></p>
+<p>闭包被广泛使用于函数式编程语言，慢慢很多命令式语言也开始支持闭包。<strong>在函数中可以（嵌套）定义另一个函数时</strong>，如果<strong>内部的函数引用了外部的函数的变量</strong>，则可能产生闭包。运行时，一旦外部的函数被执行，一个闭包就形成了，闭包中包含了内部函数的代码，以及所需外部函数中的变量的引用。</p>
+<p><em>发明Lambda演算的作者叫做阿隆佐邱奇（Alonzo Church）， 发明图灵机的作者叫做阿兰图灵（Alan Turing）。他们几乎活跃在同一个时代，他们那个时代的数学界有个领袖，叫希尔伯特（David Hilbert， 德国数学家），当然比图灵和邱大不少。简单说，他鼓舞大家去将证明过程纯机械化，这样机器就可以通过形式语言推理出大量定理（是不是有点像人工智能，机器自己把定理枚举了）。当然那个时代没有今天计算能力如此强大的机器，但当时的科学家们已经在思考今天的事情了。图灵和邱奇都受到这股思潮的影响，几乎从不同的角度解决了同一个问题。无论是图灵机还是λ演算，都可以模拟出我们今天的所有程序。</em></p>
+<h3 id="Lambda-Calculus本身有若干显著优点："><a href="#Lambda-Calculus本身有若干显著优点：" class="headerlink" title="Lambda Calculus本身有若干显著优点："></a>Lambda Calculus本身有若干显著优点：</h3><ul>
+<li>它非常简单。反正比图灵机简单（但是两者等价)</li>
+<li>它图灵完备。也就是说，图灵机能完成的计算，Lambda Calculus也能完成。</li>
+<li>它易于读写（正是这个优点催生了许多或多或少基于lambda calculus的极为优秀的编程语言：Lisp, ML, 和Haskell都在很大程度上基于Lambda calculus开发出来）</li>
+<li>它的语义足够强大，能让我们用它来推理。</li>
+<li>它的计算模型足够强大</li>
+<li>容易创建不同的变种，以便我们探索用不同的方式构建计算或语义时的特性</li>
+</ul>
+<h3 id="Lambda-表达式"><a href="#Lambda-表达式" class="headerlink" title="Lambda 表达式"></a>Lambda 表达式</h3><ul>
+<li><p>函数定义：在lambda calculus里一个函数就是一个表达式，写成<code>lambda x . &lt;函数体&gt;。</code>**意思是“一个函数，带一个参数X，返回计算函数体后得到的结果”。这个时候我们说这个lambda表达式绑定了参数X。</p>
+</li>
+<li><p>标识符引用（identifier reference): 一个标识符引用就是一个名字。这个名字和包括这个引用的函数定义里的参数同名。</p>
+</li>
+<li><p>函数应用(function application): 这个更简单，把要应用的值放到函数定义的后面就行了。</p>
+</li>
+</ul>
+<h3 id="Lambda-算子计算规则"><a href="#Lambda-算子计算规则" class="headerlink" title="Lambda 算子计算规则"></a>Lambda 算子计算规则</h3><p>Lambda 算子的计算规则， 主要包括两个规则  ：<strong>Beta规则</strong>  和<strong>Alpha规则</strong>。</p>
+<ul>
+<li><strong>Alpha规则</strong>又叫转换(conversion)规则。</li>
+<li><strong>Beta规则</strong>又叫简化(reduction)规则。</li>
+</ul>
+<h3 id="Alpha转换"><a href="#Alpha转换" class="headerlink" title="Alpha转换"></a>Alpha转换</h3><p>它无非是说变量名不重要：给定任何一个lambda表达式，我们可以任意改变参数的名字，只要我们相应地改变这些对应这些参数的变量名</p>
+<pre><code class="hljs angelscript">&gt;&gt;&gt; lambda x . <span class="hljs-keyword">if</span> (= x <span class="hljs-number">0</span>) then <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> x^<span class="hljs-number">2</span>
+&gt;&gt;&gt; lambda y . <span class="hljs-keyword">if</span> (= y <span class="hljs-number">0</span>) then <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> y^<span class="hljs-number">2</span></code></pre>
+
+<p>Alpha操作完全不影响lambda表达式的意义。不过我们后面会发现，这个操作很重要，因为它让我们能够实现诸如递归的操作。</p>
+<pre><code class="hljs python">&gt;&gt;&gt;f1= <span class="hljs-keyword">lambda</span> n:<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> n==<span class="hljs-number">0</span> <span class="hljs-keyword">else</span> n*f1(n<span class="hljs-number">-1</span>)
+&gt;&gt;&gt;print(f1(<span class="hljs-number">4</span>))
+&gt;&gt;&gt;f2= <span class="hljs-keyword">lambda</span> f1,n :<span class="hljs-number">1</span> <span class="hljs-keyword">if</span> n==<span class="hljs-number">0</span> <span class="hljs-keyword">else</span> n*f1(f1,n<span class="hljs-number">-1</span>)
+<span class="hljs-meta">&gt;&gt;&gt; </span>print(f2(f2,<span class="hljs-number">4</span>))</code></pre>
+
+<h3 id="Beta简化"><a href="#Beta简化" class="headerlink" title="Beta简化"></a>Beta简化</h3><p>们只需要这一个规则，就可以让lamdba算子实现一台计算机能做的<strong>任何</strong>计算</p>
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">lambda</span> y . (<span class="hljs-keyword">lambda</span> x . x + y)) q 
+<span class="hljs-meta">&gt;&gt;&gt; </span>当我们对这个表达式应用Beta简化时，我们把所有对应参数y的变量替换成实际的值q。所以结果是<span class="hljs-string">"lambda x, x+q"</span>。</code></pre>
+
+<p>再来一个例子：</p>
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">"(lambda x y. x y) (lambda z . z * z) 3"</span>. 
+&gt;&gt;&gt;这个带两个参数的函数把第一个参数应用到第二个参数上。当我们计算它的值时，我们把第一个<span class="hljs-keyword">lambda</span>表达式里的变量x换成<span class="hljs-keyword">lambda</span> z. z * z, 再把变量y换成<span class="hljs-number">3</span>，得到(<span class="hljs-keyword">lambda</span> z. z * z) <span class="hljs-number">3</span>。对该结果应用Beta简化，我们得到<span class="hljs-number">3</span> * <span class="hljs-number">3</span>。</code></pre>
+
+<p>可以执行的python代码：</p>
+<pre><code class="hljs python">&gt;&gt;&gt;a=( <span class="hljs-keyword">lambda</span> x: ( <span class="hljs-keyword">lambda</span> y: ( <span class="hljs-keyword">lambda</span> z: x + y + z  )( <span class="hljs-number">1</span> ) )( <span class="hljs-number">2</span> ) )( <span class="hljs-number">3</span> )
+&gt;&gt;&gt;print(a)
+ans: <span class="hljs-number">1</span>+<span class="hljs-number">2</span>+<span class="hljs-number">3</span> =<span class="hljs-number">6</span></code></pre>
+
+<p>Beta简化的严格定义如下：</p>
+<pre><code class="hljs llvm">lambda <span class="hljs-keyword">x</span> . B e = B[<span class="hljs-keyword">x</span> := e] if <span class="hljs-keyword">free</span>(e) /subset <span class="hljs-keyword">free</span>(B[<span class="hljs-keyword">x</span> := e]`</code></pre>
+
+<p>​    从他的定义可以看出我们需要Alpha转换的原因：仅当beta化简不会引起有界变量和自由变量的冲突时，我们可以实施Beta化简。</p>
+<p>错误的做法：</p>
+<pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>(<span class="hljs-keyword">lambda</span> z . (<span class="hljs-keyword">lambda</span> x . x + z)) (x + <span class="hljs-number">2</span>)
+<span class="hljs-comment">#直接开始Beta简化，便会得到: lambda x . x + x + 2</span>
+<span class="hljs-comment"># "x+2"里自由变量，x，现在变得有界了。如果我们把结果应用到3上：(lambda x. x+2+2) 3</span>
+<span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">3</span> + <span class="hljs-number">3</span> + <span class="hljs-number">2</span>。</code></pre>
+
+<p>正确的做法：</p>
+<pre><code class="hljs gml">应用 alpha[<span class="hljs-symbol">x</span>/<span class="hljs-symbol">y</span>]: 
+&gt;&gt;&gt; (lambda z . (lambda <span class="hljs-symbol">y</span> . <span class="hljs-symbol">y</span>+z)) (<span class="hljs-symbol">x</span> + <span class="hljs-number">2</span>)
+应用 beta:
+&gt;&gt;&gt;  (lambda <span class="hljs-symbol">y</span> . <span class="hljs-symbol">y</span> + <span class="hljs-symbol">x</span> + <span class="hljs-number">2</span>) <span class="hljs-number">3</span>
+再次应用beta
+&gt;&gt;&gt; <span class="hljs-number">3</span> + <span class="hljs-symbol">x</span> + <span class="hljs-number">2</span></code></pre>
+
+<h3 id="丘奇编码"><a href="#丘奇编码" class="headerlink" title="丘奇编码"></a>丘奇编码</h3><p>丘奇数酷的地方是它抛弃了传统整数的概念，用函数取而代之。它把每个数对应为一个函数。而数数（counting）这个操作被对应为应用某个函数（在这里是后继函数）的次数。</p>
+<pre><code class="hljs python">rue = <span class="hljs-keyword">lambda</span> x: <span class="hljs-keyword">lambda</span> y: x
+ 
+false = <span class="hljs-keyword">lambda</span> x: <span class="hljs-keyword">lambda</span> y: y
+ 
+if_then_else = <span class="hljs-keyword">lambda</span> a: <span class="hljs-keyword">lambda</span> b: <span class="hljs-keyword">lambda</span> c: ( a )( b )( c )
+ 
+zero = <span class="hljs-keyword">lambda</span> f: <span class="hljs-keyword">lambda</span> x: x
+ 
+succ = ( <span class="hljs-keyword">lambda</span> n: <span class="hljs-keyword">lambda</span> f: <span class="hljs-keyword">lambda</span> x:
+         f( n( f )( x ) ) )
+one = succ( zero )
+plus_one = <span class="hljs-keyword">lambda</span> x: x + <span class="hljs-number">1</span>
+add = ( <span class="hljs-keyword">lambda</span> m: <span class="hljs-keyword">lambda</span> n: <span class="hljs-keyword">lambda</span> f: <span class="hljs-keyword">lambda</span> x:
+        n( f )( m( f )( x ) ) )
+mult = ( <span class="hljs-keyword">lambda</span> m: <span class="hljs-keyword">lambda</span> n: <span class="hljs-keyword">lambda</span> f: <span class="hljs-keyword">lambda</span> x:
+         n( m( f ) )( x ) )
+exp = <span class="hljs-keyword">lambda</span> m: <span class="hljs-keyword">lambda</span> n: n( m )
+church_numeral = <span class="hljs-keyword">lambda</span> n: n( plus_one )( <span class="hljs-number">0</span> )
+natural_number_to_church = <span class="hljs-keyword">lambda</span> num: zero <span class="hljs-keyword">if</span> num == <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> 
+                           succ( natural_number_to_church( num - <span class="hljs-number">1</span> ) )
+ 
+execute = <span class="hljs-keyword">lambda</span> s: s + <span class="hljs-string">' = '</span> + str( eval( s ) )
+ 
+<span class="hljs-keyword">print</span> (execute( <span class="hljs-string">'church_numeral( zero )'</span> ))
+print(execute( <span class="hljs-string">'church_numeral( succ( zero ) )'</span> ))
+print( execute( <span class="hljs-string">'church_numeral( add( one )( succ( one ) ) )'</span> ))
+<span class="hljs-keyword">print</span> (execute( <span class="hljs-string">'church_numeral( mult( succ( one ) )( succ( one ) ) )'</span> ))
+<span class="hljs-keyword">print</span> (execute( <span class="hljs-string">'church_numeral( exp( succ( succ( one) ) )( succ( one ) ) )'</span> ))
+ 
+c200 = natural_number_to_church( <span class="hljs-number">200</span> )
+c222 = natural_number_to_church( <span class="hljs-number">222</span> )
+ 
+print(execute( <span class="hljs-string">'church_numeral( add( c200 )( c222 ) )'</span> ))
+print(execute( <span class="hljs-string">'church_numeral( if_then_else( true )( zero )( one ) )'</span> ))</code></pre>
+
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><ul>
+<li><a href="http://tsgzj.me/2015/02/26/lambda_caculus_and_church_encoding/" target="_blank" rel="noopener">λ演算与邱奇编码</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/30510749" target="_blank" rel="noopener">认知科学家写给小白的Lambda演算</a></li>
+<li><a href="https://blog.csdn.net/beswkwangbo/article/details/15812467" target="_blank" rel="noopener">图灵和丘奇</a></li>
+<li><a href="">符号计算</a></li>
+<li><a href="https://www.icourse163.org/learn/BUAA-1205799845#/learn/content?type=detail&id=1211804319&sm=1" target="_blank" rel="noopener">自动推理综述</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-closure/index.html" target="_blank" rel="noopener">什么是闭包？</a></li>
+<li><a href="https://blog.codinglabs.org/articles/closure-perspective-of-abstract-mathematic-and-functional-language.html" target="_blank" rel="noopener">闭包漫谈（从抽象代数及函数式编程角度)</a></li>
+</ul>
+<h1 id="PARTII-符号计算与分析-自动推理"><a href="#PARTII-符号计算与分析-自动推理" class="headerlink" title="PARTII : 符号计算与分析 :自动推理"></a>PARTII : 符号计算与分析 :<a href="[https://zh.wikipedia.org/wiki/%E8%87%AA%E5%8A%A8%E6%8E%A8%E7%90%86](https://zh.wikipedia.org/wiki/自动推理)">自动推理</a></h1><ul>
+<li><a href="[https://zh.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E6%A9%9F%E4%BB%A3%E6%95%B8%E7%B3%BB%E7%B5%B1](https://zh.wikipedia.org/wiki/計算機代數系統)">计算机代数系统</a></li>
+<li>典型的软件：Maple,Matlab</li>
+</ul>
+<h2 id="自动推理综述"><a href="#自动推理综述" class="headerlink" title="自动推理综述"></a>自动推理综述</h2><ul>
+<li><p><strong>自动推理是</strong><a href="https://zh.wikipedia.org/wiki/计算机科学" target="_blank" rel="noopener">计算机科学</a>和<a href="https://zh.wikipedia.org/wiki/数理逻辑" target="_blank" rel="noopener">数理逻辑</a>的一个交叉领域，致力于了解<a href="https://zh.wikipedia.org/wiki/理智" target="_blank" rel="noopener">理智</a>的方方面面。自动逻辑的研究帮助了利用计算机自动进行完全或几乎完全的推理，其内容一般可分为演绎推理和非演绎推理。自动推理被认为是<a href="https://zh.wikipedia.org/wiki/人工智能" target="_blank" rel="noopener">人工智能</a>的一个分支，还和<a href="https://zh.wikipedia.org/wiki/理論計算機科學" target="_blank" rel="noopener">理论计算机科学</a>甚至<a href="https://zh.wikipedia.org/wiki/哲学" target="_blank" rel="noopener">哲学</a>相关联。</p>
+</li>
+<li><p>自动推理的研究内容包括<a href="https://zh.wikipedia.org/wiki/定理机器证明" target="_blank" rel="noopener">定理机器证明</a>、<a href="https://zh.wikipedia.org/w/index.php?title=证明自动检查&action=edit&redlink=1" target="_blank" rel="noopener">证明自动检查</a>、<a href="https://zh.wikipedia.org/wiki/不确定性推理" target="_blank" rel="noopener">不确定性推理</a>、<a href="https://zh.wikipedia.org/wiki/非单调逻辑" target="_blank" rel="noopener">非单调逻辑</a>以及<a href="https://zh.wikipedia.org/wiki/类比" target="_blank" rel="noopener">类比</a><a href="https://zh.wikipedia.org/wiki/归纳" target="_blank" rel="noopener">归纳</a>和外展推理。</p>
+</li>
+<li><p>自动推理的技术和工具包括<a href="https://zh.wikipedia.org/wiki/经典逻辑" target="_blank" rel="noopener">经典逻辑</a>、<a href="https://zh.wikipedia.org/wiki/微积分学" target="_blank" rel="noopener">微积分学</a>、<a href="https://zh.wikipedia.org/wiki/模糊逻辑" target="_blank" rel="noopener">模糊逻辑</a>、<a href="https://zh.wikipedia.org/wiki/贝叶斯推断" target="_blank" rel="noopener">贝叶斯推断</a>、推理与最大熵和大量的非正式特别技术。</p>
+</li>
+</ul>
+<h2 id="自动推理方法"><a href="#自动推理方法" class="headerlink" title="自动推理方法"></a>自动推理方法</h2><ul>
+<li><p>研究计算程序（算法）使机器能够自动或半自动地进行推理并判定（在有限步内确定）定理是否成立，又称“定理机器证明”</p>
+<h3 id="基于逻辑演算"><a href="#基于逻辑演算" class="headerlink" title="基于逻辑演算"></a>基于逻辑演算</h3></li>
+<li><p>归结原理</p>
+<ul>
+<li>是一种基于“反证法”的自动定理证明技术，即证明前提知识（公理）和定理的否定之间存在矛盾</li>
+<li>归结（Resolution）原理可以应用于命题逻辑和一阶逻辑形式化的定理证明中.</li>
+</ul>
+</li>
+<li><p>基本步骤</p>
+<ul>
+<li>将前提知识（公理）和待证明的命题（定理）用逻辑语言进行形式表示；</li>
+<li>利用逻辑公式的等价变型将形式化的前提知识和定理的否定式分别转化为合取范式，再将其中包含的析取项作为子式构造子句集；</li>
+<li>对Γ中的子句应用归结规则进行形式演算，并将得到的归结式化简后也加入到Γ中；</li>
+<li>重复步骤3，直到归结出空子句（这表明定理得证，即在前提知识成立的情况下，定理也成立）或者不能再继续归结为止</li>
+<li>.这个过程可以通过程序在计算机上自动进行.</li>
+</ul>
+</li>
+<li><p>例</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gcjym8kobij30is0p2n0v.jpg" srcset="/img/loading.gif" alt=""></p>
+</li>
+</ul>
+<h3 id="基于代数计算"><a href="#基于代数计算" class="headerlink" title="基于代数计算"></a>基于代数计算</h3><ul>
+<li><p>吴方法</p>
+</li>
+<li><p>首次提出数学机械化思想并获得Herbrand自动推理杰出成就奖的中国数学家是–吴文俊</p>
+<ul>
+<li><p>吴方法是一种基于代数计算的自动定理证明方法）</p>
+<ul>
+<li>应用吴方法可以判定一个几何定理在哪些条件下成立</li>
+</ul>
+</li>
+<li><p>应用吴方法可以判定一个几何定理在哪些条件下不成立</p>
+</li>
+</ul>
+</li>
+<li><p>基本步骤</p>
+<ul>
+<li>利用代数表示</li>
+<li>利用整序定理</li>
+<li>伪除求余</li>
+<li>非退化条件分析</li>
+</ul>
+</li>
+<li><p>例子</p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gcjymr4sxxj30os13wth2.jpg" srcset="/img/loading.gif" style="zoom:50%;" />
+
+<p>​    </p>
+<img src="https://tva1.sinaimg.cn/large/00831rSTly1gcjymx2yf4j30os13wwmn.jpg" srcset="/img/loading.gif" style="zoom:50%;" />
+
+<p>​                                          <img src="https://tva1.sinaimg.cn/large/00831rSTly1gcjyn2z3cnj30qo13644q.jpg" srcset="/img/loading.gif" style="zoom:50%;" /></p>
+</li>
+</ul>
+<h1 id="Refernce"><a href="#Refernce" class="headerlink" title="Refernce"></a>Refernce</h1><ul>
+<li><a href="https://www.icourse163.org/learn/BUAA-1205799845#/learn/content?type=detail&id=1211804319&sm=1" target="_blank" rel="noopener">自动推理综述</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Notes/">Notes</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/03/11/notes-word2vec-glove/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Notes-Word2Vec+Glove</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/01/28/notes-cpp-stl/">
+                        <span class="hidden-mobile">Notes-cpp-stl</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 4,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Notes-符号计算与自动推理&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,631 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content=" 这是一个似乎不善于自我介绍的人">
+  <meta name="author" content="yangjing">
+  <meta name="keywords" content="">
+  <title>Notes-CCKS2020评测总结 - The Sound Of Silence</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>YangJing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/index_bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-07 23:58" pubdate>
+        December 7, 2020 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      35
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Notes-CCKS2020评测总结</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="任务二：面向中文短文本的实体链指"><a href="#任务二：面向中文短文本的实体链指" class="headerlink" title="任务二：面向中文短文本的实体链指"></a>任务二：面向中文短文本的实体链指</h1><p><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=21" target="_blank" rel="noopener">题目背景介绍</a> 以及<a href="http://sigkg.cn/ccks2020/wp-content/uploads/2020/05/2-CCKS2020技术评测-面向中文短文本的实体链指.docx" target="_blank" rel="noopener">任务书</a></p>
+<p>本评测任务围绕实体链指技术：面向中文短文本的实体链指，简称 EL(Entity Linking)。即对于给定的一个中文短文本(如搜索 Query、微博、对话内容、文章/视频/图片的标题等)，EL 将其中的实体与给定知 识库中对应的实体进行关联。结合其对应的AI智能应用需求，在CCKS 2019面向中文短文本的实体链指任务的基础上进行了拓展与改进，主要改进包括以下几部分：</p>
+<p>（1）去掉实体识别，专注于中文短文本场景下的多歧义实体消歧技术；</p>
+<p>（2）增加对新实体（NIL实体:实体不存在知识库之中）的上位概念类型判断；</p>
+<p>（3）对待标注文本数据调整，增加多模任务场景下的文本源，同时调整了多歧义实体比例。</p>
+<p>难点（但是奖金好多呀..&gt;.&lt;..）：</p>
+<p>（1）口语化严重，导致实体歧义消解困难；<br>（2）短文本上下文语境不丰富，须对上下文语境进行精准理解；<br>（3）相比英文，中文由于语言自身的特点，在短文本的链指问题上更有挑战</p>
+<ul>
+<li><p>数据集：</p>
+<ul>
+<li>(1)最大的中文短文本数据集整体的标注数据大约10w左右，其中数据来源为：百度搜索的Query</li>
+<li>问题分析：实体id关联错误，NIL实体判定错误， NIL实体分类错误</li>
+</ul>
+</li>
+<li><p>评价指标：</p>
+<ul>
+<li>模型输出的结果和人工标注(golden label , ground truth)的结果比较计算准确率，召回率，f1分值。</li>
+</ul>
+</li>
+<li><p>解决方案：</p>
+<ul>
+<li>知识增强：预训练模型[robert-www-ext , bert-www-ext]+文本知识增强（根据文本和知识库生成相似的数据），在数据集之中加入对抗样本增强模型的泛化性。<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glfq6ca1yjj30yc0cmgrs.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 11.48.33 PM"></li>
+<li>多任务学习：jointly learning 对于实体关联，实体类型预测<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf0vst7a4j30x00iu14k.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 9.13.20 AM"></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Video:<ul>
+<li><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=22" target="_blank" rel="noopener">第一名MIKG:多因子融合实体链接</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="任务三-：电子病历医疗实体抽取"><a href="#任务三-：电子病历医疗实体抽取" class="headerlink" title="任务三 ：电子病历医疗实体抽取"></a>任务三 ：电子病历医疗实体抽取</h1><p>题目背景：<a href="http://sigkg.cn/ccks2020/wp-content/uploads/2020/03/3-CCKS2020技术评测-面向中文电子病历的医疗实体及事件抽取.docx" target="_blank" rel="noopener">任务介绍下载</a></p>
+<ul>
+<li><p>任务一： 医疗命名体识别给定纯文本的文档，抽取出enitity 已经 entity mention 以及 实体分类。</p>
+<ul>
+<li><p>需要提取出mention的起始位置和实体的类别 {$(&lt;d_i , b_i , e_i&gt; , c_{m1})$}</p>
+</li>
+<li><p>七个类别： 疾病和诊断 ； 检查（心电图之类的）；检验（检验科的物理化学检查）； 手术 ； 药物； 解剖部位</p>
+</li>
+<li><p>1500条标注数据 ； 1000条非标注数据；并且其中样本的分类是不平衡的</p>
+</li>
+<li><p>评价指标：定义了严格指标和松弛指标[准确率和召回率以及f1指标]；输出{$&lt;d, pos_b , pos_e ,c &gt;$} ； </p>
+</li>
+</ul>
+</li>
+<li><p>任务二： 医疗事件抽取以及属性，进行文本结构化？</p>
+<ul>
+<li><p>文章说只有少量的数据标注 ，但是实际的数据集[1400标注 ， 1300非标注  ]</p>
+</li>
+<li><p>给定事件主体（肿瘤）的模版之中的属性（原发部位 ，原发病灶大小 ，转移部位），抽取若干符合的属性。</p>
+</li>
+</ul>
+</li>
+<li><p>任务难点</p>
+<ul>
+<li>没有统一的标注标准(labeling consistency) ； 缺少训练数据而且存在长尾现象</li>
+<li>由于测试集文本分布与验证集和训练集分布不同导致的。由于训练集较小，模型容易学到一些泛化能 力较差的特征</li>
+</ul>
+</li>
+<li><p>解决方案</p>
+<ul>
+<li>实体抽取第一名[Bert+BiLstm+CRF+Ensemb+Adversarial Training]：五折交叉验证+模型融合；使用了1000条未标注的数据进行训练；对抗训练(对于embedding)；词典后处理。这些方法：都可以用来尝试解决数据不确定的一些问题<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf1irwfb5j30x00i60u9.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 9.35.27 AM" style="zoom:50%;" /></li>
+<li>实体抽取第二名： BERT+LSTM+CRF对于每一个字，我们除了通过BERT来 生成相应的字特征以外，还结合了字音和字形的特征( 除此之外针对中文的处理还有：lattice-lstm 以及 结合词典信息的FLAT)。字音和字形特征 经过charCNN和MaxPooling生成embedding, 与字embedding结合在一起作 为BiLSTM的输入来预测相应的标签。![Screen Shot 2020-12-07 at 10.09.56 AM](/Users/yangjing/Library/Application Support/typora-user-images/Screen Shot 2020-12-07 at 10.09.56 AM.png)</li>
+<li>实体抽取第三名[使用规则没有使用预训练模型+联合抽取+随机替换伪数据生成]</li>
+<li>事件抽取第一名[ RoBERTa-www-ext-large+CRF ]： 数据预处理：长文本切分，添加答案的序列位置；基于预训练模型对于小样本电子病历数据领域和任务都需要额外的数据增强(biobert会有用吗)以及翻译back translaton策略；在模型方面：通过指数滑动平均和模型集成。</li>
+</ul>
+</li>
+<li><p>Video:</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=23" target="_blank" rel="noopener">实体抽取第一名[中科院]： Noisy Label Learning for Chinese Medical Named Entity Recognition Based on Uncertainty Strategy</a></li>
+<li><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=24" target="_blank" rel="noopener">事件抽取第一名[百度]：基于预训练语言模型的小样本医疗事件抽取系统</a></li>
+</ul>
+</li>
+<li><p>论文</p>
+<ul>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_3_1_3.pdf" target="_blank" rel="noopener">基于 ChiEHRBert 与多模型融合的医疗命名实体识别</a> ：提出了一个 BERT 模 型(Chinese Electronic Health Record Bert,简称 ChiEHRBert)，我们使用大量脱敏的电子病历，文本大小 2G+，包括入院记录、出院记录、 病程记录、手术记录、护理记录、医嘱等部分，在哈工大讯飞实验室开源的 BERT-wwm-ext 的基 础上，继续使用电子病历训练 BERT-Base 模型，在网络结构上采用与 Google 发布的原生 BERT 相 同的架构，采用 12 层的 Transformer 结构，预训练的方式依然采用字级别的训练和下一句预测， 具体的模型架构和训练方法介绍，请参考谷歌公司关于 Bert 的论文。在训练 100 万个 step 后， 得到中文电子病历 BERT 模型 ChiEHRBert-Base(Chinese EHR Bert )。</li>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_1_1_3.pdf" target="_blank" rel="noopener">A BERT-Based Framework for Chinese Medical Entity Type Inference</a>:[BERT+MLP+The Extended Web Corpus+Post -&gt;0.99525的成绩 ] ,数据增强和后处理。</li>
+</ul>
+</li>
+</ul>
+<h1 id="任务四：面向金融领域的小样本跨类迁移事件抽取"><a href="#任务四：面向金融领域的小样本跨类迁移事件抽取" class="headerlink" title="任务四：面向金融领域的小样本跨类迁移事件抽取"></a><strong>任务四：面向金融领域的小样本跨类迁移事件抽取</strong></h1><p>背景介绍：<a href="http://sigkg.cn/ccks2020/wp-content/uploads/2020/03/4-CCKS2020技术评测-面向金融领域的小样本跨类迁移事件抽取.docx" target="_blank" rel="noopener">任务书</a></p>
+<p>本任务需要从金融领域新闻资讯句子中，抽取事件知识（包括事件类型、触发词和事件元素），并将大样本下训练的模型跨类迁移到小样本的其他事件类型上。</p>
+<ul>
+<li>两个任务：<ul>
+<li>初始事件类型 + 迁移事件类型</li>
+<li>针对每个事件类型抽取出对应的事件元素</li>
+</ul>
+</li>
+<li>问题难点：<ul>
+<li>事件重叠问题[不同事件类型包括同样的触发词和事件元素] ,低质量的数据集(存在标注错误 ， 样本不平衡)，小样本数据的学习</li>
+</ul>
+</li>
+<li>数据集以及评测指标<ul>
+<li>训练集：初始事件7000+700条迁移事件类型；测试集：初始事件20w+10w迁移事件类型</li>
+<li>本任务采用调整后的精准率(Precision,P)、调整后的召回率(Recall， R)、F1 值 (F1-measure,F1)来评估事件抽取的效果:</li>
+</ul>
+</li>
+<li>解决方案：<ul>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_4_1.pdf" target="_blank" rel="noopener">第一名[Roberta]：A Joint Learning Framework for the CCKS-2020 Financial Event Extraction Task</a>:以一种联合概率和条件概率的形式将本任务分别看作：事件类型检测，事件触发词抽取，事件论元抽取三个任务来处理。<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf7bv1hwwj30zg0lqgpk.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 12.56.28 PM"></li>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020eval_paper_4_3.pdf" target="_blank" rel="noopener">第二名[Roberta]：篇章级事件抽取</a>：方法：利用pipeline的方式(一个bert分类+一个bert+crf实体识别)，此方法不懂(这么多个bert分别的作用还是不是很理解);大致如下-&gt;First : Event-classification base-bert进行分类,second:每类的事件再次传到bert。为了解决事件分类和实体抽取分开处理会不能够利用充分信息，再次用所有数据训练了一个pretrained-bert<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf6is9tm9j316g0ii42g.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 12.28.38 PM"></li>
+<li></li>
+<li><a href="">第三名[RoBerTA]：多任务联合训练方式</a> : (RoBerta+ 文本分类+阅读理解来抽取事件)，此方法不懂（完全没看懂模型）</li>
+</ul>
+</li>
+<li>Video<ul>
+<li><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=25" target="_blank" rel="noopener">第一名：A Joint Learning Framework for the CCKS-2020 Financial Event Extraction Task</a></li>
+<li><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=26" target="_blank" rel="noopener">第二名：Transfer Learning for Small-scale Financial Event Extraction</a></li>
+<li><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=27" target="_blank" rel="noopener">基于bert的事件主体抽取</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="任务五：面向金融领域的篇章级事件主题与要素抽取"><a href="#任务五：面向金融领域的篇章级事件主题与要素抽取" class="headerlink" title="任务五：面向金融领域的篇章级事件主题与要素抽取"></a><strong>任务五：面向金融领域的篇章级事件主题与要素抽取</strong></h1><p>背景介绍: <a href="http://sigkg.cn/ccks2020/wp-content/uploads/2020/03/5-CCKS2020技术评测-面向金融领域的篇章级事件主体与要素抽取.docx" target="_blank" rel="noopener">任务书</a></p>
+<ul>
+<li><p>两个子任务：</p>
+<ul>
+<li>事件抽取：即给定文本T，抽取T中所有的事件类型集合S，对于S中的每个事件类型s，从文本T中抽取s的事件主体</li>
+<li>篇章事件要素抽取： 即给定文本T，抽取T中所有的事件类型集合S，对于S中的每个事件类型s，从文本T中抽取s的事件要素</li>
+</ul>
+</li>
+<li><p>数据集和评价指标</p>
+<ul>
+<li>本次数据主要来自金融领域的新闻、公告文本，样本包含正样本和负样本，训练集、验证集及测试集</li>
+<li>任务一：2w条标注数据集+1k验证集 ； 任务二：5k标注数据和1k验证数据</li>
+<li>精确率(Precision, P)、召回率(Recall, R)、F1 值(F1-measure, F1)</li>
+</ul>
+</li>
+<li><p>解决方案</p>
+<ul>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_5_2_1.pdf" target="_blank" rel="noopener">第一名：A Prior Information Enhanced Extraction Framework for Document-level Financial Event Extraction</a>[Pipeline + PLM+  MRC]:分解成三个任务分别是事件检测，事件论元抽取，事件表填充。数据预处理<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glfq32h0v7j30y80o2n0i.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 11.45.26 PM"></li>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_5_2_2.pdf" target="_blank" rel="noopener">第二名:上市公司公告事件要素抽取研究</a>:[Pipeline + Bert+MRC]虽然比赛的题目是document-level但是本文全部都是只对句子建模最后能够得到第二名估计是规则定义的比较的好，最后再从重要的句子里面提取篇章要素；本文在提取实体的时候是采用阅读理解的方式来处理；</li>
+</ul>
+</li>
+<li><p>Video</p>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=28" target="_blank" rel="noopener">第一名:A Prior Information Enhanced Extraction Framework for Document-level Financial Event Extractio</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="中文预训练模型以及开源地址"><a href="#中文预训练模型以及开源地址" class="headerlink" title="中文预训练模型以及开源地址"></a>中文预训练模型以及开源地址</h1><ul>
+<li><a href="https://arxiv.org/pdf/2004.13922v1.pdf" target="_blank" rel="noopener">RoBERTa: A Robustly Optimized BERT Pretraining Approach</a></li>
+<li><a href="https://arxiv.org/abs/1906.08101" target="_blank" rel="noopener">Pre-Training with Whole Word Masking for Chinese BERT</a></li>
+<li><a href="https://arxiv.org/abs/2004.13922" target="_blank" rel="noopener">Revisiting Pre-Trained Models for Chinese Natural Language Processing</a></li>
+<li>中文预训练RoBERTa模型 : brightmart/roberta_zh: <a href="https://github.com/brightmart/roberta_zh" target="_blank" rel="noopener">https://github.com/brightmart/roberta_zh</a></li>
+<li>中文预训练AlBERT模型: albert_zh: <a href="https://github.com/brightmart/albert_zh" target="_blank" rel="noopener">https://github.com/brightmart/albert_zh</a></li>
+<li>中文预训练bert-www：ymcui/Chinese-BERT-wwm： <a href="https://github.com/ymcui/Chinese-BERT-wwm" target="_blank" rel="noopener">https://github.com/ymcui/Chinese-BERT-wwm</a></li>
+<li>中文MacBERT预训练模型：<a href="https://github.com/ymcui/MacBERT" target="_blank" rel="noopener">https://github.com/ymcui/MacBERT</a></li>
+<li>中文ELECTRA预训练模型：<a href="https://github.com/ymcui/Chinese-ELECTRA" target="_blank" rel="noopener">https://github.com/ymcui/Chinese-ELECTRA</a></li>
+<li>中文XLNet预训练模型：<a href="https://github.com/ymcui/Chinese-XLNet" target="_blank" rel="noopener">https://github.com/ymcui/Chinese-XLNet</a></li>
+</ul>
+<h1 id="比赛trick总结"><a href="#比赛trick总结" class="headerlink" title="比赛trick总结"></a>比赛trick总结</h1><ul>
+<li><p>使用预训练模型：使用Roberta-www-eta模型比bert更好；BERT-BiLSTM-CRF可以作为baseline</p>
+</li>
+<li><p>要使用交叉验证和模型集成投票(主要是各种预训练模型)：bert-www-ext + roberta-www-ext+xlnet+bert-base…..</p>
+</li>
+<li><p>数据预处理：针对类别不平衡（focal loss）特殊处理 ； 针对数据标注信息回标以及构造一些额外的有用的信息；根据文本的长度是否需要切分以及batchsize的选择</p>
+</li>
+<li><p>数据增强：分析数据信息可以定义一些规则；自己爬取/生成更多更多的数据来训练；对抗样本以及对抗训练；针对训练集生成伪标签训练数据；</p>
+</li>
+<li><p>分类模型和阅读理解模型：可以通过阅读理解的方式来做信息抽取：将需要提取的要素当做问题 Q，将句子当做材料 C，通过阅读理解模型获得 事件句子要素实体。</p>
+</li>
+<li><p>后处理：一般模型结果出来之后，要根据评测指标以及得分来进行再次的规则制定来处理答案。</p>
+</li>
+</ul>
+<h1 id="视频回放地址-智源研究院"><a href="#视频回放地址-智源研究院" class="headerlink" title="视频回放地址 智源研究院"></a>视频回放地址 <a href="https://space.bilibili.com/424100065/" target="_blank" rel="noopener">智源研究院</a></h1><ul>
+<li>讲习班 ： <a href="https://www.bilibili.com/video/BV1sa411w7Cx" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1sa411w7Cx</a></li>
+<li>主会： 待公布 </li>
+</ul>
+<h3 id="陆汝衿-知识图谱平台的构建KGSP"><a href="#陆汝衿-知识图谱平台的构建KGSP" class="headerlink" title="陆汝衿-知识图谱平台的构建KGSP"></a>陆汝衿-知识图谱平台的构建KGSP</h3><p>动机</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkog3mvagbj31gy0t44qp.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 9.29.17 AM"></p>
+<p>通用平台 vs 专家系统</p>
+<p>大知识(massive )</p>
+<p>Hape 通用平台 费xx phd….</p>
+<p>知识操作系统 + 知识浏览器</p>
+<p>summary</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkohnllq3xj31c00u0wjr.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 9.38.31 AM"></p>
+<h3 id="李航老师-language-model"><a href="#李航老师-language-model" class="headerlink" title="李航老师-language model"></a>李航老师-language model</h3><h3 id="classic-LM"><a href="#classic-LM" class="headerlink" title="classic LM"></a>classic LM</h3><p>n-gram language model and markov chain (HMM)</p>
+<p><strong>shannon(information theory )  + n-gram</strong></p>
+<p>Chomsky grammar</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkohn187shj31c00u0u0x.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.22.58 AM"></p>
+<h3 id="nueral-network-LM"><a href="#nueral-network-LM" class="headerlink" title="nueral network LM"></a>nueral network LM</h3><p> word embedding(bengio , 2003)  -&gt; word2vec(miklov ,2013)</p>
+<p>rnn(no markov assumption):</p>
+<h3 id="pre-trained-LM"><a href="#pre-trained-LM" class="headerlink" title="pre-trained LM"></a>pre-trained LM</h3><p>Gpt ：适合于生成</p>
+<p>bert： mask learning有利于纠错而不是检错</p>
+<p><strong>Soft-mask model: AMBERT(bert+bert) Vs Roberta</strong></p>
+<p>两种不同的粒度 (词粒度和字力度)</p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoikraz8qj31c00u0qv5.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.48.25 AM"></p>
+<h3 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h3><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoiknyg1dj31c00u0u0x.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.55.09 AM"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoiqosk9zj31c00u0u0x.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.01.01 AM"></p>
+<h2 id="毛先领-知识图谱视角的自然语言处理"><a href="#毛先领-知识图谱视角的自然语言处理" class="headerlink" title="毛先领-知识图谱视角的自然语言处理"></a>毛先领-知识图谱视角的自然语言处理</h2><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkok5rv8ilj31c00u0x6p.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.49.40 AM"></p>
+<p>融合知识和常识</p>
+<p>语义网三大会(www ,)<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkokfl07h4j31c00u0e82.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.59.39 AM"></p>
+<h1 id="Thinking-body-and-world"><a href="#Thinking-body-and-world" class="headerlink" title="Thinking body and world"></a>Thinking body and world</h1><p>space  distance </p>
+<p>空间信息其实不完全同于物理信息</p>
+<p>gestures ：如何理解动图？和视频内容的理解有什么区别吗？</p>
+<p>图片内容信息的抽取和手势内容的抽取？？</p>
+<h3 id="🍅-程龚-实体摘要"><a href="#🍅-程龚-实体摘要" class="headerlink" title="🍅 程龚- 实体摘要"></a>🍅 程龚- 实体摘要</h3>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Notes/">Notes</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/04/paper-multi-task/">
+                        <span class="hidden-mobile">Paper-Multi-Task</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 4,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Notes-CCKS2020评测总结&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

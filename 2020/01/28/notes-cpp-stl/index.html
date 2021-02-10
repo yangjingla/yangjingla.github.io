@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content=" 这是一个似乎不善于自我介绍的人">
+  <meta name="author" content="yangjing">
+  <meta name="keywords" content="">
+  <title>Notes-cpp-stl - The Sound Of Silence</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>YangJing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/index_bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-01-28 22:56" pubdate>
+        January 28, 2020 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      32
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Notes-cpp-stl</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>关于c++之中常见容器的常见操作……….</p>
+<h1 id="C-模版一个例子"><a href="#C-模版一个例子" class="headerlink" title="C++模版一个例子"></a>C++模版一个例子</h1><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-keyword">template</span>&lt;<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">T</span>&gt;</span>
+<span class="hljs-class"><span class="hljs-title">T</span> <span class="hljs-title">min</span>(<span class="hljs-title">T</span> <span class="hljs-title">a</span>[],<span class="hljs-title">int</span> <span class="hljs-title">n</span>)</span>
+<span class="hljs-class">&#123;</span>
+	<span class="hljs-keyword">int</span> i;
+	T minv=a[<span class="hljs-number">0</span>];
+	<span class="hljs-keyword">for</span>(i=<span class="hljs-number">1</span>;i&lt;n;i++)
+	&#123;
+		<span class="hljs-keyword">if</span>(minv&gt;a[i])
+		&#123;
+			minv=a[i];
+		&#125;
+	&#125;
+	<span class="hljs-keyword">return</span> minv;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+
+	<span class="hljs-keyword">int</span> a[]=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">7</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">-1</span>&#125;;
+	<span class="hljs-keyword">double</span> b[]=&#123;<span class="hljs-number">1.3</span>,<span class="hljs-number">1.5</span>,<span class="hljs-number">-9.8</span>,<span class="hljs-number">21</span>,<span class="hljs-number">12</span>&#125;;
+	<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"min element in a[] : \t"</span>&lt;&lt;<span class="hljs-built_in">min</span>(a,<span class="hljs-number">8</span>)&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"min in b[]: \t"</span>&lt;&lt;<span class="hljs-built_in">min</span>(b,<span class="hljs-number">5</span>)&lt;&lt;<span class="hljs-built_in">endl</span>;
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
+<h2 id="使用模版优缺点"><a href="#使用模版优缺点" class="headerlink" title="使用模版优缺点"></a>使用模版优缺点</h2><p>优点：</p>
+<ul>
+<li><strong>函数模板方法克服了C语言解决上述问题时用大量不同函数名表示相似功能的坏习惯</strong></li>
+<li>克服了宏定义不能进行参数类型检查的弊端</li>
+<li>克服了C++函数重载用相同函数名字重写几个函数的繁琐</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>调试比较困难<ul>
+<li>一般先写一个特殊版本的函数</li>
+<li>运行正确后，改成模板函数</li>
+</ul>
+</li>
+</ul>
+<h1 id="STL-的基本概念"><a href="#STL-的基本概念" class="headerlink" title="STL 的基本概念"></a>STL 的基本概念</h1><ul>
+<li>容器：可容纳各种数据类型的数据结构。</li>
+<li>迭代器 ：可以一次存取容器之中的元素</li>
+<li>算法： 用来操作容器之中元素的函数模版<ul>
+<li>vetor 数据排序</li>
+<li>list 之中的find</li>
+</ul>
+</li>
+</ul>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><ul>
+<li><p>顺序容器</p>
+<ul>
+<li>vector :后部插入，直接访问</li>
+<li>deque： 前部插入，直接访问</li>
+<li>list： 双向</li>
+</ul>
+</li>
+<li><p>关联容器</p>
+<ul>
+<li>set： 无重复元素</li>
+<li>multiset ： 可以有重复元素</li>
+<li>map ： 基于关键字查找</li>
+<li>multimap</li>
+</ul>
+</li>
+<li><p>容器适配器</p>
+<ul>
+<li>stack</li>
+<li>queue</li>
+<li>priority queue</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="code"><a href="#code" class="headerlink" title="code"></a>code</h1><h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>常见操作</p>
+<pre><code class="hljs arduino">vec1.push_back(<span class="hljs-number">100</span>);            <span class="hljs-comment">//添加元素</span>
+
+ <span class="hljs-keyword">int</span> <span class="hljs-built_in">size</span> = vec1.<span class="hljs-built_in">size</span>();         <span class="hljs-comment">//元素个数</span>
+
+ <span class="hljs-keyword">bool</span> isEmpty = vec1.empty();    <span class="hljs-comment">//判断是否为空</span>
+
+ <span class="hljs-built_in">cout</span>&lt;&lt;vec1[<span class="hljs-number">0</span>]&lt;&lt;<span class="hljs-built_in">endl</span>;        <span class="hljs-comment">//取得第一个元素</span>
+
+ vec1.insert(vec1.<span class="hljs-built_in">end</span>(),<span class="hljs-number">5</span>,<span class="hljs-number">3</span>);    <span class="hljs-comment">//从vec1.back位置插入5个值为3的元素</span>
+
+ vec1.pop_back();              <span class="hljs-comment">//删除末尾元素</span>
+
+ vec1.erase(vec1.<span class="hljs-built_in">begin</span>(),vec1.<span class="hljs-built_in">end</span>());<span class="hljs-comment">//删除之间的元素，其他元素前移</span>
+
+ <span class="hljs-built_in">cout</span>&lt;&lt;(vec1==vec2)?<span class="hljs-literal">true</span>:<span class="hljs-literal">false</span>;  <span class="hljs-comment">//判断是否相等==、！=、&gt;=、&lt;=...</span>
+
+ <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;::iterator iter = vec1.<span class="hljs-built_in">begin</span>();    <span class="hljs-comment">//获取迭代器首地址</span>
+
+ <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;::const_iterator c_iter = vec1.<span class="hljs-built_in">begin</span>();   <span class="hljs-comment">//获取const类型迭代器</span>
+
+ vec1.<span class="hljs-built_in">clear</span>();                 <span class="hljs-comment">//清空元素</span></code></pre>
+
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;vector&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-function"><span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">vec1</span><span class="hljs-params">(<span class="hljs-number">10</span>,<span class="hljs-number">4</span>)</span></span>;<span class="hljs-comment">//10个值为4的元素</span>
+    <span class="hljs-function"><span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">string</span>&gt; <span class="hljs-title">vec2</span><span class="hljs-params">(<span class="hljs-number">5</span>,<span class="hljs-string">"hello"</span>)</span></span>;
+
+    vec1.push_back(<span class="hljs-number">4</span>);
+    <span class="hljs-keyword">int</span> l=vec1.<span class="hljs-built_in">size</span>();
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;l;i++)
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;vec1[i];
+    &#125;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+
+    <span class="hljs-built_in">cout</span>&lt;&lt;vec1.<span class="hljs-built_in">size</span>()&lt;&lt;<span class="hljs-built_in">endl</span>;
+    vec1.pop_back();
+    <span class="hljs-comment">//vec1.insert(vec1.end(),5,3);    //从vec1.back位置插入5个值为3的元素</span>
+     <span class="hljs-comment">//vec1.erase(vec1.begin(),vec1.end());//删除之间的元素，其他元素前移</span>
+     <span class="hljs-comment">// vec1.clear();                 //清空元素</span>
+     <span class="hljs-comment">//获取迭代器首地址</span>
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;::const_iterator iterator=vec1.<span class="hljs-built_in">begin</span>();
+    <span class="hljs-comment">//第二种遍历方法</span>
+    <span class="hljs-keyword">for</span>(;iterator!=vec1.<span class="hljs-built_in">end</span>();iterator++)
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;*iterator;
+    &#125;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
+<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><p>几个比较有特色的方法，其他和vector有相似性</p>
+<pre><code class="hljs less"><span class="hljs-selector-tag">lst1</span><span class="hljs-selector-class">.front</span>();                      <span class="hljs-comment">//返回第一个元素的引用</span>
+<span class="hljs-selector-tag">lst1</span><span class="hljs-selector-class">.back</span>();                       <span class="hljs-comment">//返回最后一个元素的引用</span>
+<span class="hljs-selector-tag">lst1</span><span class="hljs-selector-class">.rbegin</span>();                         <span class="hljs-comment">//返回第一个元素的前向指针</span>
+<span class="hljs-selector-tag">lst1</span><span class="hljs-selector-class">.remove</span>(<span class="hljs-number">2</span>);                        <span class="hljs-comment">//相同的元素全部删除</span>
+<span class="hljs-selector-tag">lst1</span><span class="hljs-selector-class">.reverse</span>();                        <span class="hljs-comment">//反转</span>
+<span class="hljs-selector-tag">lst1</span><span class="hljs-selector-class">.sort</span>();                       <span class="hljs-comment">//排序</span>
+<span class="hljs-selector-tag">lst1</span><span class="hljs-selector-class">.unique</span>();                         <span class="hljs-comment">//删除相邻重复元素</span></code></pre>
+
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;list&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-built_in">list</span>&lt;<span class="hljs-keyword">int</span>&gt; lst)</span></span>
+<span class="hljs-function"></span>&#123;
+  <span class="hljs-keyword">for</span>(<span class="hljs-built_in">list</span>&lt;<span class="hljs-keyword">int</span>&gt; ::const_iterator iter=lst.<span class="hljs-built_in">begin</span>(); iter!=lst.<span class="hljs-built_in">end</span>();iter++)
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;*iter;
+    &#125;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+&#125;
+
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-function"><span class="hljs-built_in">list</span>&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">lst1</span><span class="hljs-params">(<span class="hljs-number">6</span>,<span class="hljs-number">6</span>)</span></span>;
+    <span class="hljs-built_in">print</span>(lst1);
+    lst1.push_back(<span class="hljs-number">7</span>);
+    <span class="hljs-built_in">print</span>(lst1);
+    lst1.unique();
+    <span class="hljs-built_in">print</span>(lst1);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
+<h2 id="deque"><a href="#deque" class="headerlink" title="deque"></a>deque</h2><ul>
+<li>deque容器类与vector类似，支持随机访问和快速插入删除，它在容器中某一位置上的操作所花费的是线性时间。与vector不同的是，deque还支持从开始端插入数据：push_front()。其余类似vector操作方法的使用。</li>
+</ul>
+<h2 id="顺序容器小结"><a href="#顺序容器小结" class="headerlink" title="顺序容器小结"></a>顺序容器小结</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>push_back()</td>
+<td>尾部追加</td>
+</tr>
+<tr>
+<td>push_front</td>
+<td>首部添加</td>
+</tr>
+<tr>
+<td>insert()</td>
+<td>可以指定位置插入</td>
+</tr>
+<tr>
+<td>for( xxx::const_iterator/iterator iter=xxx.begin() ; iter!=xxx.end();iter++)</td>
+<td>迭代器的方法遍历</td>
+</tr>
+</tbody></table>
+<h2 id="map"><a href="#map" class="headerlink" title="map"></a><a href="https://www.cnblogs.com/fnlingnzb-learner/p/5833051.html" target="_blank" rel="noopener">map</a></h2><p>C++中map容器提供一个键值对（key/value）容器，map与multimap差别仅仅在于multiple允许一个键对应多个值。对于迭代器来说，可以修改实值，而不能修改key。Map会根据key自动排序。</p>
+<ul>
+<li>可以使用pairs[key] 形式访问map之中的元素</li>
+</ul>
+<pre><code class="hljs angelscript">map&lt;<span class="hljs-built_in">int</span>,<span class="hljs-built_in">double</span>&gt; pars;
+pairs[<span class="hljs-number">50</span>]=<span class="hljs-number">5</span>; <span class="hljs-comment">// 会修改pairs之中的关键字为50的元素，变成5</span></code></pre>
+
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;map&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-built_in">map</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-built_in">string</span>&gt; mapstudent;
+    mapstudent.insert(make_pair(<span class="hljs-number">2</span>,<span class="hljs-string">"anna"</span>));
+    mapstudent.insert(make_pair(<span class="hljs-number">3</span>,<span class="hljs-string">"bob"</span>));
+    <span class="hljs-built_in">map</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-built_in">string</span>&gt;::iterator iter;
+    <span class="hljs-keyword">for</span>(iter=mapstudent.<span class="hljs-built_in">begin</span>();iter!=mapstudent.<span class="hljs-built_in">end</span>();iter++)
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;iter-&gt;first&lt;&lt;<span class="hljs-string">" "</span>&lt;&lt;iter-&gt;second;
+    &#125;
+   
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+&#125;</code></pre>
+
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;map&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+ostream &amp; <span class="hljs-keyword">operator</span> &lt;&lt;(ostream&amp;o,<span class="hljs-keyword">const</span> pair&lt;<span class="hljs-keyword">int</span> ,<span class="hljs-keyword">double</span>&gt;&amp;p)
+&#123;
+    o&lt;&lt;<span class="hljs-string">"("</span>&lt;&lt;p.first&lt;&lt;<span class="hljs-string">","</span>&lt;&lt;p.second&lt;&lt;<span class="hljs-string">")"</span>;
+    <span class="hljs-keyword">return</span> o;
+&#125;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">typedef</span> <span class="hljs-built_in">map</span>&lt;<span class="hljs-keyword">int</span>,<span class="hljs-keyword">double</span>,less&lt;<span class="hljs-keyword">double</span>&gt; &gt; nmid;
+    nmid pairs;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"1)"</span>&lt;&lt;pairs.count(<span class="hljs-number">15</span>)&lt;&lt;<span class="hljs-built_in">endl</span>;
+    pairs.insert(nmid::value_type(<span class="hljs-number">15</span>,<span class="hljs-number">2.7</span>));
+    pairs.insert(make_pair(<span class="hljs-number">15</span>,<span class="hljs-number">99.3</span>)) ;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"2) "</span>&lt;&lt;pairs.count(<span class="hljs-number">15</span>)&lt;&lt;<span class="hljs-built_in">endl</span>;
+    pairs.insert(nmid::value_type(<span class="hljs-number">20</span>,<span class="hljs-number">9.3</span>));
+   
+    nmid::iterator i;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"3) "</span>;
+    <span class="hljs-keyword">for</span>(i=pairs.<span class="hljs-built_in">begin</span>();i!=pairs.<span class="hljs-built_in">end</span>();i++)
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;*i&lt;&lt;<span class="hljs-string">","</span>;
+    &#125;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"4) "</span>;
+
+    <span class="hljs-keyword">int</span> n=pairs[<span class="hljs-number">40</span>];<span class="hljs-comment">//如果没有40的关键字则插入</span>
+    <span class="hljs-keyword">for</span>(i=pairs.<span class="hljs-built_in">begin</span>(); i!=pairs.<span class="hljs-built_in">end</span>();i++)
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;*i&lt;&lt;<span class="hljs-string">","</span>;
+    &#125;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"5)"</span>;
+    pairs[<span class="hljs-number">15</span>]=<span class="hljs-number">6.28</span>; <span class="hljs-comment">//把15的关键字进行修改</span>
+    <span class="hljs-keyword">for</span>(i=pairs.<span class="hljs-built_in">begin</span>(); i!=pairs.<span class="hljs-built_in">end</span>();i++)
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;*i&lt;&lt;<span class="hljs-string">","</span>;
+    &#125;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+
+-------------
+<span class="hljs-number">1</span>)<span class="hljs-number">0</span>
+<span class="hljs-number">2</span>) <span class="hljs-number">1</span>
+<span class="hljs-number">3</span>) (<span class="hljs-number">15</span>,<span class="hljs-number">2.7</span>),(<span class="hljs-number">20</span>,<span class="hljs-number">9.3</span>),
+<span class="hljs-number">4</span>) (<span class="hljs-number">15</span>,<span class="hljs-number">2.7</span>),(<span class="hljs-number">20</span>,<span class="hljs-number">9.3</span>),(<span class="hljs-number">40</span>,<span class="hljs-number">0</span>),
+<span class="hljs-number">5</span>)(<span class="hljs-number">15</span>,<span class="hljs-number">6.28</span>),(<span class="hljs-number">20</span>,<span class="hljs-number">9.3</span>),(<span class="hljs-number">40</span>,<span class="hljs-number">0</span>),%
+&#125;</code></pre>
+
+<h2 id="pair"><a href="#pair" class="headerlink" title="pair"></a>pair</h2><pre><code class="hljs smali">pair模板类用来绑定两个对象为一个新的对象，该类型在&lt;utility&gt;头文件中定义。
+pair模板类支持如下操作：
+pair&lt;T1, T2&gt; p1：创建一个空的pair对象，它的两个元素分别是T1和T2类型，采用值初始化
+pair&lt;T1, T2&gt; p1(v1, v2)：创建一个pair对象，它的两个元素分别是T1和T2类型，其中first成员初始化为v1，second成员初始化为v2
+make_pair(v1, v2)：以v1和v2值创建一个新的pair对象，其元素类型分别是v1和v2的类型
+p1 &lt; p2字典次序：如果p1.first&lt;p2.first或者!(p2.first &lt; p1.first)&amp;&amp; p1.second&lt;p2.second，则返回true
+p1 == p2：如果两个pair对象的first和second成员依次相等，则这两个对象相等。
+p.first：返回p中名为first的（公有）数据成员
+p.second：返回p中名为second的（公有）数据成员</code></pre>
+
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;set&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;string&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>
+<span class="hljs-function"></span>&#123;
+    <span class="hljs-keyword">typedef</span> <span class="hljs-built_in">set</span>&lt;<span class="hljs-keyword">double</span>,less&lt;<span class="hljs-keyword">double</span>&gt; &gt;double_set;
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> SIZE=<span class="hljs-number">5</span>;
+    <span class="hljs-keyword">double</span> a[SIZE]=&#123;<span class="hljs-number">2.1</span>,<span class="hljs-number">4.2</span>,<span class="hljs-number">9.5</span>,<span class="hljs-number">2.1</span>,<span class="hljs-number">3.7</span>&#125;;
+    <span class="hljs-function">double_set <span class="hljs-title">doubleSet</span><span class="hljs-params">(a,a+SIZE)</span></span>;
+    ostream_iterator&lt;<span class="hljs-keyword">double</span>&gt;output(<span class="hljs-built_in">cout</span>,<span class="hljs-string">" "</span>);
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"1) "</span>;
+    copy(doubleSet.<span class="hljs-built_in">begin</span>(), doubleSet.<span class="hljs-built_in">end</span>(),output);
+    <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+    pair&lt;double_set::const_iterator,<span class="hljs-keyword">bool</span>&gt; p;
+    p=doubleSet.insert(<span class="hljs-number">9.5</span>);
+    <span class="hljs-keyword">if</span>(p.second)
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"2) "</span>&lt;&lt;*(p.first)&lt;&lt;<span class="hljs-string">"inserted"</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+    &#125;<span class="hljs-keyword">else</span>
+    &#123;
+        <span class="hljs-built_in">cout</span>&lt;&lt;<span class="hljs-string">"2)"</span>&lt;&lt;*(p.first)&lt;&lt;<span class="hljs-string">"not inserted"</span>&lt;&lt;<span class="hljs-built_in">endl</span>;
+    &#125;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+&#125;</code></pre>
+
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a><a href="https://www.geeksforgeeks.org/set-in-cpp-stl/" target="_blank" rel="noopener">set</a></h2><pre><code class="hljs c++">
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt; </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;set&gt; </span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iterator&gt; </span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>; 
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>
+<span class="hljs-function"></span>&#123; 
+	<span class="hljs-comment">// empty set container </span>
+	<span class="hljs-built_in">set</span> &lt;<span class="hljs-keyword">int</span>, greater &lt;<span class="hljs-keyword">int</span>&gt; &gt; gquiz1;		 
+
+	<span class="hljs-comment">// insert elements in random order </span>
+	gquiz1.insert(<span class="hljs-number">40</span>); 
+	gquiz1.insert(<span class="hljs-number">30</span>); 
+	gquiz1.insert(<span class="hljs-number">60</span>); 
+	gquiz1.insert(<span class="hljs-number">20</span>); 
+	gquiz1.insert(<span class="hljs-number">50</span>); 
+	gquiz1.insert(<span class="hljs-number">50</span>); <span class="hljs-comment">// only one 50 will be added to the set </span>
+	gquiz1.insert(<span class="hljs-number">10</span>); 
+
+	<span class="hljs-comment">// printing set gquiz1 </span>
+	<span class="hljs-built_in">set</span> &lt;<span class="hljs-keyword">int</span>, greater &lt;<span class="hljs-keyword">int</span>&gt; &gt; :: iterator itr; 
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"\nThe set gquiz1 is : "</span>; 
+	<span class="hljs-keyword">for</span> (itr = gquiz1.<span class="hljs-built_in">begin</span>(); itr != gquiz1.<span class="hljs-built_in">end</span>(); ++itr) 
+	&#123; 
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">'\t'</span> &lt;&lt; *itr; 
+	&#125; 
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>; 
+
+	<span class="hljs-comment">// assigning the elements from gquiz1 to gquiz2 </span>
+	<span class="hljs-built_in">set</span> &lt;<span class="hljs-keyword">int</span>&gt; gquiz2(gquiz1.<span class="hljs-built_in">begin</span>(), gquiz1.<span class="hljs-built_in">end</span>()); 
+
+	<span class="hljs-comment">// print all elements of the set gquiz2 </span>
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"\nThe set gquiz2 after assign from gquiz1 is : "</span>; 
+	<span class="hljs-keyword">for</span> (itr = gquiz2.<span class="hljs-built_in">begin</span>(); itr != gquiz2.<span class="hljs-built_in">end</span>(); ++itr) 
+	&#123; 
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">'\t'</span> &lt;&lt; *itr; 
+	&#125; 
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>; 
+
+	<span class="hljs-comment">// remove all elements up to 30 in gquiz2 </span>
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"\ngquiz2 after removal of elements less than 30 : "</span>; 
+	gquiz2.erase(gquiz2.<span class="hljs-built_in">begin</span>(), gquiz2.<span class="hljs-built_in">find</span>(<span class="hljs-number">30</span>)); 
+	<span class="hljs-keyword">for</span> (itr = gquiz2.<span class="hljs-built_in">begin</span>(); itr != gquiz2.<span class="hljs-built_in">end</span>(); ++itr) 
+	&#123; 
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">'\t'</span> &lt;&lt; *itr; 
+	&#125; 
+
+	<span class="hljs-comment">// remove element with value 50 in gquiz2 </span>
+	<span class="hljs-keyword">int</span> num; 
+	num = gquiz2.erase (<span class="hljs-number">50</span>); 
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"\ngquiz2.erase(50) : "</span>; 
+	<span class="hljs-built_in">cout</span> &lt;&lt; num &lt;&lt; <span class="hljs-string">" removed \t"</span> ; 
+	<span class="hljs-keyword">for</span> (itr = gquiz2.<span class="hljs-built_in">begin</span>(); itr != gquiz2.<span class="hljs-built_in">end</span>(); ++itr) 
+	&#123; 
+		<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">'\t'</span> &lt;&lt; *itr; 
+	&#125; 
+
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">endl</span>; 
+
+	<span class="hljs-comment">//lower bound and upper bound for set gquiz1 </span>
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"gquiz1.lower_bound(40) : "</span>
+		&lt;&lt; *gquiz1.lower_bound(<span class="hljs-number">40</span>) &lt;&lt; <span class="hljs-built_in">endl</span>; 
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"gquiz1.upper_bound(40) : "</span>
+		&lt;&lt; *gquiz1.upper_bound(<span class="hljs-number">40</span>) &lt;&lt; <span class="hljs-built_in">endl</span>; 
+
+	<span class="hljs-comment">//lower bound and upper bound for set gquiz2 </span>
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"gquiz2.lower_bound(40) : "</span>
+		&lt;&lt; *gquiz2.lower_bound(<span class="hljs-number">40</span>) &lt;&lt; <span class="hljs-built_in">endl</span>; 
+	<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">"gquiz2.upper_bound(40) : "</span>
+		&lt;&lt; *gquiz2.upper_bound(<span class="hljs-number">40</span>) &lt;&lt; <span class="hljs-built_in">endl</span>; 
+
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; 
+
+&#125;</code></pre>
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/cpp/">cpp</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/03/06/notes-fu-hao-ji-suan-yu-zi-dong-tui/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Notes-符号计算与自动推理</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/01/28/leetcode-liang-li-xiao-ji/">
+                        <span class="hidden-mobile">LeetCode-string两例</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 4,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Notes-cpp-stl&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

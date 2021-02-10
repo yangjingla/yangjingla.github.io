@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content=" 这是一个似乎不善于自我介绍的人">
+  <meta name="author" content="yangjing">
+  <meta name="keywords" content="">
+  <title>Talks-Mar - The Sound Of Silence</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>YangJing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/index_bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-04-01 10:00" pubdate>
+        April 1, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      19
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Talks-Mar</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>三月份的几个讲座，关于写论文/图神经网络，作为一个大四老油条,毕设不搞,假装在家上网课….</p>
+<h1 id="TALKS：​"><a href="#TALKS：​" class="headerlink" title="TALKS：​"></a>TALKS：​</h1><h3 id="智源论坛Live丨论文写作线上专题报告会：三位青年科学家深入指导学术论文写作"><a href="#智源论坛Live丨论文写作线上专题报告会：三位青年科学家深入指导学术论文写作" class="headerlink" title="智源论坛Live丨论文写作线上专题报告会：三位青年科学家深入指导学术论文写作"></a><a href="https://www.bilibili.com/video/BV1n7411o7dU?from=search&seid=4757447343323435627" target="_blank" rel="noopener">智源论坛Live丨论文写作线上专题报告会：三位青年科学家深入指导学术论文写作</a></h3><ul>
+<li>如何写论文的 Introduction , Abstract ?  不光要多看，也要多多的写！</li>
+<li>多查一些国外大学的 slides ,以及沉浸在英文的资料里面, 多看多度多思！</li>
+<li>熟悉了一些投稿的流程, 佛系一点，平衡好心态，不要放弃 rebuttal</li>
+</ul>
+<h3 id="✨✨【THU-刘洋老师】浅谈研究生学位论文选题方法"><a href="#✨✨【THU-刘洋老师】浅谈研究生学位论文选题方法" class="headerlink" title="✨✨【THU-刘洋老师】浅谈研究生学位论文选题方法"></a>✨✨<a href="https://www.bilibili.com/video/av94346515/" target="_blank" rel="noopener">【THU-刘洋老师】浅谈研究生学位论文选题方法</a></h3><ul>
+<li><strong>【高度重视】</strong>树立自己的“三观”（学术发展规律/研究生目标/价值观)，根据自己的三观选题,评价研究问题的标准？(九个原则/评价标准) ，时间的安排(第一年学习，第二年选题目)</li>
+<li>文献调研几个主要方法？[经典著作/期刊/会议/学者主页/社交媒体]</li>
+<li>关于粗读和细读(二八原则:80%标题,14%的标题和摘要,5%摘要和正文,1%全部搞懂细节), 然后深入思考(自主/独立/勇气)</li>
+</ul>
+<h3 id="✨✨【MSAR-周明老师】自然语言让生活更美好"><a href="#✨✨【MSAR-周明老师】自然语言让生活更美好" class="headerlink" title="✨✨【MSAR-周明老师】自然语言让生活更美好"></a>✨✨<a href="https://www.bilibili.com/video/BV1LE411w7B7?from=search&seid=13506580784016192113" target="_blank" rel="noopener">【MSAR-周明老师】自然语言让生活更美好</a></h3><ul>
+<li><p>nlp五大关键技术 ？</p>
+</li>
+<li><p>nlp应用一些应用场景/任务？</p>
+</li>
+<li><p>如何成为MSAR那样企业的希望的学生/人才？</p>
+</li>
+<li><p><a href="https://www.youtube.com/watch?v=rBCqOTEfxvg" target="_blank" rel="noopener">Attention is all you need; Attentional Neural Network Models | Łukasz Kaiser | Masterclass</a></p>
+</li>
+</ul>
+<h1 id="图神经网络在线研讨会-2020-PPT"><a href="#图神经网络在线研讨会-2020-PPT" class="headerlink" title="图神经网络在线研讨会 2020  PPT"></a><a href="https://www.bilibili.com/video/BV1zp4y117bB" target="_blank" rel="noopener"><strong>图神经网络在线研讨会 2020</strong></a>  <a href="https://www.yanxishe.com/resourceDetail/1328" target="_blank" rel="noopener">PPT</a></h1><pre><code class="hljs coq">近年来，图表示学习（<span class="hljs-keyword">Graph</span> Embedding）和图神经网络（<span class="hljs-keyword">Graph</span> Neural Network, GNN）成为网络数据分析与应用的热点研究问题，本研讨会邀请了四位国内著名学者（宋国杰、沈华伟、唐杰、石川）介绍图表示学习和图神经网络的最新理论进展和应用探索。</code></pre>
+
+
+
+<h3 id="宋国杰老师-网络表示学习"><a href="#宋国杰老师-网络表示学习" class="headerlink" title="[宋国杰老师]  网络表示学习"></a>[宋国杰老师]  网络表示学习</h3><ul>
+<li>　BackGround<ul>
+<li>Embedding 里面常见的映射空间和数学上的一些理论(虽然根本没听过)？<ul>
+<li>空间度量 , 谱方法 , 流形 ,李群代数</li>
+</ul>
+</li>
+<li>和 KRL(kownledge represent learning ) 的一些常见方法比较 ? <ul>
+<li><a href="http://pyvandenbussche.info/2017/translating-embeddings-transe/" target="_blank" rel="noopener">TransE</a>? Word2vec ？ </li>
+</ul>
+</li>
+<li>相关的有哪一些的图神经网络？<ul>
+<li>GCNs (Graph Convolution Network ) ，GAT(graph attention Network)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Recent Work<ul>
+<li>菜….没听太懂….. 总感觉应该在知识图谱建立的时候有用</li>
+</ul>
+</li>
+<li>Futrue<ul>
+<li>可迁移(transferability) ,deep 更深真的有用？</li>
+<li>建立知识驱动的模型–对于整个ai的领域？</li>
+</ul>
+</li>
+</ul>
+<h3 id="沈华伟老师-图卷积神经网络"><a href="#沈华伟老师-图卷积神经网络" class="headerlink" title="[沈华伟老师] 图卷积神经网络"></a>[沈华伟老师] 图卷积神经网络</h3><p>什么是图卷积网络，以及CNN的比较？图神经网络能够学到结构？</p>
+<ul>
+<li>如何理解 Graph Convolutional Network（GCN）？ - superbrother的回答 - 知乎 <a href="https://www.zhihu.com/question/54504471/answer/332657604" target="_blank" rel="noopener">https://www.zhihu.com/question/54504471/answer/332657604</a></li>
+<li><a href="http://www.huaxiaozhuan.com/深度学习/chapters/5_CNN.html" target="_blank" rel="noopener">CNN</a> <a href="https://www.bilibili.com/video/BV1Lb411b7BS?from=search&seid=15628076360574133614" target="_blank" rel="noopener">video here!</a></li>
+</ul>
+<h4 id="谱方法（特殊的空间方法-（基）"><a href="#谱方法（特殊的空间方法-（基）" class="headerlink" title="谱方法（特殊的空间方法)（基）"></a><a href="https://archwalker.github.io/blog/2019/06/16/GNN-Spectral-Graph.html" target="_blank" rel="noopener">谱方法</a>（特殊的空间方法)（基）</h4><ul>
+<li>如何把欧式数据迁移到非欧式数据 ？ <a href="http://www.jeepxie.net/article/203591.html" target="_blank" rel="noopener">欧式不满足 : 平移不变性</a></li>
+<li>什么是谱方法  ，什么是拉普拉斯矩阵，以及有何作用？</li>
+<li>比较前沿 ：ChebyNet 解决了谱方法的什么缺陷？  以及</li>
+<li>✨✨ <a href="https://www.matongxue.com/madocs/619.html" target="_blank" rel="noopener">如何通俗的解释傅立叶变化  ？ 空间变化？</a></li>
+<li>0✨✨<a href="https://www.zhihu.com/question/22298352/answer/637156871" target="_blank" rel="noopener">如何通俗的解释卷积？</a></li>
+</ul>
+<h4 id="空间方法（邻居）"><a href="#空间方法（邻居）" class="headerlink" title="空间方法（邻居）"></a>空间方法（邻居）</h4><ul>
+<li>卷积核函数的作用？</li>
+<li>Orz………………</li>
+</ul>
+<h4 id="Recent-Work-Future-applications"><a href="#Recent-Work-Future-applications" class="headerlink" title="Recent Work /Future applications"></a>Recent Work /Future applications</h4><ul>
+<li>Orz………….</li>
+<li>节点分类 ， 异常检测（比如gan生成的fakeimg）。。。</li>
+<li>Node-level . Graph-level ,  - level （</li>
+</ul>
+<h3 id="唐杰老师-图神经网络及认知推理-ppt"><a href="#唐杰老师-图神经网络及认知推理-ppt" class="headerlink" title="唐杰老师 图神经网络及认知推理   ppt"></a><a href="http://keg.cs.tsinghua.edu.cn/jietang/" target="_blank" rel="noopener">唐杰老师 </a>图神经网络及认知推理   <a href="http://keg.cs.tsinghua.edu.cn/jietang/publications/2020-baai-GNN-Cognitive-Graph.pdf" target="_blank" rel="noopener">ppt</a></h3><p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdefbbke3xj310r0u0u0x.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-04-01 at 6.04.27 PM"></p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdefdd5zvqj310r0u0u0x.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-04-01 at 6.06.31 PM"></p>
+<p>Reiew 表示学习到底是什么？</p>
+<pre><code class="hljs gauss">各种的表示学习的本质上都是一些 <span class="hljs-keyword">Matrix</span> <span class="hljs-built_in">factorizing</span> (矩阵分解)。</code></pre>
+
+<ul>
+<li><p>✨✨什么是 DeepWalk , Random Walk?</p>
+</li>
+<li><p>GNN（graph nerual network) 的本质和核心？</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/68015756" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/68015756</a></li>
+</ul>
+</li>
+<li><p>Contrastive Learning: MoCo, SimCLR ?</p>
+</li>
+<li><p>CongQA 系统 ？</p>
+<ul>
+<li>System 1(Knowledge expansion by association in text when reading) -&gt; System2 (Decision making w/ all the information)? </li>
+</ul>
+</li>
+</ul>
+<p>第三代人工智能的理论体系（知识+推理）</p>
+<pre><code class="hljs plain">可解释，鲁棒性的人工智能理论体系 ， 发展安全，可靠，可信以及拓展的人工智能的技术 。
+与脑科学融合 ， 发展脑启发的理论 ， 数据和知识融合。</code></pre>
+
+<h3 id="石川老师-异质网络的表示学习"><a href="#石川老师-异质网络的表示学习" class="headerlink" title="石川老师 异质网络的表示学习"></a><a href="http://www.shichuan.org/ShiChuan_ch.html#services-and-talking" target="_blank" rel="noopener">石川老师</a> 异质网络的表示学习</h3><pre><code class="hljs ini"><span class="hljs-attr">ML</span> = Representation + objective + optimize</code></pre>
+
+<ul>
+<li><p>什么是 heterogeneous information network 异质图 ？</p>
+<ul>
+<li>WWW‘19  异质图注意力网络 - Houye的文章 - 知乎 <a href="https://zhuanlan.zhihu.com/p/93942419" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/93942419</a> </li>
+<li><a href="http://www.shichuan.org/doc/43.pdf" target="_blank" rel="noopener">异质信息网络的研究现状和未来发展 - ShiChuan @ BUPT</a></li>
+</ul>
+</li>
+<li><p>什么是meta-path ，？ </p>
+<ul>
+<li>元路径是定义在网络模式上的链接两类对象的一条路径， 形式化定义为$A_1 \stackrel{R_1}{\rightarrow} A_2 \stackrel{R_2}{\rightarrow} A_3 \stackrel{R_3}{\rightarrow}  \cdots A_{l+1}$，表示对象类型之间的一种复合关系$R = R_1○R_2 ○R_3○ R_4○ \cdots R_l $，其中○代表关系之间的复合算子，A_i表示对象类型，R_i表示关系类型</li>
+</ul>
+</li>
+<li><p>✨✨什么是randomwelk ，什么是deepwalk  ， 应用如何？ </p>
+</li>
+<li><p>挑战 ： node-level attention and senmatic-level attention ? </p>
+</li>
+<li><p>北邮教授石川：图神经网络需要解决的几个关键问题 - 北京智源人工智能研究院的文章 - 知乎<br><a href="https://zhuanlan.zhihu.com/p/135974923" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/135974923</a></p>
+</li>
+</ul>
+<hr>
+<h2 id="Recap"><a href="#Recap" class="headerlink" title="Recap:"></a>Recap:</h2><h5 id="什么图神经网络-？-典型的图神经网络结构？"><a href="#什么图神经网络-？-典型的图神经网络结构？" class="headerlink" title="什么图神经网络 ？ 典型的图神经网络结构？"></a>什么图神经网络 ？ 典型的图神经网络结构？</h5><ul>
+<li>​    <a href="https://github.com/talorwu/Graph-Neural-Network-Review" target="_blank" rel="noopener"><a href="https://github.com/talorwu/Graph-Neural-Network-Review" target="_blank" rel="noopener">Graph-Neural-Network-Review</a></a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/68015756" target="_blank" rel="noopener">GCN survey </a>  GCN(谱方法/空间方法） ， GAN(注意力机制 ） ， 基于门控的方法等等….</li>
+</ul>
+<h5 id="什么是谱方法-？-如何解释卷积公式和卷积核？"><a href="#什么是谱方法-？-如何解释卷积公式和卷积核？" class="headerlink" title="什么是谱方法 ？ 如何解释卷积公式和卷积核？"></a>什么是谱方法 ？ 如何解释卷积公式和卷积核？</h5><ul>
+<li><h5 id="如何解释傅立叶变化，拉普拉斯变化-，以及空间变化？"><a href="#如何解释傅立叶变化，拉普拉斯变化-，以及空间变化？" class="headerlink" title="如何解释傅立叶变化，拉普拉斯变化 ，以及空间变化？"></a>如何解释傅立叶变化，拉普拉斯变化 ，以及空间变化？</h5></li>
+<li><p>[傅立叶]<a href="https://www.bilibili.com/video/BV11W411H7Uz/?spm_id_from=333.788.videocard.0" target="_blank" rel="noopener">https://www.bilibili.com/video/BV11W411H7Uz/?spm_id_from=333.788.videocard.0</a></p>
+</li>
+<li><p>[拉普拉斯] 谱聚类方法推导和对拉普拉斯矩阵的理解 - 图图的文章 - 知乎 <a href="https://zhuanlan.zhihu.com/p/81502804" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/81502804</a></p>
+</li>
+</ul>
+<h5 id="图表示本质是什么？ml-第三代人工智能？"><a href="#图表示本质是什么？ml-第三代人工智能？" class="headerlink" title="图表示本质是什么？ml= ? 第三代人工智能？"></a>图表示本质是什么？ml= ? 第三代人工智能？</h5><pre><code class="hljs fix"><span class="hljs-attr">表示学习的本质是：矩阵因子分解。</span>
+<span class="hljs-attr">ml </span>=<span class="hljs-string"> representation + objetctive + optimize。</span>
+<span class="hljs-string">可解释性和鲁棒性 和心理科学以及脑科学的结合。</span>
+<span class="hljs-string">注重伦理，隐私以及安全方面。</span></code></pre>
+
+
+
+<h5 id="知识图谱与异质信息网络的区别"><a href="#知识图谱与异质信息网络的区别" class="headerlink" title="知识图谱与异质信息网络的区别 ?"></a><a href="https://www.zhihu.com/question/264642944" target="_blank" rel="noopener">知识图谱与异质信息网络的区别</a> ?</h5><ul>
+<li>我觉得，知识图谱实际上更强调实体以及关系数据的抽取、获取（不管是从结构化数据、半结构化数据还是文本）；以及基于知识图谱的推理。而异质网络则更注重从图的角度对信息网络所包含的实体以及关系进行分析。</li>
+</ul>
+<h5 id="什么是randomwelk-，什么是deepwalk-，-应用如何？"><a href="#什么是randomwelk-，什么是deepwalk-，-应用如何？" class="headerlink" title="什么是randomwelk ，什么是deepwalk  ， 应用如何？"></a>什么是randomwelk ，什么是deepwalk  ， 应用如何？</h5><ul>
+<li>随机游走 ？ <a href="https://www.bilibili.com/video/BV1NW411n7AD?from=search&seid=9794716614469850743" target="_blank" rel="noopener">here</a></li>
+<li>Deepwalk ? <a href="https://www.youtube.com/watch?v=n12HS-24CtA" target="_blank" rel="noopener">deepwalk : online learning of social representation</a><ul>
+<li>一种网络嵌入的方法叫<strong>DeepWalk</strong>，它的输入是一张图或者网络，输出为网络中顶点的向量表示。DeepWalk通过<strong>截断随机游走</strong>(truncated random walk)学习出一个网络的<strong>社会表示</strong>(social representation)，在网络标注顶点很少的情况也能得到比较好的效果。并且该方法还具有可扩展的优点，能够适应网络的变化。</li>
+</ul>
+</li>
+</ul>
+<h5 id="什么是autoencoder"><a href="#什么是autoencoder" class="headerlink" title="什么是autoencoder ?"></a>什么是autoencoder ?</h5><pre><code class="hljs angelscript"> 一句话：<span class="hljs-built_in">auto</span>encoder是一种压缩表示学习</code></pre>
+
+<ul>
+<li>【✨✨】<a href="https://www.bilibili.com/video/BV1dJ411B7gh?p=27" target="_blank" rel="noopener"> 机器学习课程 - 深度学习自编码器</a></li>
+<li><a href="https://www.jeremyjordan.me/autoencoders/" target="_blank" rel="noopener">Introduction to autoencoders.</a></li>
+<li><a href="https://www.youtube.com/watch?v=E28CVTbNoSA" target="_blank" rel="noopener">CS480/680 Lecture 20: Autoencoders</a><ul>
+<li>回顾一下PCA 和LDA这两个模型 ？ </li>
+<li>Autoencoder 和PCA的区别和联系 ？ </li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Talks/">Talks</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/NLP/">NLP</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/04/30/leetcode-apr/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Leetcode-Apr</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/03/31/leetcode-mar/">
+                        <span class="hidden-mobile">Leetcode-Mar</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 4,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Talks-Mar&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

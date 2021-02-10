@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content=" 这是一个似乎不善于自我介绍的人">
+  <meta name="author" content="yangjing">
+  <meta name="keywords" content="">
+  <title>Talks-May - The Sound Of Silence</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>YangJing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/index_bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-06-03 10:27" pubdate>
+        June 3, 2020 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      17
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Talks-May</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h1 id="AI-TIME-Debate【第六期】-论道机器翻译：离我们还有多远"><a href="#AI-TIME-Debate【第六期】-论道机器翻译：离我们还有多远" class="headerlink" title="AI TIME Debate【第六期】  论道机器翻译：离我们还有多远?"></a><a href="https://www.bilibili.com/video/BV1X741137XJ" target="_blank" rel="noopener">AI TIME Debate【第六期】  论道机器翻译：离我们还有多远?</a></h1><h3 id="机器翻译存在的一些具体问题？"><a href="#机器翻译存在的一些具体问题？" class="headerlink" title="机器翻译存在的一些具体问题？"></a>机器翻译存在的一些具体问题？</h3><ul>
+<li>一词多义 ， 指代消解，背景信息，上下文的语意信息，机器翻译只是对于形式的解析(句子-&gt;句子)，机器翻译中的常识问题</li>
+<li>Pre-train预训练的数据是不是体现了对于背景知识的重视</li>
+</ul>
+<h3 id="机器翻译的发展的历史"><a href="#机器翻译的发展的历史" class="headerlink" title="机器翻译的发展的历史"></a>机器翻译的发展的历史</h3><ul>
+<li>规则驱动-&gt;统计机器翻译-&gt;深度学习驱动的机器翻译</li>
+</ul>
+<h3 id="应用篇？机器翻译能够代替人类吗？"><a href="#应用篇？机器翻译能够代替人类吗？" class="headerlink" title="应用篇？机器翻译能够代替人类吗？"></a>应用篇？机器翻译能够代替人类吗？</h3><ul>
+<li>在可预见的几十年内几乎不可能完全替代人，只能够特定的情景之下取得一定的帮助。</li>
+<li>2016年之后google全部替换成了神经网络</li>
+</ul>
+<h3 id="panel的讨论"><a href="#panel的讨论" class="headerlink" title="panel的讨论"></a>panel的讨论</h3><p>机器翻译之中的，语言学更重要还是数据表示更重要？</p>
+<p>如何补充背景知识？</p>
+<h3 id="未来的突破口和方向？"><a href="#未来的突破口和方向？" class="headerlink" title="未来的突破口和方向？"></a>未来的突破口和方向？</h3><ul>
+<li>找到一个重新的策略和框架？一定要大规模的高质量的标注数据吗？</li>
+<li>机器翻译是一个映射问题？还是一个理解和生成的问题是？</li>
+</ul>
+<h1 id="AITIME-PHD-融合知识的预训练语言模型-知识增强模型"><a href="#AITIME-PHD-融合知识的预训练语言模型-知识增强模型" class="headerlink" title="AITIME-PHD-融合知识的预训练语言模型 (知识增强模型)"></a><a href="https://www.bilibili.com/video/BV1Lt4y1U7Wa" target="_blank" rel="noopener">AITIME-PHD-融合知识的预训练语言模型 (知识增强模型)</a></h1><ul>
+<li>早期的word2vec , glove等模型存在信息单一，不能够体现不同的环境中的不同的意义，不能够动态的调整词向量。</li>
+</ul>
+<h3 id="Feature-based"><a href="#Feature-based" class="headerlink" title="Feature-based"></a>Feature-based</h3><ul>
+<li>ELMO :  用大规模的语料训练双向的语言模型 ，但还是基于lstm来进行编码 ，  能够根据上下文的语境可以变化的词向量</li>
+</ul>
+<h3 id="Fine-tuning-based"><a href="#Fine-tuning-based" class="headerlink" title="Fine-tuning-based"></a>Fine-tuning-based</h3><ul>
+<li><p>Bert[<cls><sep>] : 采用了transformer进行文本编码</p>
+</li>
+<li><p>提出了 masked language model 的任务 （transformer decorder里买的 masked mutli-head attention？） </p>
+</li>
+</ul>
+<p>  <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt4ydlxx4j315u0mcwvm.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-04-14 at 11.29.34 AM"></p>
+<h3 id="融合知识的预训练模型-ERNIE-baidu-amp-thu-KEPLER，KnowBERT-）"><a href="#融合知识的预训练模型-ERNIE-baidu-amp-thu-KEPLER，KnowBERT-）" class="headerlink" title="融合知识的预训练模型(ERNIE(baidu&amp;thu) , KEPLER，KnowBERT ）"></a>融合知识的预训练模型(ERNIE(baidu&amp;thu) , KEPLER，KnowBERT ）</h3><ul>
+<li>现有的模型难以捕捉<strong>低频实体</strong>的信息 –&gt; (所以引入外部的知识信息)<ul>
+<li>ELMO : Character CNN</li>
+<li>BERT : subword </li>
+</ul>
+</li>
+<li>（引入知识图谱）的两个挑战<ul>
+<li>结构化知识表示（Structur3d kownledge encoding ) </li>
+<li>异质信息融合 ( heterogeneous information fusion)</li>
+</ul>
+</li>
+</ul>
+<h4 id="结构化知识表示"><a href="#结构化知识表示" class="headerlink" title="结构化知识表示"></a>结构化知识表示</h4><ul>
+<li>将文本中命名实体链接到知识图谱当中的实体 ， 通过文本中的实体把知识信息引入到预训练模型</li>
+<li>表示结构化信息 ： KRL(TransE)  ； 将学习到的实体作为模型的输入特征</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt5j3fuf6j315u0ms488.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-04-14 at 11.49.33 AM"></p>
+<p>重点是如何构造aggregator进行信息增强 ？</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt5kq2qh2j315u0mswq9.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-04-14 at 11.51.06 AM"></p>
+<h4 id="异质信息融合"><a href="#异质信息融合" class="headerlink" title="异质信息融合"></a>异质信息融合</h4><ul>
+<li>一个预训练任务 ： 降噪实体自编码机（Denoising Entity Auto-encoder): 使用输出的词向量预测对应的实体， 加强鲁棒性</li>
+</ul>
+<h4 id="微调细节和训练过程（Details-of-Fine-tuning"><a href="#微调细节和训练过程（Details-of-Fine-tuning" class="headerlink" title="微调细节和训练过程（Details of Fine-tuning)"></a>微调细节和训练过程（Details of Fine-tuning)</h4><ul>
+<li><p>先把bert进行微调</p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1K5411t7MD" target="_blank" rel="noopener">🍅</a>    找段时间尝试一些Bert的微调</p>
+</li>
+</ul>
+<h4 id="如何将知识图谱进行有效的融合-摆脱图谱的表示向量的束缚-？"><a href="#如何将知识图谱进行有效的融合-摆脱图谱的表示向量的束缚-？" class="headerlink" title="如何将知识图谱进行有效的融合(摆脱图谱的表示向量的束缚)？"></a>如何将知识图谱进行有效的融合(摆脱图谱的表示向量的束缚)？</h4><ul>
+<li>图谱空间 难以 和语言表示空间融合</li>
+<li>需要实体链接组建，带来额外的开销和连接错误 </li>
+</ul>
+<h3 id="KEPLER"><a href="#KEPLER" class="headerlink" title="KEPLER"></a>KEPLER</h3><ul>
+<li>两个预训练任务 ： mask LM   + KG的嵌入</li>
+<li>优点 ： 构建起了文本空间和知识空间的桥梁 + 没有额外的开销，也不需要实体链接+对于知识相关的任务有更好的理解和可解释</li>
+</ul>
+<h4 id="KnowBERT"><a href="#KnowBERT" class="headerlink" title="KnowBERT"></a>KnowBERT</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt627kuedj315u0msan7.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-04-14 at 12.07.56 PM"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h4 id="三大流派"><a href="#三大流派" class="headerlink" title="三大流派"></a>三大流派</h4><ul>
+<li>把图谱表示作为特征输入（knowBert , ERNIE)</li>
+<li>设计新的预训练任务(Masked LM , Kepler ,  Pretrained Encyclopedia)</li>
+<li>增加额外的一些结构模块(K-adapter)</li>
+</ul>
+<h4 id="未来方向"><a href="#未来方向" class="headerlink" title="未来方向"></a>未来方向</h4><ul>
+<li>多重知识融合，更多样的知识来源 ，更大规模的知识数据</li>
+<li>无监督知识获取 ，跟好的从大规模的预料之中总结出知识</li>
+</ul>
+<h1 id="自然语言处理的未来"><a href="#自然语言处理的未来" class="headerlink" title="自然语言处理的未来 "></a><a href="https://www.bilibili.com/video/BV1vK41157WE" target="_blank" rel="noopener">自然语言处理的未来 </a></h1><ul>
+<li>[<a href="https://nlpoverview.com/index.html" target="_blank" rel="noopener">Modern Deep Learning Techniques Applied to Natural Language Processing</a>]</li>
+</ul>
+<h3 id="模型的复杂度-模型压缩"><a href="#模型的复杂度-模型压缩" class="headerlink" title="模型的复杂度/模型压缩"></a>模型的复杂度/模型压缩</h3><ul>
+<li>现在的预训练的模型越来越大，参数动不动就上了亿级别的单位，几百兆的参数使得模型的能力越来越强，但是随之而来的是 ， 要求训练的数据越来越多和计算资源的巨大消耗，一个sota模型所消耗的资源是巨大的。</li>
+<li>一个重要的问题是模型压缩 ： <a href="https://www.pragmatic.ml/a-survey-of-methods-for-model-compression-in-nlp/" target="_blank" rel="noopener">A Survey of Methods for Model Compression in NLP</a></li>
+<li>主要可以分为四个方向 ： 减少数值精度(Numeric Precision Reduction ) ； 知识蒸馏(Kownledge Distillation) ; (module replacement)  模型替换; 剪枝(pruning）</li>
+</ul>
+<h2 id="三大挑战"><a href="#三大挑战" class="headerlink" title="三大挑战"></a>三大挑战</h2><ul>
+<li>数据受限（好的数据集） ； 计算资源受限 ； 模型受限和参数受限</li>
+</ul>
+<h3 id="数据受限和计算资源受限"><a href="#数据受限和计算资源受限" class="headerlink" title="数据受限和计算资源受限"></a>数据受限和计算资源受限</h3><h3 id="泛化能力和迁移学习"><a href="#泛化能力和迁移学习" class="headerlink" title="泛化能力和迁移学习"></a>泛化能力和迁移学习</h3><h3 id="存在的挑战和已有的问题"><a href="#存在的挑战和已有的问题" class="headerlink" title="存在的挑战和已有的问题"></a>存在的挑战和已有的问题</h3><h1 id="THU-常识知识获取与常识学习"><a href="#THU-常识知识获取与常识学习" class="headerlink" title="THU-常识知识获取与常识学习"></a><a href="https://www.bilibili.com/video/BV1G64y1M736" target="_blank" rel="noopener">THU-常识知识获取与常识学习</a></h1><ul>
+<li><a href="https://www.yanxishe.com/blogDetail/19455" target="_blank" rel="noopener">让计算机拥抱常识|雷锋字幕组</a></li>
+</ul>
+<h3 id="Backward"><a href="#Backward" class="headerlink" title="Backward"></a>Backward</h3><ul>
+<li>推理 ：常识推理(common sense) ， 事实推理(fact) ， 逻辑推理(logic)</li>
+</ul>
+<h3 id="常识知识库（common-sense-knowledge-acquisition）"><a href="#常识知识库（common-sense-knowledge-acquisition）" class="headerlink" title="常识知识库（common sense knowledge acquisition）"></a>常识知识库（common sense knowledge acquisition）</h3><ul>
+<li>构建的方法 ： 使用embedding知识 ； 文本知识抽取 ； 现有的知识完成(kownledge base completion)</li>
+<li>互信息的定义 ； 信息熵的定义 ； 决策树的信息增益比</li>
+</ul>
+<h3 id="Prototypical-Reasoning（原型推理）-vs-Non-prototypical-Reasoning"><a href="#Prototypical-Reasoning（原型推理）-vs-Non-prototypical-Reasoning" class="headerlink" title="Prototypical Reasoning（原型推理） vs Non-prototypical Reasoning()"></a>Prototypical Reasoning（原型推理） vs Non-prototypical Reasoning()</h3><ul>
+<li>常识知识问答(common sense QA）</li>
+<li>一些常识推理的数据集： </li>
+</ul>
+<h3 id="Temporal-Reasoning-时间推理-vs-Narrative-Reasoning-内容推理"><a href="#Temporal-Reasoning-时间推理-vs-Narrative-Reasoning-内容推理" class="headerlink" title="Temporal Reasoning(时间推理) vs  Narrative Reasoning(内容推理)"></a>Temporal Reasoning(时间推理) vs  Narrative Reasoning(内容推理)</h3><h1 id="沈向洋老师-An-introduction-to-research-paper-reading"><a href="#沈向洋老师-An-introduction-to-research-paper-reading" class="headerlink" title="沈向洋老师-An introduction to research paper reading"></a><a href="https://www.bilibili.com/video/BV1df4y1m74k" target="_blank" rel="noopener">沈向洋老师-An introduction to research paper reading</a></h1><ul>
+<li>相关的链接 ： how to give a great research talks ?</li>
+</ul>
+<h3 id="why-read-paper"><a href="#why-read-paper" class="headerlink" title="why read paper?"></a>why read paper?</h3><ul>
+<li>课程的论文 ; 参考的文献 ; read survey  , presentation</li>
+<li>质量不齐 ； 下一步的阅读  ； 如何专注的阅读focus</li>
+</ul>
+<h3 id="Disconnection-between-reading-and-writing"><a href="#Disconnection-between-reading-and-writing" class="headerlink" title="Disconnection between reading and writing"></a>Disconnection between reading and writing</h3><ul>
+<li>作者想说什么 ？ 读者想知道什么？</li>
+<li>从香农的信息论解释，paper是点到点的传输信息（encoder - decoder）</li>
+</ul>
+<h3 id="approachs"><a href="#approachs" class="headerlink" title="approachs"></a>approachs</h3><ul>
+<li>Quick skimming [read first/two page]: title -&gt; abstract -&gt; intriduction -&gt; the rest 0f the paper</li>
+<li>critical reading : what are the good ideas ; improvement</li>
+<li>deep analyzing ： </li>
+<li>write a summary and review </li>
+</ul>
+<h3 id="introdution"><a href="#introdution" class="headerlink" title="introdution"></a>introdution</h3><ul>
+<li>what your paper is about ? What problem it solves ?why the problem is interesting ? what is new ? Why is neat?</li>
+</ul>
+<h3 id="when-get-stuck"><a href="#when-get-stuck" class="headerlink" title="when get stuck?"></a>when get stuck?</h3><ul>
+<li>Read more papers ,books ; keep reading (read again , read again , read again); </li>
+<li>Ask for help ; dont get overwhelmed</li>
+</ul>
+<h3 id="write-a-one-page-review-or-presentation"><a href="#write-a-one-page-review-or-presentation" class="headerlink" title="write a one-page review or presentation"></a>write a one-page review or presentation</h3><ul>
+<li>summary ; </li>
+</ul>
+<h3 id="Analyze-with-a-list-of-question"><a href="#Analyze-with-a-list-of-question" class="headerlink" title="Analyze with a list of question"></a>Analyze with a list of question</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gez0ywdw8hj31200kcgwt.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-05-20 at 5.05.07 PM"></p>
+<h3 id="✨✨✨tips"><a href="#✨✨✨tips" class="headerlink" title="✨✨✨tips"></a>✨✨✨tips</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gez141tpunj31200kcthb.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-05-20 at 5.10.12 PM"></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Talks/">Talks</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/NLP/">NLP</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/06/27/leetcode-june/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Leetcode-June</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/15/notes-bert-xlnet-albert/">
+                        <span class="hidden-mobile">Notes-BERT_XLnet_Albert</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 4,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Talks-May&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
