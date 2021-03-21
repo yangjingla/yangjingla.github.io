@@ -8,34 +8,36 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content=" 这是一个似乎不善于自我介绍的人">
+  <meta name="description" content="这是一个似乎不善于自我介绍的人">
   <meta name="author" content="yangjing">
   <meta name="keywords" content="">
+  
   <title>Notes-CCKS2020评测总结 - The Sound Of Silence</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
   <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
     
     
       
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
     
   
 
   
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -52,6 +54,10 @@
 <!-- 自定义样式保持在最底部 -->
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
@@ -128,13 +134,13 @@
   </div>
 </nav>
 
-    <div class="banner intro-2" id="background" parallax=true
+    <div class="banner" id="banner" parallax=true
          style="background: url('/img/index_bg.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container page-header text-center fade-in-up">
-            <span class="h2" id="subtitle">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Notes-CCKS2020评测总结">
               
             </span>
 
@@ -188,17 +194,17 @@
     
       
 
-<div class="container-fluid">
-  <div class="row">
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
     <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
         <div class="py-5" id="board">
-          <article class="post-content mx-auto" id="post">
+          <article class="post-content mx-auto">
             <!-- SEO header -->
             <h1 style="display: none">Notes-CCKS2020评测总结</h1>
             
-            <div class="markdown-body" id="post-body">
+            <div class="markdown-body">
               <h1 id="任务二：面向中文短文本的实体链指"><a href="#任务二：面向中文短文本的实体链指" class="headerlink" title="任务二：面向中文短文本的实体链指"></a>任务二：面向中文短文本的实体链指</h1><p><a href="https://www.bilibili.com/video/BV1jK4y177Ya?p=21" target="_blank" rel="noopener">题目背景介绍</a> 以及<a href="http://sigkg.cn/ccks2020/wp-content/uploads/2020/05/2-CCKS2020技术评测-面向中文短文本的实体链指.docx" target="_blank" rel="noopener">任务书</a></p>
 <p>本评测任务围绕实体链指技术：面向中文短文本的实体链指，简称 EL(Entity Linking)。即对于给定的一个中文短文本(如搜索 Query、微博、对话内容、文章/视频/图片的标题等)，EL 将其中的实体与给定知 识库中对应的实体进行关联。结合其对应的AI智能应用需求，在CCKS 2019面向中文短文本的实体链指任务的基础上进行了拓展与改进，主要改进包括以下几部分：</p>
 <p>（1）去掉实体识别，专注于中文短文本场景下的多歧义实体消歧技术；</p>
@@ -220,8 +226,8 @@
 </li>
 <li><p>解决方案：</p>
 <ul>
-<li>知识增强：预训练模型[robert-www-ext , bert-www-ext]+文本知识增强（根据文本和知识库生成相似的数据），在数据集之中加入对抗样本增强模型的泛化性。<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glfq6ca1yjj30yc0cmgrs.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 11.48.33 PM"></li>
-<li>多任务学习：jointly learning 对于实体关联，实体类型预测<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf0vst7a4j30x00iu14k.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 9.13.20 AM"></li>
+<li>知识增强：预训练模型[robert-www-ext , bert-www-ext]+文本知识增强（根据文本和知识库生成相似的数据），在数据集之中加入对抗样本增强模型的泛化性。<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glfq6ca1yjj30yc0cmgrs.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 11.48.33 PM"></li>
+<li>多任务学习：jointly learning 对于实体关联，实体类型预测<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf0vst7a4j30x00iu14k.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 9.13.20 AM"></li>
 </ul>
 </li>
 </ul>
@@ -261,7 +267,7 @@
 </li>
 <li><p>解决方案</p>
 <ul>
-<li>实体抽取第一名[Bert+BiLstm+CRF+Ensemb+Adversarial Training]：五折交叉验证+模型融合；使用了1000条未标注的数据进行训练；对抗训练(对于embedding)；词典后处理。这些方法：都可以用来尝试解决数据不确定的一些问题<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf1irwfb5j30x00i60u9.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 9.35.27 AM" style="zoom:50%;" /></li>
+<li>实体抽取第一名[Bert+BiLstm+CRF+Ensemb+Adversarial Training]：五折交叉验证+模型融合；使用了1000条未标注的数据进行训练；对抗训练(对于embedding)；词典后处理。这些方法：都可以用来尝试解决数据不确定的一些问题<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf1irwfb5j30x00i60u9.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 9.35.27 AM" style="zoom:50%;" /></li>
 <li>实体抽取第二名： BERT+LSTM+CRF对于每一个字，我们除了通过BERT来 生成相应的字特征以外，还结合了字音和字形的特征( 除此之外针对中文的处理还有：lattice-lstm 以及 结合词典信息的FLAT)。字音和字形特征 经过charCNN和MaxPooling生成embedding, 与字embedding结合在一起作 为BiLSTM的输入来预测相应的标签。![Screen Shot 2020-12-07 at 10.09.56 AM](/Users/yangjing/Library/Application Support/typora-user-images/Screen Shot 2020-12-07 at 10.09.56 AM.png)</li>
 <li>实体抽取第三名[使用规则没有使用预训练模型+联合抽取+随机替换伪数据生成]</li>
 <li>事件抽取第一名[ RoBERTa-www-ext-large+CRF ]： 数据预处理：长文本切分，添加答案的序列位置；基于预训练模型对于小样本电子病历数据领域和任务都需要额外的数据增强(biobert会有用吗)以及翻译back translaton策略；在模型方面：通过指数滑动平均和模型集成。</li>
@@ -298,8 +304,8 @@
 </ul>
 </li>
 <li>解决方案：<ul>
-<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_4_1.pdf" target="_blank" rel="noopener">第一名[Roberta]：A Joint Learning Framework for the CCKS-2020 Financial Event Extraction Task</a>:以一种联合概率和条件概率的形式将本任务分别看作：事件类型检测，事件触发词抽取，事件论元抽取三个任务来处理。<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf7bv1hwwj30zg0lqgpk.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 12.56.28 PM"></li>
-<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020eval_paper_4_3.pdf" target="_blank" rel="noopener">第二名[Roberta]：篇章级事件抽取</a>：方法：利用pipeline的方式(一个bert分类+一个bert+crf实体识别)，此方法不懂(这么多个bert分别的作用还是不是很理解);大致如下-&gt;First : Event-classification base-bert进行分类,second:每类的事件再次传到bert。为了解决事件分类和实体抽取分开处理会不能够利用充分信息，再次用所有数据训练了一个pretrained-bert<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf6is9tm9j316g0ii42g.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 12.28.38 PM"></li>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_4_1.pdf" target="_blank" rel="noopener">第一名[Roberta]：A Joint Learning Framework for the CCKS-2020 Financial Event Extraction Task</a>:以一种联合概率和条件概率的形式将本任务分别看作：事件类型检测，事件触发词抽取，事件论元抽取三个任务来处理。<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf7bv1hwwj30zg0lqgpk.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 12.56.28 PM"></li>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020eval_paper_4_3.pdf" target="_blank" rel="noopener">第二名[Roberta]：篇章级事件抽取</a>：方法：利用pipeline的方式(一个bert分类+一个bert+crf实体识别)，此方法不懂(这么多个bert分别的作用还是不是很理解);大致如下-&gt;First : Event-classification base-bert进行分类,second:每类的事件再次传到bert。为了解决事件分类和实体抽取分开处理会不能够利用充分信息，再次用所有数据训练了一个pretrained-bert<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glf6is9tm9j316g0ii42g.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 12.28.38 PM"></li>
 <li></li>
 <li><a href="">第三名[RoBerTA]：多任务联合训练方式</a> : (RoBerta+ 文本分类+阅读理解来抽取事件)，此方法不懂（完全没看懂模型）</li>
 </ul>
@@ -328,7 +334,7 @@
 </li>
 <li><p>解决方案</p>
 <ul>
-<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_5_2_1.pdf" target="_blank" rel="noopener">第一名：A Prior Information Enhanced Extraction Framework for Document-level Financial Event Extraction</a>[Pipeline + PLM+  MRC]:分解成三个任务分别是事件检测，事件论元抽取，事件表填充。数据预处理<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glfq32h0v7j30y80o2n0i.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 11.45.26 PM"></li>
+<li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_5_2_1.pdf" target="_blank" rel="noopener">第一名：A Prior Information Enhanced Extraction Framework for Document-level Financial Event Extraction</a>[Pipeline + PLM+  MRC]:分解成三个任务分别是事件检测，事件论元抽取，事件表填充。数据预处理<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glfq32h0v7j30y80o2n0i.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-12-07 at 11.45.26 PM"></li>
 <li><a href="https://bj.bcebos.com/v1/conference/ccks2020/eval_paper/ccks2020_eval_paper_5_2_2.pdf" target="_blank" rel="noopener">第二名:上市公司公告事件要素抽取研究</a>:[Pipeline + Bert+MRC]虽然比赛的题目是document-level但是本文全部都是只对句子建模最后能够得到第二名估计是规则定义的比较的好，最后再从重要的句子里面提取篇章要素；本文在提取实体的时候是采用阅读理解的方式来处理；</li>
 </ul>
 </li>
@@ -368,29 +374,29 @@
 <li>主会： 待公布 </li>
 </ul>
 <h3 id="陆汝衿-知识图谱平台的构建KGSP"><a href="#陆汝衿-知识图谱平台的构建KGSP" class="headerlink" title="陆汝衿-知识图谱平台的构建KGSP"></a>陆汝衿-知识图谱平台的构建KGSP</h3><p>动机</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkog3mvagbj31gy0t44qp.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 9.29.17 AM"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkog3mvagbj31gy0t44qp.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 9.29.17 AM"></p>
 <p>通用平台 vs 专家系统</p>
 <p>大知识(massive )</p>
 <p>Hape 通用平台 费xx phd….</p>
 <p>知识操作系统 + 知识浏览器</p>
 <p>summary</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkohnllq3xj31c00u0wjr.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 9.38.31 AM"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkohnllq3xj31c00u0wjr.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 9.38.31 AM"></p>
 <h3 id="李航老师-language-model"><a href="#李航老师-language-model" class="headerlink" title="李航老师-language model"></a>李航老师-language model</h3><h3 id="classic-LM"><a href="#classic-LM" class="headerlink" title="classic LM"></a>classic LM</h3><p>n-gram language model and markov chain (HMM)</p>
 <p><strong>shannon(information theory )  + n-gram</strong></p>
 <p>Chomsky grammar</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkohn187shj31c00u0u0x.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.22.58 AM"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkohn187shj31c00u0u0x.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.22.58 AM"></p>
 <h3 id="nueral-network-LM"><a href="#nueral-network-LM" class="headerlink" title="nueral network LM"></a>nueral network LM</h3><p> word embedding(bengio , 2003)  -&gt; word2vec(miklov ,2013)</p>
 <p>rnn(no markov assumption):</p>
 <h3 id="pre-trained-LM"><a href="#pre-trained-LM" class="headerlink" title="pre-trained LM"></a>pre-trained LM</h3><p>Gpt ：适合于生成</p>
 <p>bert： mask learning有利于纠错而不是检错</p>
 <p><strong>Soft-mask model: AMBERT(bert+bert) Vs Roberta</strong></p>
 <p>两种不同的粒度 (词粒度和字力度)</p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoikraz8qj31c00u0qv5.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.48.25 AM"></p>
-<h3 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h3><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoiknyg1dj31c00u0u0x.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.55.09 AM"></p>
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoiqosk9zj31c00u0u0x.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.01.01 AM"></p>
-<h2 id="毛先领-知识图谱视角的自然语言处理"><a href="#毛先领-知识图谱视角的自然语言处理" class="headerlink" title="毛先领-知识图谱视角的自然语言处理"></a>毛先领-知识图谱视角的自然语言处理</h2><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkok5rv8ilj31c00u0x6p.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.49.40 AM"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoikraz8qj31c00u0qv5.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.48.25 AM"></p>
+<h3 id="Future"><a href="#Future" class="headerlink" title="Future"></a>Future</h3><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoiknyg1dj31c00u0u0x.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 10.55.09 AM"></p>
+<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkoiqosk9zj31c00u0u0x.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.01.01 AM"></p>
+<h2 id="毛先领-知识图谱视角的自然语言处理"><a href="#毛先领-知识图谱视角的自然语言处理" class="headerlink" title="毛先领-知识图谱视角的自然语言处理"></a>毛先领-知识图谱视角的自然语言处理</h2><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkok5rv8ilj31c00u0x6p.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.49.40 AM"></p>
 <p>融合知识和常识</p>
-<p>语义网三大会(www ,)<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkokfl07h4j31c00u0e82.jpg" srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.59.39 AM"></p>
+<p>语义网三大会(www ,)<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gkokfl07h4j31c00u0e82.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-14 at 11.59.39 AM"></p>
 <h1 id="Thinking-body-and-world"><a href="#Thinking-body-and-world" class="headerlink" title="Thinking body and world"></a>Thinking body and world</h1><p>space  distance </p>
 <p>空间信息其实不完全同于物理信息</p>
 <p>gestures ：如何理解动图？和视频内容的理解有什么区别吗？</p>
@@ -411,8 +417,14 @@
                 
               </div>
               
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
               
-                <div class="post-prevnext row">
+              
+                <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
                     
@@ -446,7 +458,7 @@
       <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
         <div id="toc">
   <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
-  <div id="tocbot"></div>
+  <div class="toc-body" id="toc-body"></div>
 </div>
 
       </div>
@@ -458,16 +470,15 @@
 
 
     
-  </main>
 
-  
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
-  
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
      aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
@@ -488,9 +499,10 @@
     </div>
   </div>
 </div>
-  
+    
 
-  
+    
+  </main>
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
@@ -503,17 +515,32 @@
   
 </footer>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
 <script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 <!-- Plugins -->
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -522,109 +549,93 @@
 
 
 
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
 
 
 
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
   <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: '#post-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 4,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "Notes-CCKS2020评测总结&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "right",
-      visible: "hover",
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
       
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
+      typing(title)
+      
+    })(window, document);
   </script>
 
 
 
   <script  src="/js/local-search.js" ></script>
   <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
   </script>
 
 
 
 
 
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 
@@ -633,6 +644,11 @@
 
 
 
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 </body>

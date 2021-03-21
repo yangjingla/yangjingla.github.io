@@ -8,20 +8,19 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content=" 这是一个似乎不善于自我介绍的人">
+  <meta name="description" content="这是一个似乎不善于自我介绍的人">
   <meta name="author" content="yangjing">
   <meta name="keywords" content="">
+  
   <title>The Sound Of Silence</title>
 
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
 
@@ -39,6 +38,10 @@
 <!-- 自定义样式保持在最底部 -->
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
@@ -115,13 +118,13 @@
   </div>
 </nav>
 
-    <div class="banner intro-2" id="background" parallax=true
+    <div class="banner" id="banner" parallax=true
          style="background: url('/img/index_bg.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container page-header text-center fade-in-up">
-            <span class="h2" id="subtitle">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="The Sound of Silence">
               
             </span>
 
@@ -140,7 +143,7 @@
 
   <main>
     
-      <div class="container nopadding-md">
+      <div class="container nopadding-x-md">
         <div class="py-5" id="board"
           style=margin-top:0>
           
@@ -154,8 +157,58 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/03/21/paper-graphembedding/" target="_self">
+          <img src="/img/nlp.jpg" srcset="/img/loading.gif" lazyload alt="Paper-GraphEmbedding">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/03/21/paper-graphembedding/">Paper-GraphEmbedding</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/03/21/paper-graphembedding/">
+          
+          
+            
+          
+          Graph EmbeddingWhy Embedding ? 
+1Any supervised machine learning algorithm requires s set of informative , discriminating ,  independent features.
+
+Goal of Representation Learning is to automate the w
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-21 15:52" pubdate>
+              2021-03-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Paper/">Paper</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2021/02/27/paper-feb/" target="_self">
-          <img src="/img/nlp.jpg" srcset="/img/loading.gif" alt="Paper-Feb">
+          <img src="/img/nlp.jpg" srcset="/img/loading.gif" lazyload alt="Paper-Feb">
         </a>
       </div>
     
@@ -205,7 +258,7 @@ degradati
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2021/02/25/review-feb/" target="_self">
-          <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3788422871,1852102446&fm=26&gp=0.jpg" srcset="/img/loading.gif" alt="Review-Feb">
+          <img src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3788422871,1852102446&fm=26&gp=0.jpg" srcset="/img/loading.gif" lazyload alt="Review-Feb">
         </a>
       </div>
     
@@ -221,7 +274,7 @@ degradati
           
             
           
-           
+          🤫🤫🤫🤫🤫🤫
         </a>
       </p>
 
@@ -252,7 +305,7 @@ degradati
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2020/12/07/notes-ccks2020-ping-ce-zong-jie/" target="_self">
-          <img src="/img/nlp.jpg" srcset="/img/loading.gif" alt="Notes-CCKS2020评测总结">
+          <img src="/img/nlp.jpg" srcset="/img/loading.gif" lazyload alt="Notes-CCKS2020评测总结">
         </a>
       </div>
     
@@ -300,7 +353,7 @@ degradati
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2020/11/04/paper-multi-task/" target="_self">
-          <img src="/img/nlp.jpg" srcset="/img/loading.gif" alt="Paper-Multi-Task">
+          <img src="/img/nlp.jpg" srcset="/img/loading.gif" lazyload alt="Paper-Multi-Task">
         </a>
       </div>
     
@@ -349,7 +402,7 @@ Contributions： 这篇文章拓展了一个2017年的工作[Lee et al., 2017一
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2020/08/27/talks-aug/" target="_self">
-          <img src="/img/nlp.jpg" srcset="/img/loading.gif" alt="Talks-Aug">
+          <img src="/img/nlp.jpg" srcset="/img/loading.gif" lazyload alt="Talks-Aug">
         </a>
       </div>
     
@@ -409,7 +462,7 @@ Maps and Function of Hunman attent
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2020/07/27/leetcode-july/" target="_self">
-          <img src="/img/nlp.jpg" srcset="/img/loading.gif" alt="Leetcode-July">
+          <img src="/img/nlp.jpg" srcset="/img/loading.gif" lazyload alt="Leetcode-July">
         </a>
       </div>
     
@@ -467,7 +520,7 @@ class UnionFind
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2020/07/22/talks-july/" target="_self">
-          <img src="https://pic4.zhimg.com/80/v2-5aba51927f8fad39e1ee6e07e69d7279_1440w.jpg" srcset="/img/loading.gif" alt="Talks-July">
+          <img src="https://pic4.zhimg.com/80/v2-5aba51927f8fad39e1ee6e07e69d7279_1440w.jpg" srcset="/img/loading.gif" lazyload alt="Talks-July">
         </a>
       </div>
     
@@ -527,7 +580,7 @@ class UnionFind
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2020/06/28/talks-june/" target="_self">
-          <img src="http://p5.itc.cn/q_70/images03/20200615/4e493a3e2e5842e1bed47334c039c86a.png" srcset="/img/loading.gif" alt="Talks-June">
+          <img src="http://p5.itc.cn/q_70/images03/20200615/4e493a3e2e5842e1bed47334c039c86a.png" srcset="/img/loading.gif" lazyload alt="Talks-June">
         </a>
       </div>
     
@@ -588,7 +641,7 @@ extract ecents from texts(ACE)
     
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2020/06/28/notes-transformer/" target="_self">
-          <img src="https://pic3.zhimg.com/v2-f8d834e3e3387b67f81c8c8c20c3c34d_1440w.jpg?source=172ae18b" srcset="/img/loading.gif" alt="Notes-Transformer">
+          <img src="https://pic3.zhimg.com/v2-f8d834e3e3387b67f81c8c8c20c3c34d_1440w.jpg?source=172ae18b" srcset="/img/loading.gif" lazyload alt="Notes-Transformer">
         </a>
       </div>
     
@@ -641,74 +694,13 @@ Self-attention 是seq模型吗？为什么要引入position embedding ,为何忽
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2020/06/27/leetcode-june/" target="_self">
-          <img src="/img/nlp.jpg" srcset="/img/loading.gif" alt="Leetcode-June">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/06/27/leetcode-june/">Leetcode-June</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/06/27/leetcode-june/">
-          
-          
-            
-          
-          快慢指针对于线性表类型的题目，已知线性表中某个结点满足什么条件，找到这个结点，我们就可以用到快慢指针，同时要找的这个结点所具有的特性决定着快指针比慢指针要“快”多少
-时间复杂度一般可达 O(n)，空间复杂度可达 O(1)
-典型场景
-判断链表或者数组是否存在环； 寻找中位数；
-
-解题模版若题型符合快慢指针的题型
-
-设置快指针有多快
-快指针比慢指针快多少？这要看题目的条件，比方说如果题目要求链表最中间
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-06-27 21:56" pubdate>
-              2020-06-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/LeetCode/">LeetCode</a>
-            
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
-  
-  <script>
-    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
-      ele.href += '#board';
-    }
-  </script>
 
 
 
@@ -718,16 +710,15 @@ Self-attention 是seq模型吗？为什么要引入position embedding ,为何忽
         </div>
       </div>
     
-  </main>
 
-  
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
-  
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
      aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
@@ -748,9 +739,10 @@ Self-attention 是seq模型吗？为什么要引入position embedding ,为何忽
     </div>
   </div>
 </div>
-  
+    
 
-  
+    
+  </main>
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
@@ -763,17 +755,32 @@ Self-attention 是seq模型吗？为什么要引入position embedding ,为何忽
   
 </footer>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
 <script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 <!-- Plugins -->
 
 
   
-    <script  src="/js/lazyload.js" ></script>
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
@@ -782,47 +789,43 @@ Self-attention 是seq模型吗？为什么要引入position embedding ,为何忽
 
 
 
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
 
 
 
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
 
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
   <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "The Sound of Silence&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
   </script>
-
-
 
 
 
   <script  src="/js/local-search.js" ></script>
   <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
   </script>
 
 
@@ -839,6 +842,8 @@ Self-attention 是seq模型吗？为什么要引入position embedding ,为何忽
 
 
 
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 </body>
