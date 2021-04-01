@@ -1,0 +1,575 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="这是一个似乎不善于自我介绍的人">
+  <meta name="author" content="yangjing">
+  <meta name="keywords" content="">
+  
+  <title>Paper-SciIR - The Sound Of Silence</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>YangJing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/index_bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Paper-SciIR">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-04-01 22:45" pubdate>
+        April 1, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Paper-SciIR</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Aminer-2008-kdd"><a href="#Aminer-2008-kdd" class="headerlink" title="Aminer[2008.kdd]"></a>Aminer[2008.kdd]</h1><ul>
+<li><a href="http://www.aminer.cn" target="_blank" rel="noopener">http://www.aminer.cn</a></li>
+</ul>
+<p>Motivation(information cannot be modeled interact)</p>
+<p> dblp , citeseer ， Google scholar </p>
+<ul>
+<li>lacks semantic-based information </li>
+<li>lack a unified approach to efficiently model the academic network</li>
+<li>Different information modeled individually , and the interaction and dependencies cannot be captured ! </li>
+</ul>
+<p>Goals [抽取，整合，服务]</p>
+<ul>
+<li>Extracting researcher profiles automatically from the web,</li>
+<li>Intergrating the publications into the networks </li>
+<li>Modeling entire academic network</li>
+<li>不仅仅搜索标题，作者，期刊，而且每一个学者的语言信息关系网的都能够建立</li>
+</ul>
+<p>Related subtasks</p>
+<ul>
+<li>topic modeling(LDA) ; Personal Profile Extraction ; Name Disambiguation(normalization)</li>
+</ul>
+<p>five main components</p>
+<ul>
+<li>person profile extraction ： <ul>
+<li>position ， affiliation ， email ， address , phone , fax ,phd</li>
+<li>Crf tagging to get three  feature ： content features， pattern features ， term feature.</li>
+</ul>
+</li>
+<li>name disambiguation: a  probabilistic framework </li>
+<li>Topic  modeling (author-conference-topic) : documents + author information </li>
+</ul>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> best <span class="hljs-keyword">of</span> our knowledge , <span class="hljs-keyword">the</span> issues we focus <span class="hljs-keyword">on</span> <span class="hljs-title">this</span> <span class="hljs-title">work</span> <span class="hljs-title">XXXXX</span>,<span class="hljs-title">XXX</span><br></code></pre></td></tr></table></figure>
+
+<p>Other Application</p>
+<ul>
+<li>Expert finding ; Association search  (find and rank);  author interest finding and academic suggestions</li>
+</ul>
+<h1 id="ITGInsight-2020"><a href="#ITGInsight-2020" class="headerlink" title="*ITGInsight *[2020]"></a>*<em>ITGInsight *</em>[2020]</h1><ul>
+<li><a href="http://cn.itginsight.com" target="_blank" rel="noopener">http://cn.itginsight.com</a></li>
+</ul>
+<p><strong>Discovering and Visualizing Science, Technology and Innovation Information for Generating Competitive Technological Intelligence</strong> </p>
+<ul>
+<li><p>task</p>
+<ul>
+<li>Keep pace with the latest technology  </li>
+<li>reflect technology changes in granular details</li>
+<li>monitor emerging technologies  and trend</li>
+<li>direct impact on the competitiveness and development of organization , boosting economy growth (macro level)</li>
+<li>Interpretation acquired information（重点在于已有的信息的利用和挖掘）</li>
+</ul>
+</li>
+<li><p>problem</p>
+<ul>
+<li>quantitative methods only simple indicators</li>
+<li>from data preprocessing -&gt;discivering-&gt;visualizing</li>
+<li>Search-only , summarisationi tools , advanced text analysis tools , advanced literature managemtn tools ,no flexible enought tool to incorporate all the key compoents</li>
+</ul>
+</li>
+<li><p>Four key feature</p>
+<ul>
+<li>针对多个来源数据的预处理 ； 灵活的用户自定义的分析系统；可视化模块；自动解释模块(professional automatic interpretation)</li>
+</ul>
+</li>
+</ul>
+<h1 id="Sci-Document-related-Task"><a href="#Sci-Document-related-Task" class="headerlink" title="Sci Document related Task"></a>Sci Document related Task</h1><p>ArnetMiner : Extraction and Mining of Academic Socical NetWorks </p>
+<h3 id="Task1-Text-Generation"><a href="#Task1-Text-Generation" class="headerlink" title="Task1: Text Generation"></a>Task1: Text Generation</h3><p>Problem</p>
+<ul>
+<li><p>Subtask: related work generation , multi-document summarization </p>
+</li>
+<li><p>meaning: reduce authot’s time and effort ,find the specific contribution of individual papers and arrange them in several sentences.</p>
+</li>
+</ul>
+<p>Method: </p>
+<ul>
+<li>reference file:only abstract , introduce, related work ,conclusion sections ,target file :have already written abstract and introduction. [books and thesis was dropped!]</li>
+<li>citation information is helpful for scientific summarization</li>
+<li>Step1 : summarize the referenced paper , step2: compare with the target paper </li>
+<li>Tool to parser  PDF file:  extract texts py <strong>PDFlib</strong> and pare sections with <strong>ParsCit</strong></li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1goagwzd0zvj30oy0pcjtc.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-03-06 at 8.29.36 PM"></p>
+<p>Conclustion</p>
+<ul>
+<li>first exploits a  probability latent semantic analysis [plsa] to topic-biased parts , and the applies regression models to learn the importance socres of the sentences. Finally , an optimization framework is proposed to generate the related work section.</li>
+</ul>
+<p>Metric : rouge scores</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs oxygene"><span class="hljs-keyword">to</span> the best <span class="hljs-keyword">of</span> our knowledage , no previous works have used xxx <span class="hljs-keyword">to</span> deal <span class="hljs-keyword">with</span>  xxxx tasks<br>xx methed xx was proposed <span class="hljs-keyword">to</span>  xx task xx , we exploits a xxx <span class="hljs-function"><span class="hljs-keyword">method</span> <span class="hljs-title">xxx</span> <span class="hljs-title">to</span></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="🍅Task2-Citation-Predict"><a href="#🍅Task2-Citation-Predict" class="headerlink" title="🍅Task2:Citation Predict"></a>🍅Task2:Citation Predict</h3><h3 id="🍅Task3-PeerRead"><a href="#🍅Task3-PeerRead" class="headerlink" title="🍅Task3:PeerRead"></a>🍅Task3:PeerRead</h3><ul>
+<li><p>Meaning: </p>
+<ul>
+<li>Two subtask:  accepted or not ? + predict the score of  paper ? </li>
+</ul>
+</li>
+</ul>
+<h1 id="ZH-Related"><a href="#ZH-Related" class="headerlink" title="ZH-Related"></a>ZH-Related</h1><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs markdown">科研本体的图谱的构建：<br><br><span class="hljs-bullet">- </span>知识图谱 vs 科研本体 的区别和联系？<br><span class="hljs-bullet">  - </span>schema 数据模式 和 entity 实体概念<br><span class="hljs-bullet">- </span>知识图谱的结构和一般的构建流程？<br><span class="hljs-bullet">  - </span>数据层金额模式层<br><span class="hljs-bullet">  - </span>自顶向下vs 自底向上 ？ 先获取模式信息还是先获取数据之间的关系<br><br><br><br><span class="hljs-code">	科研人员，科研机构， 科研成果， 科学会议，科研设备各种对象属性及其相互之间的联系</span><br><span class="hljs-code">	kvision 本体 ：文献document , 概念concept  , 作者 author , 出版机构press </span><br><span class="hljs-code">	relation : </span><br><span class="hljs-bullet">		- </span>继承主题词表中概念间用代属分参关系<br><span class="hljs-bullet">		- </span>文献，概念，作者之间的固有关系<br><span class="hljs-code">		</span><br><span class="hljs-code">	vivo ： organization ， concept , person , journal </span><br><span class="hljs-code">	活动，机构，成果，人员，项目，研究主题，信息来源，学术会议活动</span><br><span class="hljs-code">	</span><br><span class="hljs-code">	分类主题一体化表 ： 文中图5</span><br><span class="hljs-code">	</span><br><span class="hljs-code">	数据库 ： 美国政府报告，aiaa , iel 等全文数据库 ， ei inspeec 等文摘数据库</span><br><span class="hljs-code">	</span><br><span class="hljs-code">	图8:国防知识图谱服务系统界面截图</span><br></code></pre></td></tr></table></figure>
+
+
+
+ <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs markdown">科技文献是指：<br> 包含在科技文献之中，面向特定领域问题的，经过科学研究验证并且经过领域专家评审确认的知识单元<br><span class="hljs-bullet"> - </span>标题 -&gt; 摘要 -&gt; 相关研究 -&gt; 结论<br> 信息单元<br><span class="hljs-bullet"> 	- </span>粗粒度 ： 事件，主题，<br><span class="hljs-bullet"> 	- </span>细粒度 ： 实体，属性，<br> 	表示形式<br><span class="hljs-bullet"> 	- </span>rdf三元组的表示 vs owl等本体语言的表示<br> 	<br> 知识抽取的应用场景<br><span class="hljs-bullet"> -	 </span>引文分析 vs 主题分析<br> <br> 对于信息抽取的综述<br><span class="hljs-bullet"> 	- </span>细粒度抽取 ;xxxx<br><span class="hljs-bullet"> 	- </span>事件抽取：触发词抽取，论元抽取，事件分类 ， 角色分类 <br><span class="hljs-bullet"> 		- </span>其实也可以完全看作两个问题：分类以及抽取两个大类问题，四个子任务来当作一个联合抽取的问题 ？ <br><span class="hljs-bullet"> 		- </span>人工特征抽取触发词<br> 		<br> 	应用：<br><span class="hljs-bullet"> 	- </span>semantic scholar : 实体抽取以及实体链接<br><span class="hljs-bullet"> 		- </span>实体抽取链接到一个外部数据库 google facci标注最频繁的实体<br><span class="hljs-bullet"> 		- </span>四种关系： 种: Author、Context、Desc、Venue, Author 表示作者发表文章的题名带有该实体; Contex表		示两个实体在 20 个单位的词窗口中共现次数超过 5; Desc 表示实体与 Freebase 描述之间的关系; Venue 表示 		作者发表了标题带有该实体的会议论文。利用该知识 库, 实现了更细粒度、更精准的智能学术搜索。<br> 		<br> 	科技文献难点：<br><span class="hljs-bullet"> 	- </span>知识点语义相关性大与复杂性大，隐藏在多句信息之中甚至篇章级别之中，本身存在信息分布稀疏之外还存在存在大量的噪声信息。<br><span class="hljs-bullet"> 	- </span>其实科技领域，工学，理学，医学等等不同的学科其实很难定义出一个通用统一的实体-关系模式进行抽取<br> <br> 	想法：<br><span class="hljs-bullet"> 	- </span>缩小文本的范围，比如只抽取摘要，结论，相关研究 <br><span class="hljs-bullet"> 	- </span>如何能够利用本身科技文献的自带的一些规范性实现抽取：比如说是编号之中就会有文章信息，固定期刊有固定的章节和版面的设置??<br><span class="hljs-bullet"> 	- </span>大规模数据集的构建： 引入外部知识库远监督标注 + 引入对抗攻击和训练减少标注噪音<br></code></pre></td></tr></table></figure>
+
+<p>《面向中午科技文献非结构摘要的知识元表示》- </p>
+<p>仅仅只要摘要，将文本按句子级划分为目的、方法、结果或结论三个要素，统计 每个要素句中的线索词、句型和位置，建立相关规则库，根据本体模型和规则库构建相关抽取算法。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs routeros">仅仅摘要，setence level<br>	- 目的 ，方法， 结果/结论<br>	- 知识元本体理论 + 句型集合和线索集合 <br>	- 结构化摘要 vs 非结构化摘要 <br>	- Atanassova 等将摘要分为 三个部分: 背景、研究方法 / 主要发现、结论 / 意义<br>	- 定义一个科 技文献非结构化摘要知识元本体模型。这个模型由概念、 属性、方法及关系四大要素构成，<br>	<br>摘要的目的部分常用的句型和线索词有<br>“为了<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>难以解决的问题<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “由于<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>但是 <span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “但是<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “随着<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>不足<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span> 没有考虑<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>需要解决的问题<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>导致<br><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “但<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>难以<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” 等。<br><br><br>。句子的 位置分布通常介于摘要的目的与结论之间，常用的句型和 线索词有 “文中研究<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>最后<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “本文<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>最后<br><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “利用<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>完成<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “针对<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>提出<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “文中 <span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>提出<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “本文<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>通过<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “因此<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>采用 <span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>提出<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>提出<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>首先<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>然后 <span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>本文以<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>为解决上述问题<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>”<br>“利用<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>设计<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>本论文的研究工作主要是 <span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “本文利用<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>首先<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “因此<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>本文<br>正是基于<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “本文结合<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “针对<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>综述<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><br><br><br>置分布通常位于摘要的最<br>后一部分，常用的句型和线索词有 “实验结果表明<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “结果证明<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “表明<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>对比实验<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>测试表明<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “结果表明<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>效果<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>分类实验<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>表明” “实现<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “仿真结果表明 <span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>结果显示<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>提供参考依据<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “利用本方法<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>初步断定<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>未来的研究<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>”<br>“实验分析<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “文中总结<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>” “研究表明<span class="hljs-built_in">..</span><span class="hljs-built_in">..</span><span class="hljs-built_in">..</span>”<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><span class="hljs-built_in">Aminer ,</span> TechKG, AceKG<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs clean">科技文献资源中方法知识元的抽取研究<br><br>方法： 基于规则的方法知识元抽取，半自动-&gt;手工抽取-&gt;自动抽取，基于prefixspan算法挖掘新的知识元描述<br>数据： <span class="hljs-number">16</span>篇科技文献<br>知识元划分：数值，事实，概念，方法<br><br>知识元与本体的定义表<br>- 定义，前提条件 ， 目的，功能，子步骤 ，纤细步骤 ， 结果<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Paper/">Paper</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/04/01/review-march/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Review-March</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/21/paper-graphembedding/">
+                        <span class="hidden-mobile">Paper-GraphEmbedding</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

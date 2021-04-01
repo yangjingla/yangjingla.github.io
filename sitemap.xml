@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2021/04/01/review-march/</loc>
+    
+    <lastmod>2021-04-01T14:45:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/04/01/paper-sciir/</loc>
+    
+    <lastmod>2021-04-01T14:45:15.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2021/03/21/paper-graphembedding/</loc>
     
     <lastmod>2021-03-21T07:52:14.000Z</lastmod>
@@ -9,7 +23,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2021/02/27/paper-feb/</loc>
+    <loc>http://yoursite.com/2021/02/27/paper-resnet/</loc>
     
     <lastmod>2021-02-27T11:09:43.000Z</lastmod>
     

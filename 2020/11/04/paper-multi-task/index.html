@@ -18,7 +18,7 @@
   <meta name="author" content="yangjing">
   <meta name="keywords" content="">
   
-  <title>Paper-Multi-Task - The Sound Of Silence</title>
+  <title>Paper-InformationRetriveal - The Sound Of Silence</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -140,7 +140,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Paper-Multi-Task">
+            <span class="h2" id="subtitle" title="Paper-InformationRetriveal">
               
             </span>
 
@@ -202,7 +202,7 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Paper-Multi-Task</h1>
+            <h1 style="display: none">Paper-InformationRetriveal</h1>
             
             <div class="markdown-body">
               <h1 id="Paper"><a href="#Paper" class="headerlink" title="Paper"></a>Paper</h1><p><strong>《Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction 》 [EMNLP2018]</strong> </p>
@@ -216,7 +216,7 @@
 <li><p>关键二: 提出了由500篇科技文献摘要标注成的一个setence-level科技信息抽取数据集SciERC <a href="http://nlp.cs.washington.edu/sciIE/" target="_blank" rel="noopener">这里是主页和标注手册</a> ,重点比较了semEval2017 和 semEval2018这两个实体抽取的数据集。</p>
 </li>
 <li><p>关键三:model  </p>
-  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2qlvp8frj31e00nwjyd.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-10-26 at 2.50.34 PM" style="zoom:50%;" />
+  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2qlvp8frj31e00nwjyd.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-10-26 at 2.50.34 PM" style="zoom:50%;" />
 </li>
 <li><p>关键四:评价指标和beam pruning</p>
 <ul>
@@ -237,7 +237,7 @@
 </li>
 </ul>
 <hr>
-<p><strong>《A general framework for information extraction using dy- namic span graphs》 In NAACL-HLT 2019</strong></p>
+<p><strong>《A general framework for information extraction using dynamic span graphs》 In NAACL-HLT 2019</strong></p>
 <hr>
 <p>摘要：本文对联合抽取任务是用了span来交互各个子任务信息，而抛弃了传统的使用了LSTM来交互子任务信息，并且span的表示是可以根据指代信息和抽取的关系进行动态的更新这也是模型名字(DyGIE : dynamic graph information extraction的由来)，而不是固定的。</p>
 <ul>
@@ -256,7 +256,7 @@
 </ul>
 </li>
 <li><p><strong>关键二：TODO模型细节</strong></p>
-  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6m4gsn3zj317w0l4wlc.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-10-29 at 11.17.48 PM" style="zoom: 50%;" />
+  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6m4gsn3zj317w0l4wlc.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-10-29 at 11.17.48 PM" style="zoom: 50%;" />
 </li>
 <li><p>向量是如何一层一层的传上去的？</p>
 </li>
@@ -284,7 +284,7 @@
 <p>摘要：一个sentence-level 的实体识别，关系抽取，事件抽取的联合抽取模型 DyGIE++[本文其实是 yi  luan在对自己的SciIE框架的拓展–第一篇文章]。除了强调BERT的强大作用之外，本文主要是通过引入span representation 以及 dynamic span graph propagation 来捕捉 across-sentence level 的一些结构信息，相比较以前的模型在三个子任务上都取得了SOTA。</p>
 <ul>
 <li><p>关键一：模型结构（更多细节参考上篇）</p>
-  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6gltyawaj30sk0kw0wd.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-10-29 at 8.06.18 PM" style="zoom: 50%;" />
+  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6gltyawaj30sk0kw0wd.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-10-29 at 8.06.18 PM" style="zoom: 50%;" />
 </li>
 <li><p>底层表示： bert 的next sentence能够捕捉cross sentence 信息 ； contextual embedding works!</p>
 </li>
@@ -293,7 +293,7 @@
 <li><p>关键二：实验设置</p>
 <ul>
 <li><p>介绍了四个常规的事件抽取的数据集 ：ACE05(里面还有一个overlapping entity extraction), SciERC, GENIA and WLPC 。其中后面三个数据集都可以用作联合抽取实验的数据集。</p>
-  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6hke4426j30oc0ki42b.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-10-29 at 8.40.12 PM" style="zoom: 50%;" />
+  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6hke4426j30oc0ki42b.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-10-29 at 8.40.12 PM" style="zoom: 50%;" />
 </li>
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </ul>
 </li>
 <li><p>关键二：Model。</p>
-  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6gmscft5j31bk0oqtg8.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-10-29 at 8.07.48 PM" style="zoom:33%;" />
+  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6gmscft5j31bk0oqtg8.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-10-29 at 8.07.48 PM" style="zoom:33%;" />
 
 
 
@@ -332,7 +332,7 @@
 <li><p>什么是mention？ 什么是span?什么是entity? </p>
 <ul>
 <li><p>Mention 是和entity存在某种关系的所有东西的集合；我们将“mentions”(或span)定义为文本中实体的具体实例——这可以是实体的实际名称、缩写，等等。</p>
-  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2r4r3z16j30ym0dbn2j.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="image-20201026150856712" style="zoom: 33%;" />
+  <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2r4r3z16j30ym0dbn2j.jpg" srcset="/img/loading.gif" lazyload alt="image-20201026150856712" style="zoom: 33%;" />
 
 </li>
 </ul>
@@ -420,7 +420,7 @@
 <li>OneNote ：3493文档，平均450个单词</li>
 <li>Conll03</li>
 </ul>
-<p>​                <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk8otw2rxmj30r20fi40d.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-10-31 at 6.22.33 PM" style="zoom: 33%;" /><br>          <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk9qsynbfwj30r20fi40r.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-11-01 at 4.06.24 PM" style="zoom: 33%;" /></p>
+<p>​                <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk8otw2rxmj30r20fi40d.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-10-31 at 6.22.33 PM" style="zoom: 33%;" /><br>          <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk9qsynbfwj30r20fi40r.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-11-01 at 4.06.24 PM" style="zoom: 33%;" /></p>
 <p><strong>Overlapping entity extraction</strong></p>
 <ul>
 <li>ACE04-O , ACE05-O</li>
@@ -444,7 +444,7 @@
 <li>SIX Entity:(Task, Method, Metric, Material, Other-ScientificTerm and Generic) </li>
 <li>SEVEN Relation : (Compare, Part-of, Conjunc- tion, Evaluate-for, Feature-of, Used-for, Hyponym- Of). Directionality is taken into account except for the two symmetric relation types (Conjunction and Compare)</li>
 </ul>
-<p>​       <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gjydr6zinjj30vy0siahj.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-10-22 at 8.23.04 PM" style="zoom: 33%;" /><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2qkgiixjj316i0myahl.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="Screen Shot 2020-10-26 at 2.48.57 PM" style="zoom: 25%;" /></p>
+<p>​       <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gjydr6zinjj30vy0siahj.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-10-22 at 8.23.04 PM" style="zoom: 33%;" /><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2qkgiixjj316i0myahl.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2020-10-26 at 2.48.57 PM" style="zoom: 25%;" /></p>
 <p><strong>SciREX</strong>[document-level] [acl2020]</p>
 <ul>
 <li>identifying individual entities, their document level relationships, and predicting their saliency in the document)<pre><code>&lt;img src=&quot;https://tva1.sinaimg.cn/large/0081Kckwgy1gjydre2en8j30vy0si0zf.jpg&quot; alt=&quot;Screen Shot 2020-10-22 at 8.23.25 PM&quot; style=&quot;zoom: 33%;&quot; /&gt;</code></pre></li>
@@ -470,7 +470,7 @@
 <h2 id="span-based-representation"><a href="#span-based-representation" class="headerlink" title="span-based representation"></a>span-based representation</h2><ul>
 <li>Basic Concepts</li>
 </ul>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2r4r3z16j30ym0dbn2j.jpg" srcset="/img/loading.gif" lazyload srcset="/img/loading.gif" alt="image-20201026150856712" style="zoom: 33%;" />
+<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk2r4r3z16j30ym0dbn2j.jpg" srcset="/img/loading.gif" lazyload alt="image-20201026150856712" style="zoom: 33%;" />
 
 <ul>
 <li></li>
