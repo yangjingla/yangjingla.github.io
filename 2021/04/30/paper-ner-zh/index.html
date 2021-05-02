@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2k 字
+      2.4k 字
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      37
+      46
        分钟
     </span>
   
@@ -244,12 +244,12 @@
 <li><p>🍅 Recap: LSTM + CRF for NER details  : <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank" rel="noopener">[<strong>NNNNNice!!</strong>] Understanding LSTM Networks</a></p>
 <ul>
 <li><p>Input vector $i^c_j$ , Output vector $O^c_j$ ; Cell Vector $c^c_j$</p>
-<p>​                        $$\begin{bmatrix} i^{c}<em>j \ o^c_j \ f^c_j \ \hat{c}^c_j   \end{bmatrix} = \begin{bmatrix} \sigma \ \sigma \ \sigma \ tanh  \end{bmatrix} (W^{cT}  \begin{bmatrix} x^c_j \ h^c</em>{j-1}  \end{bmatrix} + b^c)  \  c^c_j =  f^c_j \cdot c^c_{j-1} + i^c_j \cdot \hat{c}^c_j \ h^c_j = o^c_j \cdot tanh(c^c_j)  $$</p>
+<p>$$\begin{bmatrix} i^{c}<em>j \ o^c_j \ f^c_j \ \hat{c}^c_j   \end{bmatrix} = \begin{bmatrix} \sigma \ \sigma \ \sigma \ tanh  \end{bmatrix} (W^{cT}  \begin{bmatrix} x^c_j \ h^c</em>{j-1}  \end{bmatrix} + b^c)  \  c^c_j =  f^c_j \cdot c^c_{j-1} + i^c_j \cdot \hat{c}^c_j \ h^c_j = o^c_j \cdot tanh(c^c_j)$$</p>
 </li>
 </ul>
 </li>
 <li><p>$[h^w_1 , h^w_2 , h^w_3 ,\cdots h^w_m] $ for CRF</p>
-<p>​            $$ p(y|s) = \frac{exp( \sum_i W^{l_i}<em>{CRF}h_i. + b</em>{CRF}^{l_{i-1} , l_i})}{ \sum_{y^{\prime} } exp(\sum_i(W^{l_i}<em>{CRF} + h_i + b</em>{CRF}^{l_{i-1} , l_i}))}$$</p>
+<p>$$p(y|s) = \frac{exp( \sum_i W^{l_i}<em>{CRF}h_i. + b</em>{CRF}^{l_{i-1} , l_i})}{ \sum_{y^{\prime} } exp(\sum_i(W^{l_i}<em>{CRF} + h_i + b</em>{CRF}^{l_{i-1} , l_i}))}$$</p>
 </li>
 <li><p>Lattice LSTM outperforms both word-based and character-based LSTM , Lattice Method fully independent of word segemantation thanks to the freedom of choosing lexcion words.</p>
 </li>
@@ -321,15 +321,15 @@
 </ul>
 <h3 id="Method-2"><a href="#Method-2" class="headerlink" title="Method"></a>Method</h3><ul>
 <li>Lexicon-based CNNs<ul>
-<li>$SKIP😮‍💨$ </li>
+<li>$$SKIP😮‍💨$$ </li>
 </ul>
 </li>
 <li>Refining Networks with Lexicon Rethinking<ul>
-<li>$ SKIP😮‍💨$</li>
+<li>$$ SKIP😮‍💨$$</li>
 </ul>
 </li>
 <li>Predicting NER with CRF<ul>
-<li>$ SKIP😮‍💨$</li>
+<li>$$SKIP😮‍💨$$</li>
 </ul>
 </li>
 </ul>
@@ -374,7 +374,50 @@
 <li>Compared with TENER, FLAT leverages lexicon resources and uses a new position encoding. </li>
 <li>NER’s strong alignment of label and input,<strong>we use a well-designed position encoding to indicate the lattice structure</strong>。</li>
 </ul>
-<h1 id="Paper-Task"><a href="#Paper-Task" class="headerlink" title="Paper-Task"></a>Paper-Task</h1><h2 id="Two-are-Better-than-One-Joint-Entity-and-Relation-Extraction-with-Table-Sequence-Encoders-acl2020"><a href="#Two-are-Better-than-One-Joint-Entity-and-Relation-Extraction-with-Table-Sequence-Encoders-acl2020" class="headerlink" title="Two are Better than One:Joint Entity and Relation Extraction with Table-Sequence Encoders  [acl2020]"></a>Two are Better than One:Joint Entity and Relation Extraction with Table-Sequence Encoders  [acl2020]</h2><h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><h3 id="Motivation-4"><a href="#Motivation-4" class="headerlink" title="Motivation"></a>Motivation</h3><h3 id="Method-4"><a href="#Method-4" class="headerlink" title="Method"></a>Method</h3><h3 id="Conclusion-2"><a href="#Conclusion-2" class="headerlink" title="Conclusion"></a>Conclusion</h3><h2 id="A-Unified-MRC-Framework-for-Named-Entity-Recognition-acl2020"><a href="#A-Unified-MRC-Framework-for-Named-Entity-Recognition-acl2020" class="headerlink" title="A Unified MRC Framework for Named Entity Recognition [acl2020]"></a>A Unified MRC Framework for Named Entity Recognition [acl2020]</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">Instead <span class="hljs-keyword">of</span> treating <span class="hljs-keyword">the</span> task ofNER <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> sequence labeling problem, we propose <span class="hljs-built_in">to</span> formulate <span class="hljs-keyword">it</span> <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> machine reading comprehen- sion (MRC) task. For example, extracting en- tities <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> PER(PERSON) label is formal- ized <span class="hljs-keyword">as</span> extracting answer spans <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> question “which person is mentioned <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">text</span>”.This formulation naturally tackles <span class="hljs-keyword">the</span> entity overlapping issue <span class="hljs-keyword">in</span> nested NER<br></code></pre></td></tr></table></figure>
+<h1 id="Paper-Task"><a href="#Paper-Task" class="headerlink" title="Paper-Task"></a>Paper-Task</h1><h2 id="Two-are-Better-than-One-Joint-Entity-and-Relation-Extraction-with-Table-Sequence-Encoders-acl2020"><a href="#Two-are-Better-than-One-Joint-Entity-and-Relation-Extraction-with-Table-Sequence-Encoders-acl2020" class="headerlink" title="Two are Better than One:Joint Entity and Relation Extraction with Table-Sequence Encoders  [acl2020]"></a>Two are Better than One:Joint Entity and Relation Extraction with Table-Sequence Encoders  [acl2020]</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">Joint learning algorithms have been proposed <span class="hljs-keyword">to</span> solve <span class="hljs-keyword">both</span> tasks simultaneously, <span class="hljs-keyword">and</span> many <span class="hljs-keyword">of</span> them <span class="hljs-keyword">cast</span> the joint task <span class="hljs-keyword">as</span> a <span class="hljs-keyword">table</span>-filling problem.<br><span class="hljs-keyword">In</span> this <span class="hljs-keyword">work</span>, we propose the novel <span class="hljs-keyword">table</span>-<span class="hljs-keyword">sequence</span> encoders <span class="hljs-keyword">where</span> two different encoders – a <span class="hljs-keyword">table</span> encoder <span class="hljs-keyword">and</span> a <span class="hljs-keyword">sequence</span> en- coder are designed <span class="hljs-keyword">to</span> help <span class="hljs-keyword">each</span> other <span class="hljs-keyword">in</span> the representation learning process<br></code></pre></td></tr></table></figure>
+
+<h3 id="Problem-4"><a href="#Problem-4" class="headerlink" title="Problem"></a>Problem</h3><ul>
+<li><strong>pipeline method  vs jointly method ?</strong>  </li>
+<li>jointly method as table filling problem?<ul>
+<li>First, these methods typically suffer from feature confusion as they use a single representation for the two tasks – NER and RE.</li>
+<li>Second, these methods underutilize the table structure as they usually convert it to a sequence and then use a sequence labeling approach to fill the table</li>
+</ul>
+</li>
+</ul>
+<h3 id="Motivation-4"><a href="#Motivation-4" class="headerlink" title="Motivation"></a>Motivation</h3><p>NER is then regarded as a sequence labeling problem where tags are assigned along the diagonal entries of the table. RE is regarded as the problem of labeling other entries within the table</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gq3w3aoalcj30zo0q2af1.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-05-02 at 10.48.05 AM"></p>
+<ul>
+<li><strong>sequence representations</strong> and table <strong>repre-sentations</strong> for NER and RE respectively</li>
+<li>we design a mechanism to allow them to interact with each other, in order to take advantage of the inherent association underlying the NER and RE tasks。</li>
+<li><h2 id="Use-the-attention-weights-of-BERT-for-learning-table-representations"><a href="#Use-the-attention-weights-of-BERT-for-learning-table-representations" class="headerlink" title="Use the attention weights of BERT for learning table representations."></a><strong>Use the attention weights of BERT for learning table representations.</strong></h2></li>
+</ul>
+<h3 id="Method-4"><a href="#Method-4" class="headerlink" title="Method"></a>Method</h3><ul>
+<li><p>table encoder for table representation</p>
+<ul>
+<li>an N × N table of vectors, where the vector at row i and column j corresponds to the i-th and j-th word of the input sentence.</li>
+<li><strong>MD-RNN:</strong> multi-dimensional adaptations of GRU</li>
+</ul>
+</li>
+<li><p>sequence encoder for sequence representation</p>
+<ul>
+<li>table-guide attention</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gq4a1hrm95j30y00mqdim.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-05-02 at 6.48.56 PM"></p>
+<p>​                            $$f(Query_j ,Key_j ) = U \cdot g(Query_j , Key_j) \ T_{l ,i,j} = g(S_{l-1 ,i} , S_{l-1,j}) = g(Query_j , Key_j)$$</p>
+</li>
+<li><p>Training and Evaluation</p>
+<ul>
+<li>$$SKIP😮‍💨$$</li>
+</ul>
+</li>
+</ul>
+<h3 id="Conclusion-2"><a href="#Conclusion-2" class="headerlink" title="Conclusion"></a>Conclusion</h3><ul>
+<li><strong>Pipeline Vs Joint :</strong> Joint learning has been shown effective since it can alleviate the error propagation issue and benefit from exploiting the interrelation between NER and RE。</li>
+<li><strong>Metric:</strong> Following the established line of work, we use the F1 measure to evaluate the performance ofNER and RE. For NER, an entity prediction is correct if and only if its type and boundaries both match with those of a gold entity.  For RE, a relation prediction is considered correct if its relation type and the boundaries of the two entities match with those in the gold data. We also report the strict relation F1 (denoted RE+), where a relation prediction is considered correct if its relation type as well as the boundaries and types of the two entities all match with those in the gold data. Relations are asymmetric, so the order of the two entities in a relation matters.</li>
+<li><strong>attention visualize :</strong> We visualize the table-guided attention with bertviz  <a href="https://github.com/jessevig/bertviz" target="_blank" rel="noopener">https://github.com/jessevig/bertviz</a></li>
+<li><strong>Future :</strong> In the future, we would like to inves tigate how the t<strong>able representation may be applied to other tasks</strong>. Another direction is to generalize the way in which the table and sequence i<strong>nteract to other.</strong></li>
+</ul>
+<h2 id="A-Unified-MRC-Framework-for-Named-Entity-Recognition-acl2020"><a href="#A-Unified-MRC-Framework-for-Named-Entity-Recognition-acl2020" class="headerlink" title="A Unified MRC Framework for Named Entity Recognition [acl2020]"></a>A Unified MRC Framework for Named Entity Recognition [acl2020]</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">Instead <span class="hljs-keyword">of</span> treating <span class="hljs-keyword">the</span> task ofNER <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> sequence labeling problem, we propose <span class="hljs-built_in">to</span> formulate <span class="hljs-keyword">it</span> <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> machine reading comprehen- sion (MRC) task. For example, extracting en- tities <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> PER(PERSON) label is formal- ized <span class="hljs-keyword">as</span> extracting answer spans <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> question “which person is mentioned <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">text</span>”.This formulation naturally tackles <span class="hljs-keyword">the</span> entity overlapping issue <span class="hljs-keyword">in</span> nested NER<br></code></pre></td></tr></table></figure>
 
 <h3 id="Problem-5"><a href="#Problem-5" class="headerlink" title="Problem"></a>Problem</h3><ul>
 <li><p>We can divided NER task into two types : nested ner vs flat ner ?</p>
