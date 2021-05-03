@@ -14,11 +14,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="这是一个似乎不善于自我介绍的人">
+  <meta name="description" content="🤔🤔😄😄">
   <meta name="author" content="yangjing">
   <meta name="keywords" content="">
   
-  <title>Notes-Word2Vec+Glove - The Sound Of Silence</title>
+  <title>Review-2021TODO - The Sound Of Silence</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -140,7 +140,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Notes-Word2Vec+Glove">
+            <span class="h2" id="subtitle" title="Review-2021TODO">
               
             </span>
 
@@ -150,8 +150,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-03-11 20:27" pubdate>
-        March 11, 2020 pm
+      <time datetime="2021-05-03 20:32" pubdate>
+        May 3, 2021 pm
       </time>
     </span>
   
@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      249 字
+      5 字
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      1
        分钟
     </span>
   
@@ -202,72 +202,18 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Notes-Word2Vec+Glove</h1>
+            <h1 style="display: none">Review-2021TODO</h1>
             
             <div class="markdown-body">
-              <p>关于NLP的两个Embedding模型，笔记/论文/完整代码</p>
-<h1 id="Word2Vec-Glove"><a href="#Word2Vec-Glove" class="headerlink" title="Word2Vec /Glove"></a>Word2Vec /Glove</h1><h3 id="Blogs-Questions"><a href="#Blogs-Questions" class="headerlink" title="Blogs/Questions:"></a>Blogs/Questions:</h3><ul>
-<li><p><a href="http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/" target="_blank" rel="noopener">[✨✨]  Word2Vec Tutorial - The Skip-Gram Model</a></p>
-<ul>
-<li>谈谈word  embedding的一些模型和对nlp重要性？</li>
-<li>SG vs  CBOW 的异同 , SG存在的哪些问题？</li>
-<li>SG的具体的代码的实现(模型,超参数,结果衡量标准？）</li>
-</ul>
-</li>
-<li><p><a href="http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/" target="_blank" rel="noopener">[✨✨] Word2Vec Tutorial Part 2 - Negative Sampling</a> </p>
-<ul>
-<li>为什么要引入negativeSampling?</li>
-<li>negativeSampling具体做了什么的改变和优化？</li>
-<li>数学的推倒的过程和举例说明negativaSampling的过程？</li>
-</ul>
-</li>
-<li><p><a href="http://mccormickml.com/2018/06/15/applying-word2vec-to-recommenders-and-advertising/" target="_blank" rel="noopener">Applying  word2vec to Recommenders and Advertising</a> </p>
-<ul>
-<li>为什么word2vec可以用到推荐系统？</li>
-<li>具体的场景的应用？</li>
-<li>其他的推荐系统的一些相关技术/模型？</li>
-</ul>
-</li>
-<li><p><a href="https://blog.acolyer.org/2016/04/22/glove-global-vectors-for-word-representation/" target="_blank" rel="noopener">Glove</a></p>
-<ul>
-<li>Matrix  factorization vs shallow-window methods ?</li>
-<li>统计学上的意义和解释？</li>
-</ul>
-<h3 id="✨✨-数学细节讲解："><a href="#✨✨-数学细节讲解：" class="headerlink" title="[✨✨]数学细节讲解："></a>[✨✨]数学细节讲解：</h3></li>
-<li><p><a href="https://www.bilibili.com/video/BV1r7411H7gK?p=271" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1r7411H7gK?p=271</a></p>
-</li>
-<li><p><a href="https://www.bilibili.com/video/BV1r7411H7gK?p=269" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1r7411H7gK?p=269</a></p>
-</li>
-<li><p><a href="https://www.bilibili.com/video/BV1r7411H7gK?p=267" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1r7411H7gK?p=267</a></p>
-</li>
-<li><p><a href="https://www.bilibili.com/video/BV1r7411H7gK?p=264" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1r7411H7gK?p=264</a></p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>论文/笔记：</th>
-<th>Code(Pytorch):</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://web.stanford.edu/class/cs224n/readings/cs224n-2019-notes01-wordvecs1.pdf" target="_blank" rel="noopener">笔记: cs224n官方</a></td>
-<td><a href="https://drive.google.com/open?id=1pWAiw2CAZd1WMoQaS2hVZy9UCc2W7J_9" target="_blank" rel="noopener">[✨✨]Code: Basic SG code</a></td>
-</tr>
-<tr>
-<td><a href="http://arxiv.org/pdf/1301.3781.pdf" target="_blank" rel="noopener">论文:word2vec</a></td>
-<td><a href="https://drive.google.com/open?id=1v0Nm3yvP8v0g5hEQg2r33h7hwQmqSeCW" target="_blank" rel="noopener">[✨✨]Code:  NegativeSampling SG </a></td>
-</tr>
-<tr>
-<td><a href="http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf" target="_blank" rel="noopener">[✨✨]论文:negativeSampling</a></td>
-<td><a href="https://drive.google.com/open?id=1v0Nm3yvP8v0g5hEQg2r33h7hwQmqSeCW" target="_blank" rel="noopener">Code : Glove  </a></td>
-</tr>
-<tr>
-<td><a href="https://drive.google.com/open?id=1RPkJZKPZokZQaSgXqU0yxOTjcsNV8Byu" target="_blank" rel="noopener">[✨✨]</a><a href="http://mccormickml.com/2016/04/27/word2vec-resources/" target="_blank" rel="noopener">笔记: Word2Vec Resources</a></td>
-<td><a href="https://nlp.stanford.edu/projects/glove/" target="_blank" rel="noopener">Glove 项目主页</a></td>
-</tr>
-</tbody></table>
-
+              <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">My birthday date 🤫XXXX🤫！.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="67897ee72e9b401d8d6d64aff181d3ce374b42240c83599763ab3ca9ae897de8">b0a807676b66a90eaa34eeb502f4a143f5c0555930090b0ce803d4bf98fd47c31200d6dee5bd336f95d143888f89110aebfa4ef071a7014f593c0ece73c95e1cad4c42a0c679671ef33d11ed7dc3d5539c98871f028a8ac82681a7173d5ec671632ff4175bce6601c2ed161225a47e28bd5295262452714b6957e42e1d5ccfe44acc8728986da973b7cc07500e8cb72429cc686d03d532f187fe0935b6a011439d02f85275b223ded15a486232a089ee1d388906bb10d882ce27dd66f84c4f44b916f0dd212c55690ede74516e37ce1029a521a3297117832c023e3dc157b52aca588dcf1ec7e5f80a7aa55695c65a3875fa8bd183a99c885ca6ee8aa58c8e9d08dccba213fa69c8b0fdf3979b9ba80fb9a9ddb8e3e9c35ae344081cfa16aea3106f64a23ea94d97d46a0b8c953936507fd67b67fe29ca143e4c41a6e58a812a5725d41c59f9a10b6478cc84980958e89e96f12932a4774090539ea6f3f8441eb8acc5156718e30bcab8f7116c5a4f2f8a26f257633808660432913c1b1d802cc9dd252efa85a2fea7be019fef6eebaa3589dbbc4c974b384685c10c3e2ecb56031ef2a50e96ab68302d0ccfae8c3b1482bb2d1d747dcaec24f9c515bea7820e6d6662125de4ef306ed6e82bd7275aefaed344b59b7e994f4f766b0e91960a1fea19044917f1a5d7dd4734737a3fd8243f86cda778829907cad595656c91731779c4b886db2aeee23fa81ba8e8be4824d16274b2a8d21d4e7ba3d7e2a57146780ed1d04c8a578fe6ae1c9db8439edc44ddc189be0638c0ebc8977cc8e9d433ac1e74936c7809d37a5dc8dd0c95260e01ccd4b27ce13d1d798afe4ceb2710510b532a2f6718c500dc15ccc533ea037ff0822e0507adae99500aa15f176e940f624a34f3e05382730c76fee7b694f571e3699cb5dc465cb895bd0197c957cc43131a105da6aaeda361629929c12510aaa1a7ce59477a8f2a151d141cbf415fbb204c95bb0597c69813244467dcdfe79024cdc17b57cea538ea54285fc93f6b4e2d151bb0ee652efbaf13782134afd73a8bcdb739d82536a5437e858677d4f79f329ffa2b8713db9f0ea0f155bde7ae462e7f22e789da4084bc138d7030759adb2d3c450f6d3a07c036c524d3b5fe81937d7583ff28bc3df23901368fa2ff663a4c9b639c5825e286fb8e1142e8179724635944b7661b0482133e33651091ef552d69d56efc2840c1c72cf5757bde75e2a7e38ca37fc8e4f5a6d1a48c205fd3e46df2d362ff8efe1c713b01bf624c7a9a498eae1e7b053d38700206f98c512b204da8ae9902e67ed4eb7f5dec4ee6a51ffab8c7494f142655ac880355ade7465785a8f08d81011ed231fcb01196525fe88ade0444ae3fc2a7eb2065b9d3083a7e0f687dbd9df10abff8a67e3f127fc5f447ffbd5ab8a2730b356b6c7fb5899c59cd8a60aff4af8825f981f9f6bf96b0b06e3ed5b0bf5a570820bb4278ddecb82510576e5c0390b18445352307c6120a60582250f588552566ea70e362a342b678e8deae376ebb389503860d924c096663ad68ca21c8ef1388edb21c643aae4c69c06efd4ea6fd579a298f00fc62c066c2c3028dc423f594eff3603b2f20e242e6d5435bb8848ad56e532531bd6027caad1da380e7d5cedf3cf8fae8d6cc000cb2c3477eb851c50d46645bdb882caeb82bc2c84e4bca5d104dd6c67f65c77c043a20f3a64d5b85e02c3d9d7c7f802aa797f1333f22301a39efa503bcacf473f107558cc33938d85b7a74b9f60e6f3443053cdb23795aafcefcb64e11230277bc4efb6814af84cd1c3dde1b51c09ed81dbb814ed07a0fdba8768e2bfe938585a9f3e0e85a9af6cae595c6e468ca8740f9d1c9f683605a36f957bd1678f9f26806bb7713eea77f8a398fc3823116d963cd3d9c52fd7e02d5f9934853b1ced45d29c756f3c26167fb3f29feb11c01b8acaba01e7c1cd671c4adba09b79a5e9ef1738f650103c88305597d87003cf3deba514bc43a1f6cb54444c356bc5a607f65c6fd0decf477b3f6a750edc4ac56f2de825ea80967518fcf32c44dcd250b9194242d8fafe092633b5ed136c2a1a862574cef7c6b6d3ccbc97c9aac47de23f50d15a171ccb3fbf63a8e6c3407e01c4a279b699a385667fad871e970d980c7e17ce4a424239a9c51e4031a4501a32faa90c3d02bb21c7676d58ae32e904320252a86b0e7de438a41ccac2ac70070378d11463080f87acefe1c878397034d978fab88c15d37921b263f0fc273cf84654325f2596d084c0012b4eefc003afd2612d4cda4d341a1db797456dd481d69eeab2cb3f396c9bf02972e0e4cc67299a814fa0c7625e2508a9e639bd342f60938a5ac274723a8b93dc7eba2dac9ae50a77a8550d5d8299b86beb9b0b4eea90f66cf25a8cf3bf2e806f2207f6c27316d0e26ef353d2b6181561f91b3e302699b85132e8062fc94dd956bdbc84bcc9b8247168f3c6df256b8d95d40587f3e3770bda8f560c49ee2aa7ea1199e35979b91bd7687e3542f47a19137c87e2ba0242cc8cdd407b013099c76567f8a27fe853fa89c77532a474e808e6e9f65ce9880c32d33b68bf262775da0cdeda8f3a13992ffd273996754f0a45ae645e10eae6d3ff42d477b8dbf1a1c19174d7ebd938864a7110168e20e08661abe9807fa67b8740773c8bb94e54bf7b143c053060d9b63a80602bec2a898c7b54cf16d4f513c200e7e747aa1eb1d073e217efd4e7fafc310091f0abef7e6890126bc2e32a966ddd4179dcdba96232873e19ff5f9bd1238b29b81221e97b50a21e1d91a86e21b60a22822e8116aeec53bb709b471b8235f908129cde3dfdb4f06dfe7c016c71008c37d47dc0f0cd278376e42bace9da3838912535c68d074dd4ad8c4acf774f0fd6d4492fbe07f1500face1e97c0fed63325fffc9bd425489001feb022abcc1c3499304ee3edc9f2c38b3b77a27544eea19bd631cb3be73206e5db14c6c81c9db9602a974f32e9308e51caa95300b19b469f328e53fd450b763bfb43d743564e99e798134bb7b6989abade3cd1d78a4aa731ad1691b6e0725b4c8720a972b31106bc96103d6d6a80b02d674f275174169e7ebbc4dc44299c57453e1a0abc094cfee3d9085a70091092e59cd6f941eec6525dc98d96d0002c6ff49766ebe891297fd8b455933e7b1b24aed395c99c164b3a7ed1d1cc0a0400d557a6b968aa722967823f8ef0e397dc37d44f8fa2338abe79f1087edb14a7443d00adb1eb6b0a20528ccd8c8194aa088144d496ad41a4ec08aca49e87fb92e32056acabc063fcd06b42ad715a18d6105faa3b4884fba3c6aaff547133da44109e61d81c7403182c82c9dfaa81bbc985890dfb13ce10a0adf4f9be6551ebf2692916f092a7a579228ae13e6b76f586458fc0b5dec3b4620b0b49d513a5af2d95cbbecacd2c1b9182fb64714c1152a73cfb0d888a10a157a109e63cfdd30770964c35c7932f084bd5f41da5849a89fe8bebc3ec4c92f9f882cf03cc0f86ac9b4a2c979433178d2551164c195d5663b5a6a6566acec02caa2bc79a4669853a29f66bd1546641d531168717f7a1d038e2af965596638318202a86fc3bf32216fababa460e6a137d9f32d874861e15267ad93fb3fc4b61cccf16709259322f621f1e83d5a5686c4e11e25d8925e4768e17d3b5268627f7ef671074d4c19fa4cddce6e5ad9685ba9cc0710d010772d2e9c1ba3ab4cbf016c1059f70d911858c029ccd1415e3409f3e2575f75a508900406dcb9f809ca95fb8dfed3ae464a90a9d39357b11eb7e1c27369141441a6197e5ffe3d60c62062dedf657ac211f21e9cdb0736d61a25334c3db03a9b24edff152d99703f2a62d54c52528a3e4e1baa21c98d220281f6e1213a410eb9679d376f8b6cc84432002733862f23d3c8624043674995f8334cefd1095f23382d1d0a0b1f443367c9c4701ad5dae7a84d9087c02ec39429c9cb44dab2c80a2f9d1b09ff2c0377375e18f7ac3dffdd63c09acb533945710af59e1ed32d1ca623d2de4454f30eb2281977736a82d15f58cb852fe3100df326dc1e7aafaa200892b192c87f0e3cd6dd609eb96b02758268bbf3aa64dc5c45c39401534dade5dbb2e06fbfcbf0ae1329e09364ba20aeefeaf7126ddfa0d2c28c1256ae9e3182b83f92c2c4dbffc856b50fd1a9dca8e943dd7a7034c44d473fdbf0a8592e88a4c3216016629a96d123b4bf59dd60df22b1288bb44d194cf24319de1a1321cb60fff70f0be9c0b3b55df46c6aaa0027a7ca5b514e2f7754a14900e7a65747bc4b3b46ef377db33558fc64e2c0bbc2320f6d066d590acfdf8a1bdb579fe48933ba110cd38506cc915f8e6288c48040d9f55eb6cd7273e650ba6cfe07084b6f43cc71477c11105cf55832d250e433270ab403d3cb4f6ffbab6c6328c8b6342761871022d3e87ce80e7ea09ca718a46749ed56dd07ef6cec6d7ee7b3abf5cf2057a903069c990b2fefe815583b7b48487d00359f49c914a9044958fbd8f86257b9f4a02328ed340eef4e4e7798d7a127e8066c69fd0e00f9530779bc19a2a45dc4d7a9071beffb0ad41e80365774c6c2a8ddf5b71e921865350e97f31548fd9c34cf99626125d4b7f4611808d428c502c2f9bc89d0c76938ebc0ea6dd8d56fcf48ec293252d208265c6de25fcac62a32d8af8a3cb15bc635be6a5c421727acc04237776d6569f0f8482ba154fd349538c9860c4870cc3224f69f3411b1300f0901788a0be52b1846cafb29fb40b82762857887e9c5b70f384e34696d979115aa4a5e39a57acb1104ec21c8357103ac6766e220e0b988db280e97467a159bc596d0cb14ffb5d1fa4ada9c9a023193ff7ef3754a213c016f8aa19bcee6fb967f5b32877632bf8aa9a7955ebe3d5662861bd9b7fd8a9549eca3c5e8d089ad7d3347abde076b7d3e03a45c3eb1d2ccbafb0ed6beb403ac24bfddd78e289ddb458bf753cc7f2e453f4fe7c743fc0c166ba75aacb3b23ffc2a0d57f16ac3b7d1ad5f45a156eb278dab0744904465a126b05c377d720ba568dbd67c6879c44075c7ce110004411840c5d747f4f4d2dfec6917bd63d24f6696a6b857612224768656aadc2be3722b5fa68825474e2125097d931bbe4d9390a295701168e7ea3df0ee37192012d2155a784619b1e</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
             </div>
             <hr>
             <div>
@@ -276,17 +222,10 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Notes/">Notes</a>
+                      <a class="hover-with-bg" href="/categories/Review/">Review</a>
                     
                   </div>
                 
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/NLP/">NLP</a>
-                    
-                  </div>
                 
               </div>
               
@@ -295,18 +234,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/03/21/notes-lstm-gru/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Notes-LSTM+GRU</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/03/06/notes-fu-hao-ji-suan-yu-zi-dong-tui/">
-                        <span class="hidden-mobile">Notes-符号计算与自动推理</span>
+                      <a href="/2021/04/30/paper-ner-zh/">
+                        <span class="hidden-mobile">Paper-NER(zh)</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
