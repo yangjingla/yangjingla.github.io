@@ -315,27 +315,31 @@
 </ul>
 <h3 id="sklearn的roc-auc曲线绘制"><a href="#sklearn的roc-auc曲线绘制" class="headerlink" title="sklearn的roc_auc曲线绘制"></a>sklearn的roc_auc曲线绘制</h3><ul>
 <li>Code: <a href="https://sklearn.org/modules/generated/sklearn.metrics.roc_auc_score.html#sklearn.metrics.roc_auc_score" target="_blank" rel="noopener">https://sklearn.org/modules/generated/sklearn.metrics.roc_auc_score.html#sklearn.metrics.roc_auc_score</a></li>
-<li><h2 id="面试：P-R-曲线和ROC-AUC曲线的区别是什么？分别有何作用？"><a href="#面试：P-R-曲线和ROC-AUC曲线的区别是什么？分别有何作用？" class="headerlink" title="面试：P-R 曲线和ROC-AUC曲线的区别是什么？分别有何作用？"></a>面试：P-R 曲线和ROC-AUC曲线的区别是什么？分别有何作用？</h2></li>
+<li>面试：P-R 曲线和ROC-AUC曲线的区别是什么？分别有何作用？<ul>
+<li>hint:</li>
+</ul>
+</li>
 <li>功能: 因为模型输出的是概率，对于分类问题如果我们必须要设定一个阈值来判断正负样本，这里的阈值如何设定则直接决定了我们的评价性能的好坏。</li>
 <li>阈值的设定需要考虑到我们的任务：查全率则选择较小的阈值/查准率则选择较大的阈值, ROC曲线的纵轴是真正例率TPR，横轴是假正例率 FPR。</li>
 </ul>
-<p>$$TPR = \frac{TP}{TP + TN} \ FPR = \frac{FP}{TN+FP}$$</p>
+<p>$$ TPR = \frac{TP}{TP + TN} \ FPR = \frac{FP}{TN+FP}$$</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> plot_roc_curve , plot_precision_recall_curve<br><span class="hljs-keyword">from</span> sklearn.metrics <span class="hljs-keyword">import</span> roc_curve , auc <br><br>fpr = dict()<br>tpr = dict()<br>roc_auc = dict()<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n_class):<br>    fpr[i] , tpr[i] ,_ = roc_curve(y_test[:,i] , y_score[:,i])<br>    roc_auc[i] = auc(fpr[i] ,tpr[i])<br>    <span class="hljs-comment"># print(fpr[i] , tpr[i] , roc_auc[i])</span><br><br>fpr[<span class="hljs-string">'micro'</span>] , tpr[<span class="hljs-string">'micro'</span>] ,_  = roc_curve(y_test.ravel() , y_score.ravel())<br>roc_auc[<span class="hljs-string">'micro'</span>] = auc(fpr[<span class="hljs-string">'micro'</span>] , tpr[<span class="hljs-string">'micro'</span>])<br><br>plt.figure()<br>lw = <span class="hljs-number">2</span> <br>plt.plot(fpr[<span class="hljs-number">2</span>] , tpr[<span class="hljs-number">2</span>] ,color = <span class="hljs-string">'darkorange'</span>, lw = lw ,label = <span class="hljs-string">'Roc curve (area = &#123;:.3f&#125;'</span>.format(roc_auc[<span class="hljs-number">2</span>]))<br>plt.plot([<span class="hljs-number">0</span>,<span class="hljs-number">1</span>] , [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>] ,color =<span class="hljs-string">'navy'</span>, lw = lw , linestyle = <span class="hljs-string">'--'</span>)<br>plt.legend()<br>plt.show()<br></code></pre></td></tr></table></figure>
 
 <h3 id="Conclusion-1"><a href="#Conclusion-1" class="headerlink" title="Conclusion"></a>Conclusion</h3><ul>
 <li>stacking 对于 blending的改进： 单个模型训练时候使用了交叉验证 (sklearncross_val_score函数的使用)，使用Stacking集成也是需要调参数集成之后效果并不一定比单个效果好但是似乎会缩短时间</li>
 <li>如何画出模型的分类的决策边界：mxtend</li>
 <li>如何机器学习调参： GridSearchCV 以及 bayes_opt</li>
-<li>如何画出roc-auc的曲线图 ： 代码</li>
+<li>了解roc-auc和阈值的关系作用，如何画出roc-auc的曲线图 ： 代码细节</li>
 </ul>
 <h3 id="Tutorial-1"><a href="#Tutorial-1" class="headerlink" title="Tutorial"></a>Tutorial</h3><p><a href="https://www.kaggle.com/fayzur/lgb-bayesian-parameters-finding-rank-average" target="_blank" rel="noopener">LGB + Bayesian parameters finding + Rank average</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/58204236" target="_blank" rel="noopener">Kaggle 贝叶斯优化调参应用</a></p>
 <p><a href="https://sklearn.org/modules/generated/sklearn.metrics.roc_auc_score.html#sklearn.metrics.roc_auc_score" target="_blank" rel="noopener">sklearn.metrics.roc_auc_score - scikit-learn 0.19.1 documentation</a></p>
 <h1 id="Task3-集成学习案例一-（幸福感预测）"><a href="#Task3-集成学习案例一-（幸福感预测）" class="headerlink" title="Task3:集成学习案例一 （幸福感预测）"></a>Task3:集成学习案例一 （幸福感预测）</h1><ul>
-<li>DATA:</li>
+<li>DATA: <a href="https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning/CH6-集成学习之案例分享/集成学习案例分析1" target="_blank" rel="noopener">datawhalechina/team-learning-data-mining</a></li>
 </ul>
-<p><a href="https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning/CH6-集成学习之案例分享/集成学习案例分析1" target="_blank" rel="noopener">datawhalechina/team-learning-data-mining</a></p>
-<h1 id="Task4-集成学习案例二-（蒸汽量预测）"><a href="#Task4-集成学习案例二-（蒸汽量预测）" class="headerlink" title="Task4 :集成学习案例二 （蒸汽量预测）"></a>Task4 :集成学习案例二 （蒸汽量预测）</h1><p><a href="https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning/CH6-集成学习之案例分享/集成学习案例分析1" target="_blank" rel="noopener">datawhalechina/team-learning-data-mining</a></p>
+<h1 id="Task4-集成学习案例二-（蒸汽量预测）"><a href="#Task4-集成学习案例二-（蒸汽量预测）" class="headerlink" title="Task4 :集成学习案例二 （蒸汽量预测）"></a>Task4 :集成学习案例二 （蒸汽量预测）</h1><ul>
+<li>Data: <a href="https://github.com/datawhalechina/team-learning-data-mining/tree/master/EnsembleLearning/CH6-集成学习之案例分享/集成学习案例分析1" target="_blank" rel="noopener">datawhalechina/team-learning-data-mining</a></li>
+</ul>
 
             </div>
             <hr>
