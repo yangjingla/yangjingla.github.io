@@ -1,0 +1,640 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="这是一个似乎不善于自我介绍的人">
+  <meta name="author" content="yangjing">
+  <meta name="keywords" content="">
+  
+  <title>Paper-FewShotNER - The Sound Of Silence</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>YangJing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/index_bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Paper-FewShotNER">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-06-01 16:49" pubdate>
+        June 1, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      32
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Paper-FewShotNER</h1>
+            
+            <div class="markdown-body">
+              <h2 id="Few-Shot-Named-Entity-Recognition-A-Comprehensive-Study"><a href="#Few-Shot-Named-Entity-Recognition-A-Comprehensive-Study" class="headerlink" title="Few-Shot Named Entity Recognition: A Comprehensive Study"></a>Few-Shot Named Entity Recognition: A Comprehensive Study</h2><h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Building NER System is labor-intensive, time-consuming task , prohibitively expensive  and requires rich domain Knowledge and expert experience。</p>
+<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p><strong>Tranditonal NER vs Few-shot NER?</strong></p>
+<ul>
+<li>Tranditional NER are trained in the standard supervised leanring paradigrms , In the real world application , the more favorable scenarios are given for each entity type.which yield task<strong>: few-shot NER.</strong></li>
+<li>Small number of labeled tokens are available , it renders difficulties for supervised fine-tuning approach .</li>
+</ul>
+<p><strong>Metrics for few-shot NER ?</strong></p>
+<p>$$L(x,y) = \sum_{(X,Y) \in D^L} \sum_{i=1}^{T} KL(y_i || q(y_i | x_i))$$</p>
+<p>Where KL divergence between two distribution and prediction probability:</p>
+<p>$$ KL(p||q) = E_{p}log(p|q) = Softmax(W*f(x) + b )$$</p>
+<p><strong>Related Task and Methods</strong></p>
+<ul>
+<li>Prototype-based methods :</li>
+<li>supervised pre-training :</li>
+<li>Self-training : teacher-student architecture, Distillation technology in NLP</li>
+</ul>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><p>Three orthogonal directions (also complementary) show in Figure:</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gpdqosv4sxj31bd0u07cq.jpg" srcset="/img/loading.gif" lazyload alt="https://tva1.sinaimg.cn/large/008eGmZEgy1gpdqosv4sxj31bd0u07cq.jpg"></p>
+<p><strong>Prototype-based method</strong></p>
+<ul>
+<li><p>How to adapt meta- learning such as prototype-based methods (prototype network) for few- shot NER?</p>
+</li>
+<li><p>Core idea is use episodic classification paradigm to simulate few-shor settings during model training.</p>
+</li>
+</ul>
+<p><strong>Noisy supervised pre-training</strong></p>
+<ul>
+<li><p>How to leverage freely-available web data as noisy supervised pre-training data?</p>
+</li>
+<li><p>motivated by mask-pretraining-model’s performance , but PLMs treats each token equally which is not aligned with the goal of NER.and the intuition inspires us to endow the backbone network an ability to outweight the representations of entity for NER.</p>
+</li>
+</ul>
+<p><strong>Self-Training</strong></p>
+<ul>
+<li><p>How to leverage unlabeled in-domain sentences in a semi-supervised manner?</p>
+</li>
+<li><p>Train two model : teacher model <em>θ</em> and student model  $\theta$</p>
+</li>
+</ul>
+<p><strong>Utilize a nearest enighbor classifier based on the contextualized representation</strong></p>
+<p>Training Free NER</p>
+<ul>
+<li>Neighbor-tagging:</li>
+<li>Examplebased NER:</li>
+</ul>
+<h3 id="Future-amp-Conclusion"><a href="#Future-amp-Conclusion" class="headerlink" title="Future&amp;Conclusion"></a>Future&amp;Conclusion</h3><ul>
+<li>Prototype-based methods , Noisy Supervised Pretraining , Self-Training</li>
+<li>❓How to combine Span-based and BIO-based ?</li>
+<li>❓public code and benchmarks for few-shot learning ?</li>
+</ul>
+<h2 id="Distantly-Supervised-Named-Entity-Recognition-using-Positive-Unlabeled-Learning-ACL2019"><a href="#Distantly-Supervised-Named-Entity-Recognition-using-Positive-Unlabeled-Learning-ACL2019" class="headerlink" title="Distantly Supervised Named Entity Recognition using Positive-Unlabeled Learning[ACL2019]"></a>Distantly Supervised Named Entity Recognition using Positive-Unlabeled Learning[ACL2019]</h2><h3 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h3><ul>
+<li>传统的基于序列标注方法的命名实体识别，是典型的监督学习方法，过度的依赖于数据和数据和质量，然而对于一些特殊行业（例如：生物/医学)领域无法获得大规模的高质量数据的场景之下，现有的一些模型不能够表现很好的的性能。</li>
+<li>构造一个能够覆盖所有的实体的字典是不可能的，如何利用文本之中匹配到的实体和未匹配到的实体呢？</li>
+</ul>
+<h3 id="Moitvation"><a href="#Moitvation" class="headerlink" title="Moitvation"></a>Moitvation</h3><ul>
+<li>Positive-unlabeled(PU) learning problem:<ul>
+<li>perform the NER task using only unlabeled data and named entity dictionaries.</li>
+<li>Postive data(字典匹配到的实体) 和 Unlabeled data( 未匹配到的实体)</li>
+<li>如果我们只用字典和没有标注的数据，能否同样进行命名体识别呢？</li>
+</ul>
+</li>
+</ul>
+<h3 id="Method-1"><a href="#Method-1" class="headerlink" title="Method"></a>Method</h3><ul>
+<li><p>Unbiased Positive-Unlabeled learning</p>
+<ul>
+<li>when there are only a set of positive (P) examples and a set of unlabeled (U) examples, which contains both positive and negative examples.</li>
+</ul>
+<p>$$R_l = n E_{x,y=0} l(f(x_i) , 0) + p E_{x,y=1} l(f(x) ,1)$$</p>
+<ul>
+<li>其中记 <em>π</em> = <em>p</em>(<em>y</em> = 1) 为正样本 ，其实本式的关键在于如何估计第一项unlabled data  $R_l = n E_{x,y=0}l(f(x_i) , 0) = E_{x} l(f(x) ,0) - p E_{x,y=1} l(f(x) , 0)$ 。</li>
+</ul>
+<p>$$\hat{R}<em>l = \frac{1}{n_u} \sum</em>{i=1}^{n_u} l(f(x) , 0) + \frac{\pi_p}{n_p} \sum_{i=1}^{n_p}( l(f(x_i^{p} ,1) - l(f(x_i^p) , 0))$$</p>
+<ul>
+<li>其中 $n_u$ 和  分别是正样本和负样本的总数</li>
+</ul>
+</li>
+<li><p>Consistent Positive-Unlabeled Learning</p>
+<ul>
+<li>什么是一致性？有什么作用？[能够一定程度上缓解过拟合问题吗？]</li>
+<li>文章在2.3节和附录之中介绍证明了一个结论：只要在上式之中的loss函数是一个存在上界的函数，那么$\hat{R_l}$就是一致的consistent.</li>
+</ul>
+</li>
+<li><p>使用negative/positive 两个标签进行标注，而不是传统的BIO/BIOES进行标注 ，利用字典和最大前向匹配策略进行匹配</p>
+</li>
+<li><p>Label Assignment , Data Labeling using the Dictionary , PU Learning Classifier ,Loss definiton ,Label Inference and Adapted PU Learning.</p>
+<ul>
+<li>Lebel Inference: 为每一个实体的类型建立了多个分类器，因此会存在一个实体被多个分类器同时预测为正类，此时我们只需要选择概率$f(w|s)$最高的则可.</li>
+<li>AdaSampling：因为正样本要满足$p(X|Y=1)独立同分布 ，这个条件通常无法满足， 关键是和能够渐渐的来丰富我们词典的内容(其实就是伪标签的思想，但是如何获得可靠真实的伪标签呢？)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Conclusion-amp-Future"><a href="#Conclusion-amp-Future" class="headerlink" title="Conclusion &amp; Future"></a>Conclusion &amp; Future</h3><ul>
+<li>结合词典的一种明明实体识别PU Learning 学习算法，能够缓解没有足够的标注数据的问题，甚至zero-shot ？</li>
+<li>能够证明的PU learning 学习算法应该是一致的和无偏见（consitent and unbiased）, 有助于减少我们的字典的规模。</li>
+<li>能否引入一些更加大的词典的同时，提高查询的速度？比如引入wiki百科等等规模十分大的知识库？</li>
+</ul>
+<h2 id="Improving-Low-Resource-Named-Entity-Recognition-using-Joint-sentence-and-Token-Labeling-ACL2020"><a href="#Improving-Low-Resource-Named-Entity-Recognition-using-Joint-sentence-and-Token-Labeling-ACL2020" class="headerlink" title="Improving Low-Resource Named Entity Recognition using Joint sentence and Token Labeling[ACL2020]"></a>Improving Low-Resource Named Entity Recognition using Joint sentence and Token Labeling[ACL2020]</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">We present a joint model that supports multi-class classification <span class="hljs-keyword">and</span> introduce a<span class="hljs-built_in"> simple </span>variant of self-attention that allows the model <span class="hljs-keyword">to</span> learn scaling factors. Our model produces 3.78%, 4.20%, 2.08% improvements <span class="hljs-keyword">in</span> F1 over the BiLSTM-CRF baseline on ecommerce product titles <span class="hljs-keyword">in</span> three different low-resource languages: Vietnamese, Thai, <span class="hljs-keyword">and</span> Indonesian, respectively<br></code></pre></td></tr></table></figure>
+
+<h3 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h3><ul>
+<li>Sentences-level labels is one of plausible methods to impove low-resource NER</li>
+<li>Sentences-level labels vs token-level ?[Sentences-level label is easy to get and token-level is costly to annotate]</li>
+</ul>
+<h3 id="Motivation-1"><a href="#Motivation-1" class="headerlink" title="Motivation"></a>Motivation</h3><ul>
+<li>for low resource NER -&gt;to get sufficient large number of labeled data<ul>
+<li>multi-task learning , pre-training</li>
+<li>Coarse grained NER , fine-tuning bilingual word embedding , intergrating POS tagging ,</li>
+</ul>
+</li>
+<li>previous study have exploited token-level information from auxiliary tasks ,few of them have tried to use sentence-level information</li>
+<li>jointly labeling framework</li>
+</ul>
+<h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gpay36kszmj30oo0n6n1c.jpg" srcset="/img/loading.gif" lazyload alt="https://tva1.sinaimg.cn/large/008eGmZEgy1gpay36kszmj30oo0n6n1c.jpg"></p>
+<ul>
+<li><p>Two tasks</p>
+<ul>
+<li>Task-specific layers include a <strong>CRF for NER</strong> and a linear layer for <strong>sentence classification</strong></li>
+<li>the diffierence between multi tasks learning is the goal which is to imporve the performance of the main task NER</li>
+<li>Joint labeling objective: $ L_{joint} = L_{NER} + L_{C}$</li>
+</ul>
+</li>
+<li><p><strong>soft-attention mechanism</strong></p>
+<ul>
+<li>H<em>′ = *H</em> + <em>H</em> ⊗ <em>a</em></li>
+</ul>
+<p>​    $$atten(Q,K,V) = softmax(\frac{QK^{T}}{\sigma})V \ \sigma = min(relu(w_4 H^{T} +b_4), \sqrt {d_n/n}) +1 $$                </p>
+</li>
+<li><p>Datasets</p>
+</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEgy1gpb1z4v60sj30oo0z4agy.jpg" srcset="/img/loading.gif" lazyload alt="https://tva1.sinaimg.cn/large/008eGmZEgy1gpb1z4v60sj30oo0z4agy.jpg"></p>
+<h3 id="Conclusion-amp-Question"><a href="#Conclusion-amp-Question" class="headerlink" title="Conclusion &amp; Question"></a>Conclusion &amp; Question</h3><ul>
+<li>joint sentence and token labeling model is remarkably effective for low-resource NER</li>
+<li>when the sentence and token label is weakly related , model can support multi-class classifications ?</li>
+<li>multi-task learning and jointly label learning ?soft-attention vs hard attention ?</li>
+<li>在实体和关系的联合抽取的实验之中，如果我的重点是仅仅是关系或者实体，我不需要兼顾我需要怎么去做？</li>
+<li>如何在关系，实体，指代等等多任务的场景之下来加入一些诸如分类任务？</li>
+<li>针对科技文献的信息的抽取，是否只需要根据学科的类别[clue上有相关的数据集]来当作sentence labeling? [本文的实体的来源全部都是在标题之中进行标注的吗？]</li>
+</ul>
+<h2 id="TriggerNER-Learning-with-Entity-Triggers-as-Explanations-for-Named-Entity-Recognition-ACL2020"><a href="#TriggerNER-Learning-with-Entity-Triggers-as-Explanations-for-Named-Entity-Recognition-ACL2020" class="headerlink" title="TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition[ACL2020]"></a>TriggerNER: Learning with Entity Triggers as Explanations for Named Entity Recognition[ACL2020]</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">In</span> this paper, we introduce “entity triggers,” an effec- tive<span class="hljs-built_in"> proxy </span>of human explanations <span class="hljs-keyword">for</span> facili- tating label-efficient learning of NER models. An entity trigger is defined as a<span class="hljs-built_in"> group </span>ofwords <span class="hljs-keyword">in</span> a sentence that helps <span class="hljs-keyword">to</span> explain why humans would recognize an entity <span class="hljs-keyword">in</span> the sentence.<br></code></pre></td></tr></table></figure>
+
+<h3 id="Problem-3"><a href="#Problem-3" class="headerlink" title="Problem"></a>Problem</h3><ul>
+<li>低资源场景下的实体抽取，如何进行半监督学习-&gt;自监督学习-&gt;无监督学习的任务？</li>
+<li>*<em>How to cost-effectively learn a model for NER using entity triggers ? *</em></li>
+</ul>
+<h3 id="Motivation-2"><a href="#Motivation-2" class="headerlink" title="Motivation"></a>Motivation</h3><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gr2ssma8kyj31sq0o47a7.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-01 at 10.25.23 AM"></p>
+<ul>
+<li>在句子之中有些是带有一些常识性的知识，比如 【国防科大位于四方坪】这个句子中，我们根据【位于】能够推断后面的实体【四方坪】是地名Location.所以【位于】就是我们所提到的 【Entity triggers】。</li>
+<li>还是在模型引入更多的先验知识，为模型引入规则匹配的信息，类似于语句模版。</li>
+<li>We propose a novel framework named Trigger Matching Net- work that learns trigger representations indicative of entity types during the training phase, and iden- tifies triggers in an unlabeled sentence at infer- ence time to guide a traditional entity tagger for delivering better overall NER performance.</li>
+<li>Our intuition is that triggers acting as cues for the same named-entity type should have similar trigger representations, and thus triggers can be identified in an unlabeled sentence at inference time by soft-matching between the sentence representation and trigger representations seen during training. We perform such soft- matching between the sentence representation and trigger representa- tions seen during training. We perform such soft- matching using a self-attention mechanism.</li>
+</ul>
+<h3 id="Model-1"><a href="#Model-1" class="headerlink" title="Model"></a>Model</h3><p>　<strong>Training Stage</strong></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gr2kheq143j31id0u0drf.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-01 at 10.38.32 AM"></p>
+<p><strong>Trigger Encoding &amp; Semantic Matching</strong></p>
+<ul>
+<li><p>Jointly train the trigger encoder <strong>(TrigEncoder)</strong> and the attention-based trigger matching module (<strong>TrigMatcher)</strong> using a shared embedding space.</p>
+</li>
+<li><p>Learning to match triggers and sentences based on attention-based representations, we use <strong>contrastive loss</strong>.</p>
+<p>​    $$ L_{SM} = 1_{matched} \frac{1}{2} ||g_s - g_t||^2 + (1- 1_{matched} \frac{1}{2}(max(0 , m-d)))$$</p>
+</li>
+</ul>
+<p><strong>Inference</strong></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gr2sgsrmyij31aq0smaib.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-01 at 3.17.34 PM"></p>
+<p><strong>Inference on Unlabeled Sentences</strong></p>
+<ul>
+<li>TrigMatcher + Trigger dictionary!</li>
+<li>对于已经训练好的trigger vector构建一个字典，在未标注的语料上面利用TrigMatcher 进行匹配，最后通过一个Contrasive Loss 进行学习。</li>
+</ul>
+<p><strong>Experiments</strong></p>
+<p>验证少样本的数据实验设计：</p>
+<ul>
+<li>仅使用20%的数据则可以达到80%的效果（20%的数据是否经过精挑细选还是随机选择呢？）</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gr2luggcvgj316g0tik0r.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-01 at 11.28.30 AM"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gr2sd1efnbj316g0gwtby.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-01 at 3.13.55 PM"></p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><ul>
+<li><p>本文【Related Work】对于少样本/低资源下的NER 做了一些梳理大概包括三个方面：1.lattice 2.distantly supervision  3.active learning 4. linking rules</p>
+</li>
+<li><p>能不能够根据这篇TriggerNER的思想+MRC  之中自动的构建高质量的 Query来提高模型的性能？–&gt; 在传统和典型的MRC任务或者是数据集里面的 query是如何产生的呢？</p>
+</li>
+<li><p>本文之中的trigger 是在[conll2003 ,bc5cdr]两个数据集人为的标注出来，类似于不也是将字典更换成了一个trigger，如何在事件抽取之中一样的触发词自动发现( 开放域事件/信息抽取)？</p>
+</li>
+<li><p>由于论文写作语言的独特性，科技文献之中所谓的 trigger是不是更加的简单呢？能不能当作低资源场景下的科技文献的信息抽取？</p>
+</li>
+<li><p>🍅【active learning 】for data annotation ？</p>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Paper/">Paper</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/06/01/review-may/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Review-May</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/10/notes-ensemblelearning/">
+                        <span class="hidden-mobile">Notes-EnsembleLearning</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
