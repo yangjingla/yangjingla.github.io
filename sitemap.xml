@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2021/06/30/review-june/</loc>
+    
+    <lastmod>2021-06-30T10:20:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/06/12/paper-span-basedir/</loc>
+    
+    <lastmod>2021-06-12T13:39:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2021/06/01/review-may/</loc>
     
     <lastmod>2021-06-01T08:52:02.000Z</lastmod>

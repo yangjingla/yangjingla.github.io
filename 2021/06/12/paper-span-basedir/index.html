@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="这是一个似乎不善于自我介绍的人">
+  <meta name="author" content="yangjing">
+  <meta name="keywords" content="">
+  
+  <title>Paper-Span-basedIR - The Sound Of Silence</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"§"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="The Sound Of Silence" type="application/atom+xml">
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>YangJing</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/index_bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Paper-Span-basedIR">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-06-12 21:39" pubdate>
+        June 12, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      42
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Paper-Span-basedIR</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Joint-entity-recognition-and-relation-extraction-as-a-multi-head-selection-problem"><a href="#Joint-entity-recognition-and-relation-extraction-as-a-multi-head-selection-problem" class="headerlink" title="Joint entity recognition and relation extraction as a multi-head selection problem"></a>Joint entity recognition and relation extraction as a multi-head selection problem</h1><figure class="highlight plain"><figcaption><span>2018```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs ECAI"><br>## Motivation<br><br>- State-of-the-art models for joint entity recognition and relation extraction strongly rely on external natural language processing (NLP) tools .In this paper , we proposed a joint neural model  without the need of any manually extracted features .Specifically, we model the entity recognition task using CRF layer and the relation extraction task as a multi-head selection problem [-2018].<br>- Current joint extraction model cannot have a principled way to deal with multiple relation .<br><br>## Methods<br><br>![Screen Shot 2021-06-12 at 4.54.25 PM](https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;008i3skNgy1grfl313faxj30z00q4wkl.jpg)<br><br>The outputs for each token (e.g., Smith) are twofold: (i) an entity recognition label (e.g., I-PER, denoting the token is inside a named entity of type PER) and (ii) a set of tuples comprising the head tokens of the entity and the types of relations between them (e.g., &#123;(Center, Works for), (Atlanta, Lives in)&#125;)<br><br>## Conclusion<br><br>- 本文的相关工作部分写的十分的详细，分为三个部分【命名实体】【关系抽取】【联合抽取】作出了详细的介绍（主要是包括了一些早期的手工特征的方法），在命名实体以及关系抽取部分都做了十分详细的介绍。<br>- 本文侧重点在设计了多头关系选择机制，可以看作是和TPLINK的侧重点一样，针对三种重叠的关系样例中 SEO问题的早期探索。<br>- 本文中的embedding用的是word2vec的词向量，偶然看到的这篇文章是在loujie的一篇推送之中看到的，竞赛较为常用的一种方法，但是目前来看我会选择 tplinker 而不是mulit-head selection 来作为我的baseline来处理关系抽取之中存在的关系重叠的问题。<br><br><br><br># TPLinker : Single-stage Joint Extraction of Entities and Relations Through Token Pair Linking<br><br>- conling 2020<br></code></pre></td></tr></table></figure>
+<p>Prior works show that joint learning can result in a noticeable performance gain. However, they usually involve sequential interrelated steps and suffer from the problem of exposure bias. At training time, they predict with the ground truth conditions while at inference it has to make extraction from scratch. This discrepancy leads to error accumulation. To mitigate the issue, we propose in this paper a one-stage joint extraction model, namely, TPLinker, which is capable of discovering overlapping relations sharing one or both entities while immune from the exposure bias. TPLinker formulates joint extraction as a token pair linking problem and introduces a novel handshaking tagging scheme that aligns the boundary tokens of entity pairs under each relation type.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs"><br><br><br>### Problem<br><br>- overlapping relations with shared entities : 在实体关系联合抽取任务之中，不仅仅存在实体重叠的问题，更存在关系重叠的问题，即一个实体作为头实体和不同的尾实体之中存在不同的二元关系，如果采用传统的 BIO的标注的方式，那么头实体只能够选择一组关系进行标注。<br><br>- EntityPairOverlap(EPO) and EntityPairOverlap(SEO)<br><br>  ![Screen Shot 2021-05-17 at 10.16.25 AM](https://tva1.sinaimg.cn/large/008i3skNgy1gql7gx7knij31de0j47a6.jpg)<br><br>- exposure bias :**暴漏偏差**：指在训练阶段是gold实体输入进行关系预测，而在推断阶段是上一步的预测实体输入进行关系判断；导致训练和推断存在不一致<br><br>- cascading errors ： 误差累计问题，<br><br>### Motivation<br><br>- TPLinker is to answer three Yes/No pseudo questions:<br>  - Whether p1 and p2 are the start and end positions of the same entity respectively?<br>  - Whether p1 and p2 are the start positions of two entities with r relation respectively?<br>  - Whether p1 and p2 are the end positions of two entities with r relation respectively?<br><br>### Method<br><br>Handshaking tagging scheme <br><br>![Screen Shot 2021-05-17 at 10.59.43 AM](https://tva1.sinaimg.cn/large/008i3skNgy1gql8py20obj319d0u0gxe.jpg)<br><br><span class="hljs-attribute">Decoding</span><br><span class="hljs-attribute"></span><br>![Screen Shot 2021-05-17 at 11.00.16 AM](https://tva1.sinaimg.cn/large/008i3skNgy1gql8qiiktbj30xz0u013z.jpg)<br><br>Datasets : NYT , WebNLG<br><br>![Screen Shot 2021-05-17 at 11.06.59 AM](https://tva1.sinaimg.cn/large/008i3skNgy1gql8xndo79j31de08aq4l.jpg)<br><br>![Screen Shot 2021-05-17 at 11.12.14 AM](https://tva1.sinaimg.cn/large/008i3skNgy1gql93qf6f4j31de0lkdnj.jpg)<br><br>Results Analysis and Ablation Experiments<br><br>### Conclusion<br><br>- 什么是关系重叠问题，什么是 EPO和SEO 问题，并且举例！<br>- 什么是暴露偏差问题，目前有哪些代表方法解决？<br>- Conlusion 1 : Tplinker is the first single-stage joint extration model that extract all kinds of overlapping relations without exporesure bias.<br>- 新的联合抽取的标注方式，区别于以往的序列标注和指针标注<br>- TPLinker是实体关系抽取的新模式，巧妙设计了统一的联合抽取标注框架，可实现单阶段联合抽取、并解决暴漏偏差，同时依旧可以解决复杂的重叠关系抽取<br><br># Span-based Joint Entity and Relation Extraction with Transformer Pre-training<br><br>``2020 spert , span-based model``<br></code></pre></td></tr></table></figure>
+<p>We introduce SpERT, an attention model for span-based joint entity and relation extraction. Our key contribution is a light- weight reasoning on BERT embeddings, which features entity recog- nition and filtering, as well as relation classification with a localized, marker-free context representation. The model is trained using strong within-sentence negative samples, which are efficiently extracted in a single BERT pass. These aspects facilitate a search over all spans in the sentence.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs sql"><br><span class="hljs-comment">## Motivation</span><br><br>- BERT + SPAN-Based + (negative sampling  + localized context representation)<br>- We <span class="hljs-keyword">use</span> a <span class="hljs-keyword">local</span> <span class="hljs-keyword">context</span> representation <span class="hljs-keyword">without</span> <span class="hljs-keyword">using</span> particular markers, <span class="hljs-keyword">and</span> draw negative samples <span class="hljs-keyword">from</span> the same sentence <span class="hljs-keyword">in</span> a single BERT pass. These aspects facilitate an efficient training <span class="hljs-keyword">and</span> a <span class="hljs-keyword">full</span> <span class="hljs-keyword">search</span> <span class="hljs-keyword">over</span> <span class="hljs-keyword">all</span> spans<br><br><span class="hljs-comment">## Method</span><br><br>![Screen Shot <span class="hljs-number">2021</span><span class="hljs-number">-06</span><span class="hljs-number">-12</span> <span class="hljs-keyword">at</span> <span class="hljs-number">8.19</span><span class="hljs-number">.44</span> PM](/<span class="hljs-keyword">Users</span>/yangjing/<span class="hljs-keyword">Library</span>/Application Support/typora-<span class="hljs-keyword">user</span>-images/Screen Shot <span class="hljs-number">2021</span><span class="hljs-number">-06</span><span class="hljs-number">-12</span> <span class="hljs-keyword">at</span> <span class="hljs-number">8.19</span><span class="hljs-number">.44</span> PM.png)<br><br>**Span Classification**<br><br>- 文章之中的width embeddings 在span 分类的过程之中起到了何种的作用？<br><br>**Span Filtering**<br><br>-  Different <span class="hljs-keyword">with</span> previous <span class="hljs-keyword">work</span>,we  pre-filter spans longer <span class="hljs-keyword">than</span> <span class="hljs-number">10</span> tokens <span class="hljs-keyword">and</span> dont <span class="hljs-keyword">use</span> beam <span class="hljs-keyword">search</span><br><br>**Relation Classification**<br><br>- embedding concation :  <span class="hljs-keyword">head</span> entity  embedding + contextual embedding + tail embedding<br><br>**Negative Sampling <span class="hljs-keyword">and</span> Localized <span class="hljs-keyword">Context</span>**<br><br>- Special ablation study <span class="hljs-keyword">for</span> localized <span class="hljs-keyword">Context</span><br>- 🤔The core <span class="hljs-keyword">difference</span> <span class="hljs-keyword">with</span> &lt;A Frustratingly Easy Approach <span class="hljs-keyword">for</span> Entity <span class="hljs-keyword">and</span> Relation Extraction&gt; ?  <span class="hljs-keyword">Insert</span> entity <span class="hljs-keyword">type</span>  marker  == more Localized Contextual Embedding  <span class="hljs-keyword">for</span> relationship classification? <br><br>**Experiments**<br><br>- SciERC: SciERC [<span class="hljs-number">20</span>] <span class="hljs-keyword">is</span> derived <span class="hljs-keyword">from</span> <span class="hljs-number">500</span> abstracts <span class="hljs-keyword">of</span> AI pa- pers. The dataset includes six scientific entity (Task, Method, Met- ric, Material, Other-Scientific-Term, Generic) <span class="hljs-keyword">and</span> seven relation types (Compare, Conjunction, <span class="hljs-keyword">Evaluate</span>-<span class="hljs-keyword">For</span>, Used-<span class="hljs-keyword">For</span>, Feature- <span class="hljs-keyword">Of</span>, Part-<span class="hljs-keyword">Of</span>, Hyponym-<span class="hljs-keyword">Of</span>) <span class="hljs-keyword">in</span> a total <span class="hljs-keyword">of</span> <span class="hljs-number">2</span>, <span class="hljs-number">687</span> sentences. We <span class="hljs-keyword">use</span> the same train (<span class="hljs-number">1</span>, <span class="hljs-number">861</span> sentences), <span class="hljs-keyword">validation</span> (<span class="hljs-number">275</span> sentences) <span class="hljs-keyword">and</span> <span class="hljs-keyword">test</span> (<span class="hljs-number">551</span>) <span class="hljs-keyword">split</span> <span class="hljs-keyword">as</span> <span class="hljs-keyword">in</span> [<span class="hljs-number">20</span>].<br>- We <span class="hljs-keyword">use</span> the Adam Opti- mizer <span class="hljs-keyword">with</span> a linear warmup <span class="hljs-keyword">and</span> linear decay learning rate schedule <span class="hljs-keyword">and</span> a peak learning rate <span class="hljs-keyword">of</span> <span class="hljs-number">5</span>e−<span class="hljs-number">5</span>, a dropout <span class="hljs-keyword">before</span> the entity <span class="hljs-keyword">and</span> relation classifier <span class="hljs-keyword">with</span> a rate <span class="hljs-keyword">of</span> <span class="hljs-number">0.1</span> (<span class="hljs-keyword">both</span> according <span class="hljs-keyword">to</span> [<span class="hljs-number">8</span>]), a batch <span class="hljs-keyword">size</span> ofB=<span class="hljs-number">2</span>, <span class="hljs-keyword">and</span> width embeddings w <span class="hljs-keyword">of</span> <span class="hljs-number">25</span> dimensions. <span class="hljs-keyword">No</span> further optimizations were conducted <span class="hljs-keyword">on</span> those parameters. We <span class="hljs-keyword">choose</span> the <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> epochs (<span class="hljs-number">20</span>), the relation filtering threshold (α = <span class="hljs-number">0.4</span>), <span class="hljs-keyword">as</span> well <span class="hljs-keyword">as</span> the <span class="hljs-built_in">number</span> <span class="hljs-keyword">of</span> negative entity <span class="hljs-keyword">and</span> relation samples per sen- tence (Ne=Nr=<span class="hljs-number">100</span>) based <span class="hljs-keyword">on</span> the CoNLL04 development set. We <span class="hljs-keyword">do</span> <span class="hljs-keyword">not</span> specifically tune our <span class="hljs-keyword">model</span> <span class="hljs-keyword">for</span> the other two datasets but <span class="hljs-keyword">use</span> the same hyperparameters instead<br><br><span class="hljs-comment">## Conclusion</span><br><br>-  spert模型其实十分的简答，本文在基于bert之上提出的span-based 操作十分的简单，也不能够完全看作是一个联合抽取模型，在预测阶段还是一个分步预测(并不能够做到在预测的时候能够交互多个任务的信息)。<br>- 本文在基于上述十分简单的两阶段的解码架构之下提出了三个技巧提高了模型的性能：<span class="hljs-number">1.</span>negative sampling提高了模型的训练的速度 <span class="hljs-number">2.</span> <br>- 写作的借鉴：【本文基于span的联合抽取的相关工作写得十分的详尽】【实验部分：超参数和评测指标的说明，消融实验的设计和分析】【<span class="hljs-keyword">error</span> <span class="hljs-keyword">case</span> study】<br>- 后续师兄在conling20的工作&lt; Span-based Joint Entity <span class="hljs-keyword">and</span> Relation Extraction <span class="hljs-keyword">with</span> Attention-based Span-specific <span class="hljs-keyword">and</span> Contextual Semantic Representations<br>  <span class="hljs-keyword">Bin</span>&gt;<br>- 🤔<span class="hljs-number">1.</span>本文不能够处理关系重叠问题:  能否借鉴多头选择机制  + Tplinker  的单阶段的解码的方式 +   Casel 分层关系模型 <span class="hljs-number">2.</span>本文不能够融入全局信息：能否在这个模型借鉴&lt;A Joint Neural <span class="hljs-keyword">Model</span> <span class="hljs-keyword">for</span> Information Extraction <span class="hljs-keyword">with</span> <span class="hljs-keyword">Global</span> Features[ ACL20]&gt; 之中融合进入全局(<span class="hljs-keyword">global</span> feature)的信息呢？<br><br><br><br><span class="hljs-comment"># A Frustratingly Easy Approach for Entity and Relation Extraction[ NAACL21]</span><br><br><span class="hljs-string">``</span><span class="hljs-string">`Span-based methods, Easy Approach</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">We present a<span class="hljs-built_in"> simple </span><span class="hljs-keyword">and</span> effective approach <span class="hljs-keyword">for</span> end-to-end relation extraction, which learns two independent encoders <span class="hljs-keyword">for</span> entity recognition <span class="hljs-keyword">and</span> relation extraction。<br></code></pre></td></tr></table></figure>
+
+<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><ul>
+<li>在实体和关系联合抽取之中，实体和关系应该分别用两个Encoder进行表示。</li>
+<li>在关系模型之中融入实体信息，尤其是加入实体的标签信息作为[marker]加入到序列之中。</li>
+</ul>
+<h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><ul>
+<li>Span-based Model VS(DYGIE/FYGIE++)</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gr33g36gu1j31aq0oyn52.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-01 at 9.37.27 PM"></p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><ul>
+<li>相比于传统的联合抽取方式：1.多任务学习(dygie++) 2. 结构化预测框架(structed prediction framework) 本文之中提出的简单的pipeline方法粗暴的取得三个数据集的 SOTA.</li>
+<li>本文得出了几个值得验证的结论和猜想，更加理性的去看待联合抽取，在过去的两个工作【Two better than one ACL20】以本文的 【A Frustratingly Easy Approach】都认为：<strong>实体表示和关系表示应该要分开用两个Encoder分别得到独立的表示！</strong></li>
+</ul>
+<h1 id="A-Joint-Neural-Model-for-Information-Extraction-with-Global-Features-ACL20"><a href="#A-Joint-Neural-Model-for-Information-Extraction-with-Global-Features-ACL20" class="headerlink" title="A Joint Neural Model for Information Extraction with Global Features[ ACL20]"></a>A Joint Neural Model for Information Extraction with Global Features[ ACL20]</h1><figure class="highlight plain"><figcaption><span>, RELATION,EVENT EXTRACTION```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ONEIE:ENTITY"><br>&#96;&#96;&#96;质量一般<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">For example, <span class="hljs-keyword">a</span> VICTIM <span class="hljs-keyword">of</span> <span class="hljs-keyword">a</span> DIE event is likely <span class="hljs-built_in">to</span> be <span class="hljs-keyword">a</span> VICTIM <span class="hljs-keyword">of</span> <span class="hljs-keyword">an</span> AT- TACK event <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> same <span class="hljs-keyword">sentence</span>.<br><br>In order <span class="hljs-built_in">to</span> capture such cross-subtask <span class="hljs-keyword">and</span> cross-instance inter-dependencies, we propose <span class="hljs-keyword">a</span> joint neural framework, ONEIE, that aims <span class="hljs-built_in">to</span> extract <span class="hljs-keyword">the</span> globally optimal IE <span class="hljs-built_in">result</span> <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> graph <span class="hljs-built_in">from</span> <span class="hljs-keyword">an</span> input <span class="hljs-keyword">sentence</span>.<br></code></pre></td></tr></table></figure>
+
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><ul>
+<li>Most existing joint neural models for Information Extraction (IE) use local task-specific classifiers to predict labels for individual instances (e.g., trigger, relation) regardless of their interactions. </li>
+<li>ONEIE</li>
+</ul>
+<h2 id="Motivation-1"><a href="#Motivation-1" class="headerlink" title="Motivation"></a>Motivation</h2><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gre43ke1v1j30t40f8gnv.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-11 at 10.21.12 AM"></p>
+<ul>
+<li><p><strong>Figure  shows a real example</strong>  where the local argument role classifier predicts a redundant PERSON edge. The model should be able to avoid such mistakes if it is capable of learning and leveraging the fact that it is unusual for an ELECT event to have two PERSON arguments.</p>
+</li>
+<li><p><strong>USING separate taggers</strong> to extract entity mentions and event triggers. Note that do not use types predicted by the taggers. Instead, <strong>making a joint decision for all knowledge elements at the decoding stag</strong>e to prevent error propagation and utilize their interactions to improve the prediction of node type.</p>
+</li>
+</ul>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gre45085vgj31o60sotgh.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-11 at 10.22.26 AM"></p>
+<p><strong>Model framework : Four Steps</strong></p>
+<ul>
+<li><p>Encoding-&gt;Identification-&gt;Classification-&gt;Decoding</p>
+</li>
+<li><p>Encoding:Words-level : BERT Representation </p>
+</li>
+<li><p>Decoding: </p>
+</li>
+</ul>
+<p><strong>How to incorparate Global Features?</strong></p>
+<figure class="highlight plain"><figcaption><span>loss and concate embedding```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs design"><br>- Cross-subtask interactions<br>- Cross-instance interactions<br><br>![Screen Shot 2021-06-11 at 11.02.25 AM](https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;008i3skNgy1gre5adrtu8j31o60q4n6j.jpg)<br><br>Given a Graph $G$, we can represent its golbal feature vector $F_G &#x3D; [&#123;f_1(G) ,f_2(G),f_3(G),\cdots,f_m(G)&#125;]$ ,where M is the number of global features and $f_i(\cdot)$  is a sign function that evaluates a certain feature and  return a scalar(1,0).<br><br>**Decoding :  Beam-search based decoder**<br><br>&#96;&#96;&#96;ONEIE makes a joint decision for all nodes and their pairwise edges to obtain the globally optimal graph.<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gre63lhrq3j31o60q4wn4.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-11 at 11.30.16 AM"></p>
+<p>Beam Search Alogrithm </p>
+<ul>
+<li>🍅Node Step -&gt; Edge Step</li>
+</ul>
+<p><strong>Experiments</strong> </p>
+<ul>
+<li>Datasets: ACE05 , ERE-EN(new) , ACE05-CN , ERE-ES</li>
+<li>datasets statistic table show</li>
+</ul>
+<p><strong>Analysis</strong></p>
+<p><code>Very Nice and detailed Case study and Analysis</code></p>
+<ul>
+<li>但是看完论文的分析部分之后，结论就是：构造global feature 是一件极其复杂的事情，而且显然只是针对特定数据集上面</li>
+<li>可以看出本文作者对于ACE05的数据做了大量的观察和分析，构造好的全局特征能</li>
+<li>观察数据是王道！对于ACE05存在的典型的错误作出了一些总结，可以作为了解ACE05数据集的一些说明手册。</li>
+</ul>
+<h2 id="Conclusion-1"><a href="#Conclusion-1" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
+<li>本文的工作是在dygie++工作的后续，在多任务学习框架的解码过程之中：融合全局特征和信息，在解码的过程之中也可以学到多任务的交互信息。</li>
+<li>联合信息抽取模型在解码的时候是对实体预测和关系预测分别独立进行解码，在解码的过程之中却少了两个子任务的信息共享和交互</li>
+<li>在实验阶段如何选取合适的数据集？在那种情况之下选择同时选择中文和英文的数据集比较合适？[毕竟模型的多语言的迁移能力也可以作为一个稍弱的贡献点？]</li>
+<li>选取多少合适的模型作为baseline进行比较合适合适？[1.复现完成lattice-lstm/flat-ner 取得结果之后再去看其他的论文 -&gt; 2.参考其他资源型的文章发布数据集的时候的实验部分的设计思路]</li>
+<li>✨如何学习写作实验分析：本文的实验分析的思路和写作值得好好的阅读-&gt;学习-&gt;借鉴！！（但）</li>
+</ul>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li><a href="https://yangjingla.github.io/2020/11/04/paper-multi-task/" target="_blank" rel="noopener">去年下半年 SciIE -&gt; dygie -&gt; dygie++  三篇文章的记录</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Paper/">Paper</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/06/30/review-june/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Review-June</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/06/01/review-may/">
+                        <span class="hidden-mobile">Review-May</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

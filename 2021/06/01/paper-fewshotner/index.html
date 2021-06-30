@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.2k 字
+      2.6k 字
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      32
+      38
        分钟
     </span>
   
@@ -381,18 +381,57 @@
 <p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gr2luggcvgj316g0tik0r.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-01 at 11.28.30 AM"></p>
 <p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gr2sd1efnbj316g0gwtby.jpg" srcset="/img/loading.gif" lazyload alt="Screen Shot 2021-06-01 at 3.13.55 PM"></p>
 <h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><ul>
-<li><p>本文【Related Work】对于少样本/低资源下的NER 做了一些梳理大概包括三个方面：1.lattice 2.distantly supervision  3.active learning 4. linking rules</p>
-</li>
-<li><p>能不能够根据这篇TriggerNER的思想+MRC  之中自动的构建高质量的 Query来提高模型的性能？–&gt; 在传统和典型的MRC任务或者是数据集里面的 query是如何产生的呢？</p>
-</li>
-<li><p>本文之中的trigger 是在[conll2003 ,bc5cdr]两个数据集人为的标注出来，类似于不也是将字典更换成了一个trigger，如何在事件抽取之中一样的触发词自动发现( 开放域事件/信息抽取)？</p>
-</li>
-<li><p>由于论文写作语言的独特性，科技文献之中所谓的 trigger是不是更加的简单呢？能不能当作低资源场景下的科技文献的信息抽取？</p>
-</li>
-<li><p>🍅【active learning 】for data annotation ？</p>
-</li>
+<li>本文【Related Work】对于少样本/低资源下的NER 做了一些梳理大概包括三个方面：1.lattice 2.distantly supervision  3.active learning 4. linking rules</li>
+<li>能不能够根据这篇TriggerNER的思想+MRC  之中自动的构建高质量的 Query来提高模型的性能？–&gt; 在传统和典型的MRC任务或者是数据集里面的 query是如何产生的呢？</li>
+<li>本文之中的trigger 是在[conll2003 ,bc5cdr]两个数据集人为的标注出来，类似于不也是将字典更换成了一个trigger，如何在事件抽取之中一样的触发词自动发现( 开放域事件/信息抽取)？</li>
+<li>由于论文写作语言的独特性，科技文献之中所谓的 trigger是不是更加的简单呢？能不能当作低资源场景下的科技文献的信息抽取？</li>
+<li>🍅【active learning 】for data annotation ？</li>
 </ul>
+<h1 id="A-Unified-Generative-Framework-for-Various-NER-Subtasks-arxiv"><a href="#A-Unified-Generative-Framework-for-Various-NER-Subtasks-arxiv" class="headerlink" title="A Unified Generative Framework for Various NER Subtasks[arxiv]"></a>A Unified Generative Framework for Various NER Subtasks[arxiv]</h1><figure class="highlight plain"><figcaption><span>NER, nested NER, and discontinuous NER subtasks```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs flat"><br><br></code></pre></td></tr></table></figure>
+<p>To that end, we propose to formulate the NER subtasks as an entity span sequence genera- tion task, which can be solved by a unified sequence-to-sequence (Seq2Seq) framework. Based on our unified framework, we can leverage the pre-trained Seq2Seq model to solve all three kinds of NER subtasks without the special design of the tagging schema or ways to enumerate spans</p>
+<pre><code>
 
+
+## Problem
+
+- NER has been a fundamental task of Natural Language Processing , and three kinds of NER subtasks have been recongnized in previous work.
+
+
+
+![Screen Shot 2021-06-17 at 4.40.11 PM](https://tva1.sinaimg.cn/large/008i3skNgy1grlcrt5ygxj30ly0rojvx.jpg)
+
+## Method(BART+ PointNet)
+
+![Screen Shot 2021-06-17 at 4.54.10 PM](https://tva1.sinaimg.cn/large/008i3skNgy1grld6a9dqjj315w0suq8x.jpg)
+
+Seq2Seq的生成模型
+
+- 典型的生成任务：
+
+- 生成能力比较强的模型(适合于阅读理解等等生成任务)：BART ，  T5 , Longformer
+
+ BART
+
+- BART uses the encoder to input the corrupted sentence and the decoder to recover the original sentence.
+
+NER Datasets
+
+- Flat NER : CONLL03 , OntoNotes 
+- Nested NER : ACE04,ACE05 (借鉴处理的dygie脚本) ， Genia
+
+## Conclusion
+
+- 命名实体问题可以分为：Flat NER , Nested NER , Discontinous  NER
+- 本篇文章对于NER 的两种存在的典型的问题和两种主流的方法都有很详细的优缺点的比较
+  - Sequence tagging ：没有一种好的标注方式能够同时解决上面的三个问题
+  - Span-based: 通过枚举所有的实体(对于非连续实体复杂度高) 也不能够同时解决上述的问题，基于span的方法在结构化推理和解码的时候都会十分的复杂；Span-based 受到span的长度的参数的设置
+
+
+
+
+
+
+</code></pre>
             </div>
             <hr>
             <div>
